@@ -1,0 +1,3 @@
+/*
+Navegación compartida
+*/
