@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuario | Panel Administrativo - SENA </title>
+    <link rel="stylesheet" href="#">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN COMPARTIDA ENTRE PÁGINAS  -->
+
+    <header>
+        <div id="navegacion-header_celador"></div>
+
+        <div>
+            <button>
+                <p>Este es el boton para abrir la barra de navegacion</p>
+            </button>
+            <div>
+                <h1>Registrar Usuario</h1>
+                <p>Panel Administrativo</p>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+
+    <main>
+        <h2>¿Qué quieres registrar?</h2>
+        <p>Selecciona una opción para continuar</p>
+
+        <h2>Registrar usuario</h2>
+
+        <!-- TIPO DE REGISTRO PERMANENTE O TEMPORAL -->
+        <div>
+            <button type="button">Permanente</button>
+            <button type="button">Temporal</button>
+        </div>
+
+        <form action="#">
+            <div>
+                <label>Nombre completo</label>
+                <input type="text">
+            </div>
+
+            <div>
+                <label>Documento</label>
+                <input type="number">
+            </div>
+
+            <!-- DATOS PERMANENTES -->
+            <div>
+                <label>Centro</label>
+                <select>
+                    <option value="">Selecciona una opción</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Contraseña</label>
+                <input type="password" placeholder="Mínimo 6 caracteres">
+            </div>
+
+            <div>
+                <label>Confirmar contraseña</label>
+                <input type="password" placeholder="Mínimo 6 caracteres">
+            </div>
+
+            <!-- DATOS TEMPORALES -->
+            <fieldset>
+                <legend>Computador (Opcional)</legend>
+
+                <div>
+                    <label>Serial del computador</label>
+                    <input type="text" placeholder="Si ingresa con computador">
+                </div>
+
+                <div>
+                    <p>Foto del computador</p>
+                    <button type="button">Abrir Cámara</button>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vehículo (Opcional)</legend>
+
+                <div>
+                    <label>Placa del vehículos</label>
+                    <input type="text" placeholder="Si ingresa con vehículo">
+                </div>
+
+                <div>
+                    <p>Foto del vehículo</p>
+                    <button type="button">Abrir Cámara</button>
+                </div>
+            </fieldset>
+
+            <!-- BOTÓN DE ENVÍO -->
+            <div>
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>informacion del footer</p>
+    </footer>
+</body>
+
+<!-- ENLACES JS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
+
+<script src="../../js/nav.js"></script>
+
+</html>
