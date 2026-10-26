@@ -1,13 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesion</title>
+    <title>login</title>
 </head>
 <body>
-    <!--
-    Login
-    -->
+    <section class="panel-info">
+        <h2>SENA</h2>
+        <br><br>
+        <h1>Sistema de control de acceso</h1>
+
+        <h3>Plataforma institucional para el registro y control 
+            de ingreso de personas, equipos y vehículos dentro de 
+            las instalaciones.</h3>
+
+            <ul class="lista-funciones">
+                <li>
+                    <span class="feature-icon">📋</span>
+                    Registro de ingresos y salidas en tiempo real
+                </li>
+                <li>
+                    <span class="feature-icon">💻</span>
+                    Control de dispositivos y computadores
+                </li>
+                <li>
+                    <span class="feature-icon">🚗</span>
+                    Monitoreo y trazabilidad de vehículos
+                </li>
+                <li>
+                    <span class="feature-icon">🔒</span>
+                    Auditoría completa de acciones del sistema
+                </li>
+            </ul>
+
+            <div class="pie-pagina-login">
+                <footer>© 2026 SENA — Servicio Nacional de Aprendizaje</footer>
+            </div>
+    </section>
+
+
+    <section class="panel-formulario">
+
+        <!-- opciones-formulario-->
+        <div class="opciones-formulario">
+            <div class="opciones">
+                <button type="button" class="opcion-ingresar">
+                    Ingresar
+                </button>
+                <button type="button" class="opcion-registrarse">
+                    Registrarse
+                </button>
+            </div>
+        </div>
+
+            <h2>Bienvenido</h2>
+            <h3>Ingresa tus credenciales</h3>
+
+            <!--Formulario-->
+            <div class="formulario-ingresar">
+                <form action="" method="POST">
+                    <label for="login_documento">Documento</label>
+                    <input type="text" name="documento" id="login_documento" placeholder="Número de documento" required>
+                    <label for="login_contrasena">Contraseña</label>
+                    <input type="password" name="contrasena" id="login_contrasena" placeholder="**********" required>
+                    <button type="submit" class="iniciar-sesion">Iniciar sesión</button>
+                </form>
+
+                <a class="olvidar-contrasena" href="pages/login/recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <div class="formulario-registro">
+                <h2>Crear cuenta</h2>
+                <h3>Completa el formulario para registrarte en el sistema</h3>
+
+                <!--Formulario registro-->
+                <form action="" method="POST">
+                    <label for="registro_nombre">Nombre completo</label>
+                    <input type="text" name="nombre" id="registro_nombre" placeholder="Juanito alimaña" required>
+                    <label for="registro_correo">Correo electrónico</label>
+                    <input type="email" name="correo" id="registro_correo" placeholder="correo@gmail.com" required>
+                    <label for="registro_documento">Número de documento</label>
+                    <input type="text" name="documento" id="registro_documento" placeholder="1023456542" required>
+                    <label for="registro_contrasena">Contraseña</label>
+                    <input type="password" name="contrasena" id="registro_contrasena" placeholder="Mínimo 6 caracteres">
+                    <label for="registro_confirmar_contrasena">Confirmar contraseña</label>
+                    <input type="password" name="confirmar_contrasena" id="registro_confirmar_contrasena" placeholder="*******">
+                    <button type="submit" class="crear-cuenta">Crear cuenta</button>
+                </form>
+
+            </div>
+    </section>
+
 </body>
 </html>
