@@ -1,0 +1,25 @@
+{
+  "name": "smart_access",
+  "version": "1.0.0",
+  "description": "Control de ingresos y salidas para las instalaciones del SENA.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./css/style.css -o ./css/dist.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com"
+  },
+  "homepage": "https://github.com",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
