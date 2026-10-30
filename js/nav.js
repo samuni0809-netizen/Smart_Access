@@ -9,7 +9,7 @@ fetch("../components/nav.html")
         console.error("Error en cargar la navegación: ", error)
     })
 
-    fetch("../components/nav_vigilante.html")
+    fetch("../components/nav_vigilante.php")
     .then(response => response.text())
     .then(data => {
         document.getElementById("navegación-header_vigilante").innerHTML = data;
@@ -18,7 +18,7 @@ fetch("../components/nav.html")
         console.error("Error en cargar la navegación: ", error)
     })
 
-    fetch("../components/nav_usuario.html")
+    fetch("../components/nav_usuario.php")
     .then(response => response.text())
     .then(data => {
         document.getElementById("navegacion-header_Usuario").innerHTML = data;

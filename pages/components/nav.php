@@ -11,23 +11,23 @@
     <nav>
         <ul>
             <li>
-                <a href="dashboard.html">Dashboard</a>
+                <a href="dashboard.php">Dashboard</a>
             </li>
 
             <li>
-                <a href="historial_ingresos.html">Historial de ingresos</a>
+                <a href="historial_ingresos.php">Historial de ingresos</a>
             </li>
 
             <li>
-                <a href="usuarios.html">Usuarios</a>
+                <a href="usuarios.php">Usuarios</a>
             </li>
 
             <li>
-                <a href="computadores.html">Computadores</a>
+                <a href="computadores.php">Computadores</a>
             </li>
 
             <li>
-                <a href="vehiculos.html">Vehículos</a>
+                <a href="vehiculos.php">Vehículos</a>
             </li>
 
             <!-- MENÚ DESPLEGABLE PARA LOS REGISTROS -->
@@ -36,28 +36,28 @@
                 <details open>
                     <summary>Registrar</summary>
                     <ul>
-                        <li><a href="reg_usuario.html">Usuario</a>
+                        <li><a href="reg_usuario.php">Usuario</a>
                         </li>
-                        <li><a href="reg_vigilante.html">Vigilante</a>
+                        <li><a href="reg_vigilante.php">Vigilante</a>
                         </li>
-                        <li><a href="reg_computador.html">Computador</a></li>
-                        <li><a href="reg_vehiculo.html">Vehículo</a></li>
+                        <li><a href="reg_computador.php">Computador</a></li>
+                        <li><a href="reg_vehiculo.php">Vehículo</a></li>
                     </ul>
                 </details>
             </li>
 
             <li>
-                <a href="auditoria.html">Auditoría</a>
+                <a href="auditoria.php">Auditoría</a>
             </li>
 
             <hr>
 
             <li>
-                <a href="perfil.html">Mi perfil</a>
+                <a href="perfil.php">Mi perfil</a>
             </li>
 
             <li>
-                <a href="../login/index.html">Cerrar Sesion</a>
+                <a href="../login/index.php">Cerrar Sesion</a>
             </li>
         </ul>
     </nav>
