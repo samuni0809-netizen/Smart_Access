@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/dist.css">
+</head>
+
+<body>
+
+    <main>
+
+        <!-- PANEL INFORMATIVO -->
+        <section>
+
+            <!-- Encabezado y logo -->
+            <header>
+                <h2>SENA</h2>
+            </header>
+
+            <!-- Presentación -->
+            <div>
+                <h1>Sistema de control de acceso</h1>
+
+                <p>
+                    hola soy hector jajajaj
+                    Plataforma institucional para el registro y control
+                    de ingreso de personas, equipos y vehículos dentro
+                    de las instalaciones.
+                </p>
+            </div>
+
+            <!-- Lista de funcionalidades -->
+            <ul>
+
+                <li>
+                    <span>📋</span>
+                    Registro de ingresos y salidas en tiempo real
+                </li>
+
+                <li>
+                    <span>💻</span>
+                    Control de dispositivos y computadores
+                </li>
+
+                <li>
+                    <span>🚗</span>
+                    Monitoreo y trazabilidad de vehículos
+                </li>
+
+                <li>
+                    <span>🔒</span>
+                    Auditoría completa de acciones del sistema
+                </li>
+
+            </ul>
+
+            <!-- Pie de página -->
+            <footer>
+                © 2026 SENA — Servicio Nacional de Aprendizaje
+            </footer>
+
+        </section>
+
+
+        <!-- PANEL DE AUTENTICACIÓN -->
+        <section>
+
+            <!-- Opciones de ingreso y registro -->
+            <nav aria-label="Opciones de autenticación">
+
+                <button type="button">
+                    Ingresar
+                </button>
+
+                <button type="button">
+                    Registrarse
+                </button>
+
+            </nav>
+
+
+            <!-- FORMULARIO DE INGRESO -->
+            <div>
+
+                <header>
+                    <h2>Bienvenido</h2>
+                    <p>Ingresa tus credenciales</p>
+                </header>
+
+                <form action="" method="POST">
+
+                    <div>
+                        <label for="login_documento">
+                            Documento
+                        </label>
+
+                        <input
+                            type="text"
+                            name="documento"
+                            id="login_documento"
+                            placeholder="Número de documento"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="login_contrasena">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            name="contrasena"
+                            id="login_contrasena"
+                            placeholder="**********"
+                            required>
+                    </div>
+
+                    <button type="submit">
+                        Iniciar sesión
+                    </button>
+
+                </form>
+
+                <a href="pages/login/recuperar-contrasena.html">
+                    ¿Olvidaste tu contraseña?
+                </a>
+
+            </div>
+
+
+            <!-- FORMULARIO DE REGISTRO -->
+            <div>
+
+                <header>
+                    <h2>Crear cuenta</h2>
+
+                    <p>
+                        Completa el formulario para registrarte en el sistema
+                    </p>
+                </header>
+
+                <form action="" method="POST">
+
+                    <div>
+                        <label for="registro_nombre">
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            name="nombre"
+                            id="registro_nombre"
+                            placeholder="Juanito alimaña"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="registro_correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            name="correo"
+                            id="registro_correo"
+                            placeholder="correo@gmail.com"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="registro_documento">
+                            Número de documento
+                        </label>
+
+                        <input
+                            type="text"
+                            name="documento"
+                            id="registro_documento"
+                            placeholder="1023456542"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="registro_contrasena">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            name="contrasena"
+                            id="registro_contrasena"
+                            placeholder="Mínimo 6 caracteres"
+                            minlength="6"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="registro_confirmar_contrasena">
+                            Confirmar contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            name="confirmar_contrasena"
+                            id="registro_confirmar_contrasena"
+                            placeholder="********"
+                            minlength="6"
+                            required>
+                    </div>
+
+                    <button type="submit">
+                        Crear cuenta
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
