@@ -1,156 +1,338 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Panel Administrativo - SENA </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Dashboard | Panel Administrativo - SENA</title>
 </head>
 
 <body>
-    <!-- NAVEGACIÓN COMPARTIDA ENTRE PÁGINAS  -->
-    <header>
-        <div id="navegacion-header"></div>
 
-        <div>
-            <button>
-                <p>Este es el boton para abrir la barra de navegación</p>
-            </button>
-            <div>
-                <h1>Dashboard</h1>
-                <p>Panel Administrativo</p>
-            </div>
+    <!-- ESTRUCTURA GENERAL DE LA APLICACIÓN -->
+    <div class="estructura-administrativa">
+
+        <!-- NAVEGACIÓN LATERAL COMPARTIDA -->
+        <aside id="navegacion-header"
+            class="contenedor-navegacion"
+            aria-label="Navegación principal">
+        </aside>
+
+
+        <!-- CONTENIDO DERECHO -->
+        <div class="contenido-aplicacion">
+
+            <!-- ENCABEZADO SUPERIOR -->
+            <header class="encabezado-pagina">
+
+                <div class="informacion-pagina">
+
+                    <h1>Dashboard</h1>
+
+                    <p>Panel Administrativo</p>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENIDO PRINCIPAL DEL DASHBOARD -->
+            <main class="contenido-dashboard">
+
+                <!-- TÍTULO DEL PANEL -->
+                <section class="encabezado-dashboard"
+                    aria-labelledby="titulo-panel-control">
+
+                    <h2 id="titulo-panel-control">
+                        Panel de Control
+                    </h2>
+
+                    <p>
+                        <time datetime="2026-11-11">
+                            Miércoles, 11 de noviembre de 2026
+                        </time>
+                    </p>
+
+                </section>
+
+
+                <!-- TARJETAS ESTADÍSTICAS -->
+                <section class="estadisticas-dashboard"
+                    aria-label="Resumen de estadísticas">
+
+
+                    <!-- TARJETA DE USUARIOS -->
+                    <article class="tarjeta-estadistica">
+
+                        <div class="informacion-estadistica">
+
+                            <h3>Usuarios</h3>
+
+                            <p class="valor-estadistica">20</p>
+
+                        </div>
+
+                        <span class="icono-estadistica"
+                            aria-hidden="true">👥</span>
+
+                        <div class="indicador-estadistica"
+                            aria-hidden="true"></div>
+
+                    </article>
+
+
+                    <!-- TARJETA DE COMPUTADORES -->
+                    <article class="tarjeta-estadistica">
+
+                        <div class="informacion-estadistica">
+
+                            <h3>Computadores</h3>
+
+                            <p class="valor-estadistica">20</p>
+
+                        </div>
+
+                        <span class="icono-estadistica"
+                            aria-hidden="true">💻</span>
+
+                        <div class="indicador-estadistica"
+                            aria-hidden="true"></div>
+
+                    </article>
+
+
+                    <!-- TARJETA DE VEHÍCULOS -->
+                    <article class="tarjeta-estadistica">
+
+                        <div class="informacion-estadistica">
+
+                            <h3>Vehículos</h3>
+
+                            <p class="valor-estadistica">16</p>
+
+                        </div>
+
+                        <span class="icono-estadistica"
+                            aria-hidden="true">🚘</span>
+
+                        <div class="indicador-estadistica"
+                            aria-hidden="true"></div>
+
+                    </article>
+
+
+                    <!-- TARJETA DE vigilanteS -->
+                    <article class="tarjeta-estadistica">
+
+                        <div class="informacion-estadistica">
+
+                            <h3>vigilantes</h3>
+
+                            <p class="valor-estadistica">6</p>
+
+                        </div>
+
+                        <span class="icono-estadistica"
+                            aria-hidden="true">🛡️</span>
+
+                        <div class="indicador-estadistica"
+                            aria-hidden="true"></div>
+
+                    </article>
+
+
+                    <!-- TARJETA DE ADMINISTRADORES -->
+                    <article class="tarjeta-estadistica">
+
+                        <div class="informacion-estadistica">
+
+                            <h3>Administradores</h3>
+
+                            <p class="valor-estadistica">5</p>
+
+                        </div>
+
+                        <span class="icono-estadistica"
+                            aria-hidden="true">🪪</span>
+
+                        <div class="indicador-estadistica"
+                            aria-hidden="true"></div>
+
+                    </article>
+
+
+                    <!-- TARJETA DE INGRESOS -->
+                    <article class="tarjeta-estadistica">
+
+                        <div class="informacion-estadistica">
+
+                            <h3>Ingresos hoy</h3>
+
+                            <p class="valor-estadistica">12</p>
+
+                        </div>
+
+                        <span class="icono-estadistica"
+                            aria-hidden="true">↑</span>
+
+                        <div class="indicador-estadistica"
+                            aria-hidden="true"></div>
+
+                    </article>
+
+
+                    <!-- TARJETA DE SALIDAS -->
+                    <article class="tarjeta-estadistica">
+
+                        <div class="informacion-estadistica">
+
+                            <h3>Salidas hoy</h3>
+
+                            <p class="valor-estadistica">9</p>
+
+                        </div>
+
+                        <span class="icono-estadistica"
+                            aria-hidden="true">↓</span>
+
+                        <div class="indicador-estadistica"
+                            aria-hidden="true"></div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- GRÁFICA DE ACTIVIDAD SEMANAL -->
+                <section class="seccion-actividad"
+                    aria-labelledby="titulo-actividad">
+
+                    <!-- ENCABEZADO DE LA GRÁFICA -->
+                    <header class="encabezado-actividad">
+
+                        <h3 id="titulo-actividad">
+                            Actividad Semanal
+                        </h3>
+
+                        <p>Ingresos y salidas</p>
+
+                    </header>
+
+                    <!-- LEYENDA DE LA GRÁFICA -->
+                    <div class="leyenda-actividad"
+                        aria-label="Datos representados en la gráfica">
+
+                        <span class="leyenda-ingresos">
+                            Ingresos
+                        </span>
+
+                        <span class="leyenda-salidas">
+                            Salidas
+                        </span>
+
+                    </div>
+
+                    <!-- ESPACIO RESERVADO PARA LA GRÁFICA -->
+                    <div id="grafica-actividad-semanal"
+                        class="grafica-actividad"
+                        role="img"
+                        aria-label="Gráfica semanal que compara los ingresos y las salidas por día">
+                    </div>
+
+                </section>
+
+
+                <!-- TABLA DE ÚLTIMOS REGISTROS -->
+                <section class="seccion-ultimos-registros"
+                    aria-labelledby="titulo-ultimos-registros">
+
+                    <!-- ENCABEZADO DE LA TABLA -->
+                    <header class="encabezado-registros">
+
+                        <h3 id="titulo-ultimos-registros">
+                            Últimos registros de accesos
+                        </h3>
+
+                        <p>Registros recientes del sistema</p>
+
+                    </header>
+
+
+                    <!-- TABLA DE ACCESOS -->
+                    <div class="contenedor-tabla-registros">
+
+                        <table class="tabla-ultimos-registros">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th scope="col">Usuario</th>
+
+                                    <th scope="col">Hora</th>
+
+                                    <th scope="col">Documento</th>
+
+                                    <th scope="col">Movimiento</th>
+
+                                    <th scope="col">Estado de elementos</th>
+
+                                    <th scope="col">Centro</th>
+
+                                    <th scope="col">Vigilante</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <!-- REGISTRO DE EJEMPLO -->
+                                <tr>
+
+                                    <td>Información del usuario</td>
+
+                                    <td>--:--</td>
+
+                                    <td>Documento del usuario</td>
+
+                                    <td>Movimiento</td>
+
+                                    <td>Estado de elementos</td>
+
+                                    <td>Centro de formación</td>
+
+                                    <td>Nombre del vigilante</td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+
+            <!-- PIE DE PÁGINA -->
+            <footer class="pie-dashboard">
+
+                <p>Sistema de Control de Acceso - SENA</p>
+
+            </footer>
+
         </div>
 
-    </header>
-    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
-    <main>
-
-        <!-- TÍTULO DE LA PÁGINA -->
-        <section>
-            <h1>Panel de Control</h1>
-            <p>Fecha de hoy</p>
-        </section>
-
-        <!-- CONTENIDO DE LAS CAJAS ESTADÍSTICAS -->
-        <section>
-            <section>
-                <div>
-                    <div>
-                        <h2>Usuarios</h2>
-                        <p>Cantidad de usuarios</p>
-                        <a href="#">Ver</a>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div>
-                    <div>
-                        <h2>Vigilantes</h2>
-                        <p>Cantidad de vigilantes</p>
-                        <a href="#">Ver</a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div>
-                        <h2>Computadores</h2>
-                        <p>Cantidad de computadores</p>
-                        <a href="#">Ver</a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div>
-                        <h2>Vehículos</h2>
-                        <p>Cantidad de vehículos</p>
-                        <a href="#">Ver</a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div>
-                        <h2>Ingresos</h2>
-                        <p>Cantidad de ingresos</p>
-                        <a href="#">Ver</a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div>
-                        <h2>Salidas</h2>
-                        <p>Cantidad de salidas</p>
-                        <a href="#">Ver</a>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!-- GRÁFICA DE LA ACTIVIDAD SEMANAL -->
-        <section>
-            <p> En esta sección va la gráfica de estadísticas semanales, la cual se completa con html, css y js. Por el
-                momento no se hará. </p>
-        </section>
-
-        <!-- TABLA DE ÚLTIMOS ACCESOS -->
-        <section>
-            <div>
-                <h3>Últimos registros de accesos</h3>
-                <p>Dia de hoy</p>
-            </div>
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Usuario</th>
-                            <th>Hora</th>
-                            <th>Documento</th>
-                            <th>Movimiento</th>
-                            <th>Estado de elementos</th>
-                            <th>Centro</th>
-                            <th>Vigilante</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>informacion del footer</p>
-    </footer>
+    </div>
 
 
-    <!-- ENLACES DE BOOSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <!-- ARCHIVO DE NAVEGACIÓN COMPARTIDA -->
+    <script src="../../js/nav.js"></script>
 
 </body>
-
-<!-- ENLACES JS PARA EL FUNCIONAMIENTO DE LA PÁGINA -->
-
-<script src="../../js/nav.js"></script>
 
 </html>
