@@ -1,64 +1,209 @@
-<!-- Navegación compartida en todos los archivos del administrador, mediante el archivo "nav.js" -->
 
-<!-- NOMBRE Y LOGO -->
+<!-- CONTENEDOR DE LA BARRA LATERAL -->
+<div class="barra-lateral">
 
-<div>
-    <img src="#" alt="Logotipo SENA">
-    <h1>Smart Access</h1>
-</div>
+    <!-- LOGO Y NOMBRE DEL SISTEMA -->
+    <header class="encabezado-navegacion">
 
-<div>
-    <nav>
-        <ul>
-            <li>
-                <a href="dashboard.html">Dashboard</a>
+            <span class="logo-sena" aria-hidden="true">
+                S
+            </span>
+
+            <span class="nombre-sistema">
+
+                <strong>SENA</strong>
+
+                <small>CONTROL ACCESO</small>
+
+            </span>
+
+    </header>
+
+
+    <!-- INFORMACIÓN DEL ADMINISTRADOR -->
+    <section class="informacion-administrador"
+        aria-label="Información del administrador">
+
+        <p class="cargo-administrador">
+            ADMINISTRADOR PRINCIPAL
+        </p>
+
+        <h2 class="nombre-administrador">
+            Diego Alejandro Vargas Mesa
+        </h2>
+
+    </section>
+
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu-principal"
+        aria-label="Menú principal">
+
+        <p class="titulo-menu">
+            MENÚ PRINCIPAL
+        </p>
+
+        <ul class="lista-menu">
+
+
+            <!-- DASHBOARD -->
+            <li class="elemento-menu">
+
+                <a href="dashboard.html">
+
+                    <span>Dashboard</span>
+
+                </a>
+
             </li>
 
-            <li>
-                <a href="historial_ingresos.html">Historial de ingresos</a>
+
+            <!-- HISTORIAL DE INGRESOS -->
+            <li class="elemento-menu">
+
+                <a href="historial_ingresos.html">
+
+                    <span>Historial de ingresos</span>
+
+                </a>
+
             </li>
 
-            <li>
-                <a href="usuarios.html">Usuarios</a>
+
+            <!-- USUARIOS -->
+            <li class="elemento-menu">
+
+                <a href="usuarios.html">
+
+                    <span>Usuarios</span>
+
+                </a>
+
             </li>
 
-            <li>
-                <a href="computadores.html">Computadores</a>
+
+            <!-- VEHÍCULOS -->
+            <li class="elemento-menu">
+
+                <a href="vehiculos.html">
+
+                    <span>Vehículos</span>
+
+                </a>
+
             </li>
 
-            <li>
-                <a href="vehiculos.html">Vehículos</a>
+
+            <!-- DISPOSITIVOS -->
+            <li class="elemento-menu">
+
+                <a href="computadores.html">
+
+                    <span>Dispositivos</span>
+
+                </a>
+
             </li>
 
-            <!-- MENÚ DESPLEGABLE PARA LOS REGISTROS -->
 
-            <li>
-                <details open>
-                    <summary>Registrar</summary>
-                    <ul>
-                        <li><a href="reg_usuario.html">Usuario</a>
+            <!-- MENÚ DESPLEGABLE DE REGISTRO -->
+            <li class="elemento-menu elemento-menu-desplegable">
+
+                <details>
+
+                    <summary>
+
+                        <span class="contenido-resumen">
+
+                            <span>Registrar</span>
+
+                        </span>
+
+                    </summary>
+
+
+                    <!-- SUBMENÚ DE REGISTROS -->
+                    <ul class="submenu-registros">
+
+                        <li>
+                            <a href="reg_usuario.html">
+                                Usuario
+                            </a>
                         </li>
-                        <li><a href="reg_vigilante.html">Vigilante</a>
+
+                        <li>
+                            <a href="reg_vigilante.html">
+                                Vigilante
+                            </a>
                         </li>
-                        <li><a href="reg_computador.html">Computador</a></li>
-                        <li><a href="reg_vehiculo.html">Vehículo</a></li>
+
+                        <li>
+                            <a href="reg_computador.html">
+                                Computador
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reg_vehiculo.html">
+                                Vehículo
+                            </a>
+                        </li>
+
                     </ul>
+
                 </details>
+
             </li>
 
-            <li>
-                <a href="auditoria.html">Auditoría</a>
+
+            <!-- ESCÁNER DE PORTEROS -->
+            <li class="elemento-menu">
+
+                <a href="escaner_porteros.html">
+
+                    <span>Escáner de porteros</span>
+
+                </a>
+
             </li>
 
-            <hr>
 
-            <li>
-                <a href="perfil.html">Mi perfil</a>
+            <!-- AUDITORÍA -->
+            <li class="elemento-menu">
+
+                <a href="auditoria.html">
+
+                    <span>Auditoría</span>
+
+                </a>
+
             </li>
 
-            <li>
-                <a href="../login/index.html">Cerrar Sesion</a>
+
+            <!-- MI PERFIL -->
+            <li class="elemento-menu">
+
+                <a href="perfil.html">
+
+                    <span>Mi Perfil</span>
+
+                </a>
+
             </li>
+
+            <!-- Cerrar Sesion -->
+            <li class="elemento-menu">
+
+                <a href="../../index.html">
+
+                    <span>Cerrar Sesion</span>
+
+                </a>
+
+            </li>
+
         </ul>
+
     </nav>
+
 </div>

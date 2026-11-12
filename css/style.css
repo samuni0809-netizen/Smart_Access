@@ -1,1 +1,363 @@
-@import "tailwindcss";
+/* Variables de colores */
+
+:root {
+    --primary-color: #39A900;
+    --primary-dark: #007832; 
+    --primary-light: #00304d;
+    --accent-color: #50e5f9;
+    --secondary-color: #71277A;
+    --secondary-bg: #f6f0f7;
+    --success-color: #39A900;
+    --background-color: #f6f6f6;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --sidebar-bg: #00304d;
+    --sidebar-bg-light: #184a72;
+    --success-bg: #dcf5cf;
+    --success-text: #007832;
+    --muted-bg: #e2e8f0;
+    --muted-text: #475569;
+    --danger-color: #dc2626;
+    --warning-color: #fdc300;
+}
+
+/* Panel informativo */
+
+.panel-informativo{
+    background-color: var(--primary-dark);
+    color: var(--muted-bg);
+}
+
+.titulo-informativo{
+    max-width: 520px;
+}
+
+.descripcion-informativa{
+    max-width: 540px;
+}
+
+.lista-funcionalidades{
+    max-width: 520px;
+}
+
+/* Logo */
+
+.logo-sena{
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+}
+
+.letra-logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Titulo informativo */
+
+.titulo-informativo{
+    color: white;
+}
+
+/* Panel de auteticacion */
+
+.panel-autenticacion{
+    padding: 40px;
+}
+
+.contenedor-autenticacion{
+    width: 100%;
+    max-width: 520px;
+}
+
+/* Pestañas de autenticacion */
+
+.pestanas-autenticacion{
+    margin-bottom: 32px;
+    padding: 6px;
+    background-color: var(--muted-bg);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pestanas-autenticacion .nav-link{
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-radius: 12px;
+}
+
+.pestanas-autenticacion .nav-link.active {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Formularios */
+
+.panel-autenticacion{
+    background-color: var(--background-color);
+}
+
+.encabezado-formulario{
+    margin-bottom: 24px;
+}
+
+.encabezado-formulario h2{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.encabezado-formulario p{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+/* Etiqueta de los campos */
+
+.form-label{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Campos de texto y contraseña */
+
+.form-control{
+    min-height: 48px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Botones */
+
+.panel-autenticacion .btn{
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Recuperar contraseña */
+
+.recuperacion-contrasena{
+    margin-top: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.recuperacion-contrasena a{
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+
+/* Diseño responsive - tablets celulares*/
+
+@media (max-width: 991.98px){
+    /* panel informativo */
+
+    .panel-informativo{
+        min-height: auto;
+        gap: 40px;
+    }
+
+    .panel-autenticacion{
+        min-height: auto;
+        padding: 40px 24px;
+    }
+
+    /* contenedor de los formularios */
+
+    .contenedor-autenticacion{
+        max-width: 520px;
+    }
+}
+
+/* Diseño resposive - celulares */
+
+@media (max-width: 575.98px){
+    /* panel informativo */
+
+    .panel-informativo{
+        padding: 32px 24px;
+    }
+
+    /* titulo principal */
+    .titulo-informativo{
+        font-size: 2rem;
+    }
+
+    /* panel de autenticacion */
+
+    .panel-autenticacion{
+        padding: 32px 20px;
+    }
+
+    /* pestañas */
+
+    .pestanas-autenticacion{
+        gap: 4px;
+        padding: 5px;
+    }
+
+    .pestanas-autenticacion .nav-link{
+        flex: 1;
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    /* titulos formularios */
+
+    .encabezado-formulario h2{
+        font-size: 24px;
+    }
+}
+
+/* Efectos de campos */
+
+.form-control{
+    border: 1px solid var(--border-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(57, 169, 0, 0.15);
+    outline: none;
+}
+
+/* Efectos de los botones */
+
+.panel-autenticacion .btn{
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.panel-autenticacion .btn:hover{
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* efectos de las pestañas */
+
+.pestanas-autenticacion .nav-link{
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pestanas-autenticacion .nav-link:hover{
+    color: var(--primary-color);
+}
+
+/* Animacion de formularios */
+
+@keyframes aparecerFormulario{
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación al mostrar el inicio de sesión */
+
+#formulario-login:not([hidden]){
+    animation: aparecerFormulario 0.4s ease;
+}
+
+/* Animación al mostrar el registro */
+#formulario-registro:not([hidden]){
+    animation: aparecerFormulario 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce){
+    #formulario-login:not([hidden]),
+    #formulario-registro:not([hidden]){
+        animation: none;
+    }
+}
+
+/* Contenedor de autenticacion */
+
+.contenedor-autenticacion {
+    width: 100%;
+    max-width: 520px;
+    padding: 10px;
+}
+
+/* Estados de los enlaces */
+
+.recuperacion-contrasena a{
+    transition: color 0.2s ease;
+}
+
+.recuperacion-contrasena a:hover{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Accesibilidad del teclado */
+
+.pestanas-autenticacion .nav-link:focus-visible,
+.panel-autenticacion .btn:focus-visible{
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 3px;
+}
+
+/* Lista de funcionalidades */
+
+.lista-funcionalidades{
+    width: 100%;
+    padding: 0;
+    margin-top: 28px;
+}
+
+.lista-funcionalidades li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Pie de pagina */
+
+.pie-informativo{
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+.pie-informativo p{
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Contenido informativo */
+
+.contenido-informativo{
+    width: 100%;
+    max-width: 560px;
+}
+
+.descripcion-informativa{
+    font-size: 16px;
+    line-height: 1.7;
+}

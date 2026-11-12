@@ -5,82 +5,502 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de ingresos | Panel Administrativo - SENA</title>
-    <link rel="stylesheet" href="#">
 </head>
 
 <body>
 
-    <!-- NAVEGACIÓN COMPARTIDA ENTRE PÁGINAS  -->
+    <!-- ESTRUCTURA GENERAL DE LA APLICACIÓN -->
+    <div class="estructura-administrativa">
 
-    <header>
-        <div id="navegacion-header"></div>
+        <!-- NAVEGACIÓN LATERAL COMPARTIDA -->
+        <aside id="navegacion-header" class="contenedor-navegacion" aria-label="Navegación principal">
+        </aside>
 
-        <div>
-            <button>
-                <p>Este es el boton para abrir la barra de navegación</p>
-            </button>
-            <div>
-                <h1>Historial de ingresos</h1>
-                <p>Panel Administrativo</p>
-            </div>
+
+        <!-- CONTENIDO DERECHO -->
+        <div class="contenido-aplicacion">
+
+            <!-- ENCABEZADO SUPERIOR -->
+            <header class="encabezado-pagina">
+
+                <div class="informacion-pagina">
+
+                    <h1>Historial de Ingresos</h1>
+
+                    <p>Panel Administrativo</p>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="contenido-historial">
+
+                <!-- PANEL GENERAL DEL HISTORIAL -->
+                <section class="panel-historial" aria-labelledby="titulo-historial">
+
+
+                    <!-- ENCABEZADO Y FILTROS -->
+                    <div class="encabezado-historial">
+
+                        <!-- TÍTULO Y DESCRIPCIÓN -->
+                        <div class="informacion-historial">
+
+                            <h2 id="titulo-historial">
+                                Historial
+                            </h2>
+
+                            <p>
+                                Buscar nombre, documento, centro, fecha,
+                                matrícula, serial, portero, activos/inactivos
+                            </p>
+
+                        </div>
+
+
+                        <!-- FILTROS DE MOVIMIENTO -->
+                        <div class="filtros-movimiento" aria-label="Filtrar por tipo de movimiento">
+
+                            <button type="button" id="filtro-todos" aria-pressed="true">
+
+                                Todos
+
+                            </button>
+
+                            <button type="button" id="filtro-ingresos" aria-pressed="false">
+
+                                Ingresos
+
+                            </button>
+
+                            <button type="button" id="filtro-salidas" aria-pressed="false">
+
+                                Salidas
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCIONES DEL HISTORIAL -->
+                    <div class="acciones-historial">
+
+                        <button type="button" id="btn-filtrar-fecha">
+
+                            <span aria-hidden="true">▦</span>
+
+                            Filtrar por fecha
+
+                        </button>
+
+                        <button type="button" id="btn-generar-reporte">
+
+                            <span aria-hidden="true">⇩</span>
+
+                            Generar reporte
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- BUSCADOR Y CANTIDAD DE RESULTADOS -->
+                    <div class="busqueda-historial">
+
+                        <!-- FORMULARIO DE BÚSQUEDA -->
+                        <form action="#" method="GET" id="formulario_busqueda" role="search">
+
+                            <label for="busqueda">
+                                Buscar registros
+                            </label>
+
+                            <input type="search" id="busqueda" name="busqueda"
+                                placeholder="Buscar por usuario, documento, portero o centro">
+
+                        </form>
+
+
+                        <!-- RESULTADOS -->
+                        <div class="cantidad-resultados" aria-live="polite">
+
+                            <span id="total-resultados">
+                                135 resultados
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TABLA DEL HISTORIAL -->
+                    <div class="contenedor-tabla-historial">
+
+                        <table class="tabla-historial">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th scope="col">Usuario</th>
+
+                                    <th scope="col">Documento</th>
+
+                                    <th scope="col">Movimiento</th>
+
+                                    <th scope="col">Fecha y hora</th>
+
+                                    <th scope="col">Computadores</th>
+
+                                    <th scope="col">Vehículos</th>
+
+                                    <th scope="col">Estado de elementos</th>
+
+                                    <th scope="col">Portero</th>
+
+                                    <th scope="col">Acción</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <!-- REGISTRO 1 -->
+                                <tr>
+
+                                    <td>
+
+                                        <div class="datos-usuario">
+
+                                            <span class="iniciales-usuario" aria-hidden="true">
+
+                                                CC
+
+                                            </span>
+
+                                            <span class="nombre-usuario">
+                                                Cristian Camilo Duque Orozco
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>1065544332</td>
+
+                                    <td>
+                                        <span class="movimiento salida">
+                                            Salida
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <time datetime="2026-11-11T19:56">
+                                            2026-11-11 19:56
+                                        </time>
+
+                                    </td>
+
+                                    <td>Asus ZenBook 14</td>
+
+                                    <td>Sin vehículo</td>
+
+                                    <td>
+                                        <span class="estado-elementos completo">
+                                            Completo
+                                        </span>
+                                    </td>
+
+                                    <td>Rosa Elena Muñoz Agudelo</td>
+
+                                    <td>
+
+                                        <button type="button" class="boton-ver-registro"
+                                            aria-label="Ver registro de Cristian Camilo Duque Orozco">
+
+                                            <span aria-hidden="true">◉</span>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- REGISTRO 2 -->
+                                <tr>
+
+                                    <td>
+
+                                        <div class="datos-usuario">
+
+                                            <span class="iniciales-usuario" aria-hidden="true">
+
+                                                YA
+
+                                            </span>
+
+                                            <span class="nombre-usuario">
+                                                Yeison Alberto Marín Quiceno
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>1092233445</td>
+
+                                    <td>
+                                        <span class="movimiento salida">
+                                            Salida
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <time datetime="2026-11-11T19:48">
+                                            2026-11-11 19:48
+                                        </time>
+
+                                    </td>
+
+                                    <td>Lenovo Tab P11</td>
+
+                                    <td>Sin vehículo</td>
+
+                                    <td>
+                                        <span class="estado-elementos completo">
+                                            Completo
+                                        </span>
+                                    </td>
+
+                                    <td>Mauricio Andrés Quintero Salas</td>
+
+                                    <td>
+
+                                        <button type="button" class="boton-ver-registro"
+                                            aria-label="Ver registro de Yeison Alberto Marín Quiceno">
+
+                                            <span aria-hidden="true">◉</span>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- REGISTRO 3 -->
+                                <tr>
+
+                                    <td>
+
+                                        <div class="datos-usuario">
+
+                                            <span class="iniciales-usuario" aria-hidden="true">
+
+                                                PA
+
+                                            </span>
+
+                                            <span class="nombre-usuario">
+                                                Paola Andrea Henao Cardona
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>1023445566</td>
+
+                                    <td>
+                                        <span class="movimiento salida">
+                                            Salida
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <time datetime="2026-11-11T17:55">
+                                            2026-11-11 17:55
+                                        </time>
+
+                                    </td>
+
+                                    <td>Dell Vostro 3510</td>
+
+                                    <td>TMP455 · Yamaha XTZ 150</td>
+
+                                    <td>
+                                        <span class="estado-elementos completo">
+                                            Completo
+                                        </span>
+                                    </td>
+
+                                    <td>Nelson David Arroyave Ruiz</td>
+
+                                    <td>
+
+                                        <button type="button" class="boton-ver-registro"
+                                            aria-label="Ver registro de Paola Andrea Henao Cardona">
+
+                                            <span aria-hidden="true">◉</span>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- REGISTRO 4 -->
+                                <tr>
+
+                                    <td>
+
+                                        <div class="datos-usuario">
+
+                                            <span class="iniciales-usuario" aria-hidden="true">
+
+                                                SC
+
+                                            </span>
+
+                                            <span class="nombre-usuario">
+                                                Sebastián Camilo Agudelo Ríos
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>1067788990</td>
+
+                                    <td>
+                                        <span class="movimiento salida">
+                                            Salida
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <time datetime="2026-11-11T17:21">
+                                            2026-11-11 17:21
+                                        </time>
+
+                                    </td>
+
+                                    <td>Sin computador</td>
+
+                                    <td>Sin vehículo</td>
+
+                                    <td>
+                                        <span class="estado-elementos completo">
+                                            Completo
+                                        </span>
+                                    </td>
+
+                                    <td>Nelson David Arroyave Ruiz</td>
+
+                                    <td>
+
+                                        <button type="button" class="boton-ver-registro"
+                                            aria-label="Ver registro de Sebastián Camilo Agudelo Ríos">
+
+                                            <span aria-hidden="true">◉</span>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- REGISTRO 5 -->
+                                <tr>
+
+                                    <td>
+
+                                        <div class="datos-usuario">
+
+                                            <span class="iniciales-usuario" aria-hidden="true">
+
+                                                NG
+
+                                            </span>
+
+                                            <span class="nombre-usuario">
+                                                Natalia Gómez Valencia
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>1034556677</td>
+
+                                    <td>
+                                        <span class="movimiento salida">
+                                            Salida
+                                        </span>
+                                    </td>
+
+                                    <td>
+
+                                        <time datetime="2026-11-11T17:16">
+                                            2026-11-11 17:16
+                                        </time>
+
+                                    </td>
+
+                                    <td>Acer Nitro 5</td>
+
+                                    <td>Sin vehículo</td>
+
+                                    <td>
+                                        <span class="estado-elementos completo">
+                                            Completo
+                                        </span>
+                                    </td>
+
+                                    <td>Mauricio Andrés Quintero Salas</td>
+
+                                    <td>
+
+                                        <button type="button" class="boton-ver-registro"
+                                            aria-label="Ver registro de Natalia Gómez Valencia">
+
+                                            <span aria-hidden="true">◉</span>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </main>
+
         </div>
-    </header>
 
-    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
-    <main>
-        <!-- TABLA DEL HISTORIAL DE INGRESOS -->
-        <section>
-            <div>
-                <h3>Historial de ingresos</h3>
+    </div>
 
-                <button type="button">Todos</button>
-                <button type="button">Ingresos</button>
-                <button type="button">Salidas</button>
 
-                <button type="button">Filtrar por fecha</button>
-                <button type="button">Generar reporte</button>
+    <!-- ARCHIVO DE NAVEGACIÓN COMPARTIDA -->
+    <script src="../../js/nav.js"></script>
 
-                <form action="#" id="formulario_busqueda" role="search">
-                    <input type="search" id="busqueda" placeholder="Buscar por tipo de dato">
-                    <p>Resultados</p>
-                </form>
-            </div>
-
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Usuario</th>
-                            <th>Documento</th>
-                            <th>Movimiento</th>
-                            <th>Fecha</th>
-                            <th>Computador</th>
-                            <th>Vehículo</th>
-                            <th>Estado de elementos</th>
-                            <th>Vigilante</th>
-                            <th>Acción</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
 </body>
-
-<script src="../../js/nav.js"></script>
 
 </html>
