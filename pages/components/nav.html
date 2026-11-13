@@ -1,28 +1,26 @@
-
 <!-- CONTENEDOR DE LA BARRA LATERAL -->
-<div class="barra-lateral">
+<div class="barra-lateral d-flex flex-column min-vh-100">
 
     <!-- LOGO Y NOMBRE DEL SISTEMA -->
-    <header class="encabezado-navegacion">
+    <header class="encabezado-navegacion d-flex align-items-center gap-3">
 
-            <span class="logo-sena" aria-hidden="true">
-                S
-            </span>
+        <span class="logo-sena d-flex align-items-center justify-content-center flex-shrink-0" aria-hidden="true">
+            S
+        </span>
 
-            <span class="nombre-sistema">
+        <span class="nombre-sistema d-flex flex-column">
 
-                <strong>SENA</strong>
+            <strong>SENA</strong>
 
-                <small>CONTROL ACCESO</small>
+            <small>CONTROL ACCESO</small>
 
-            </span>
+        </span>
 
     </header>
 
 
     <!-- INFORMACIÓN DEL ADMINISTRADOR -->
-    <section class="informacion-administrador"
-        aria-label="Información del administrador">
+    <section class="informacion-administrador p-3 rounded-3" aria-label="Información del administrador">
 
         <p class="cargo-administrador">
             ADMINISTRADOR PRINCIPAL
@@ -36,20 +34,19 @@
 
 
     <!-- MENÚ DE NAVEGACIÓN -->
-    <nav class="menu-principal"
-        aria-label="Menú principal">
+    <nav class="menu-principal d-flex flex-column flex-grow-1" aria-label="Menú principal">
 
         <p class="titulo-menu">
             MENÚ PRINCIPAL
         </p>
 
-        <ul class="lista-menu">
+        <ul class="lista-menu d-flex flex-column flex-grow-1">
 
 
             <!-- DASHBOARD -->
             <li class="elemento-menu">
 
-                <a href="dashboard.html">
+                <a href="dashboard.html" class="d-flex align-items-center">
 
                     <span>Dashboard</span>
 
@@ -61,7 +58,7 @@
             <!-- HISTORIAL DE INGRESOS -->
             <li class="elemento-menu">
 
-                <a href="historial_ingresos.html">
+                <a href="historial_ingresos.html" class="d-flex align-items-center">
 
                     <span>Historial de ingresos</span>
 
@@ -73,7 +70,7 @@
             <!-- USUARIOS -->
             <li class="elemento-menu">
 
-                <a href="usuarios.html">
+                <a href="usuarios.html" class="d-flex align-items-center">
 
                     <span>Usuarios</span>
 
@@ -85,7 +82,7 @@
             <!-- VEHÍCULOS -->
             <li class="elemento-menu">
 
-                <a href="vehiculos.html">
+                <a href="vehiculos.html" class="d-flex align-items-center">
 
                     <span>Vehículos</span>
 
@@ -97,7 +94,7 @@
             <!-- DISPOSITIVOS -->
             <li class="elemento-menu">
 
-                <a href="computadores.html">
+                <a href="computadores.html" class="d-flex align-items-center">
 
                     <span>Dispositivos</span>
 
@@ -109,9 +106,9 @@
             <!-- MENÚ DESPLEGABLE DE REGISTRO -->
             <li class="elemento-menu elemento-menu-desplegable">
 
-                <details>
+                <details class="w-100">
 
-                    <summary>
+                    <summary class="d-flex align-items-center justify-content-between">
 
                         <span class="contenido-resumen">
 
@@ -126,25 +123,25 @@
                     <ul class="submenu-registros">
 
                         <li>
-                            <a href="reg_usuario.html">
+                            <a href="reg_usuario.html" class="d-flex align-items-center">
                                 Usuario
                             </a>
                         </li>
 
                         <li>
-                            <a href="reg_vigilante.html">
+                            <a href="reg_vigilante.html" class="d-flex align-items-center">
                                 Vigilante
                             </a>
                         </li>
 
                         <li>
-                            <a href="reg_computador.html">
+                            <a href="reg_computador.html" class="d-flex align-items-center">
                                 Computador
                             </a>
                         </li>
 
                         <li>
-                            <a href="reg_vehiculo.html">
+                            <a href="reg_vehiculo.html" class="d-flex align-items-center">
                                 Vehículo
                             </a>
                         </li>
@@ -159,7 +156,7 @@
             <!-- ESCÁNER DE PORTEROS -->
             <li class="elemento-menu">
 
-                <a href="escaner_porteros.html">
+                <a href="escaner_porteros.html" class="d-flex align-items-center">
 
                     <span>Escáner de porteros</span>
 
@@ -171,7 +168,7 @@
             <!-- AUDITORÍA -->
             <li class="elemento-menu">
 
-                <a href="auditoria.html">
+                <a href="auditoria.html" class="d-flex align-items-center">
 
                     <span>Auditoría</span>
 
@@ -183,7 +180,7 @@
             <!-- MI PERFIL -->
             <li class="elemento-menu">
 
-                <a href="perfil.html">
+                <a href="perfil.html" class="d-flex align-items-center">
 
                     <span>Mi Perfil</span>
 
@@ -192,9 +189,9 @@
             </li>
 
             <!-- Cerrar Sesion -->
-            <li class="elemento-menu">
+            <li class="elemento-menu mt-auto">
 
-                <a href="../../index.html">
+                <a href="../../index.html" class="d-flex align-items-center">
 
                     <span>Cerrar Sesion</span>
 

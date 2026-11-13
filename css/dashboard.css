@@ -1,0 +1,61 @@
+/* Variables de colores */
+
+:root {
+    --primary-color: #39A900;
+    --primary-dark: #007832; 
+    --primary-light: #00304d;
+    --accent-color: #50e5f9;
+    --secondary-color: #71277A;
+    --secondary-bg: #f6f0f7;
+    --success-color: #39A900;
+    --background-color: #f6f6f6;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --sidebar-bg: #00304d;
+    --sidebar-bg-light: #184a72;
+    --success-bg: #dcf5cf;
+    --success-text: #007832;
+    --muted-bg: #e2e8f0;
+    --muted-text: #475569;
+    --danger-color: #dc2626;
+    --warning-color: #fdc300;
+}
+
+/* Contenido principal */
+
+.contenido-aplicacion{
+    min-width: 0;
+}
+
+/* Encabezado superior */
+
+.encabezado-pagina{
+    background-color: #ffffff;
+    min-height: 84px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.informacion-pagina h1{
+    color: var(--text-dark);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.informacion-pagina p{
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Titulo del panel */
+
+.encabezado-dashboard h2{
+    color: var(--text-dark);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.encabezado-dashboard p{
+    color: var(--text-muted);
+    font-size: 16px;
+}

@@ -1,0 +1,169 @@
+/* Variables de colores */
+
+:root {
+    --primary-color: #39A900;
+    --color-nombre-sistema: #b7c9d6;
+    --color-links: #c5d4df;
+    --primary-dark: #007832; 
+    --primary-light: #00304d;
+    --accent-color: #50e5f9;
+    --secondary-color: #71277A;
+    --secondary-bg: #f6f0f7;
+    --success-color: #39A900;
+    --background-color: #f6f6f6;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --sidebar-bg: #00304d;
+    --sidebar-bg-light: #184a72;
+    --success-bg: #dcf5cf;
+    --success-text: #007832;
+    --muted-bg: #e2e8f0;
+    --muted-text: #475569;
+    --danger-color: #dc2626;
+    --warning-color: #fdc300;
+}
+
+/* Barra lateral */
+
+.barra-lateral {
+    width: 280px;
+    min-width: 280px;
+    background-color: var(--sidebar-bg);
+    color: #ffffff;
+    padding: 24px;
+    height: 100%;
+}
+
+.encabezado-navegacion{
+    margin-bottom: 24px;
+}
+
+.logo-sena{
+    width: 46px;
+    height: 46px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nombre-sistema{
+    line-height: 1.2;
+}
+
+.nombre-sistema strong{
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.nombre-sistema small{
+    color: var(--color-nombre-sistema);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Informacion del administrador */
+
+.informacion-administrador{
+    background-color: var(--sidebar-bg-light);
+    margin-bottom: 28px;
+}
+
+.cargo-administrador{
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.nombre-administrador{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Menu principal */
+
+.titulo-menu{
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.lista-menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.elemento-menu{
+    margin-bottom: 8px;
+}
+
+.elemento-menu a, .elemento-menu summary{
+    padding: 10px 8px;
+    color: var(--color-links);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.elemento-menu a:hover, .elemento-menu summary:hover{
+    background-color: var(--sidebar-bg-light);
+    color: #ffffff;
+}
+
+/* Submenu registrar */
+
+.elemento-menu details{
+    width: 100%;
+}
+
+.elemento-menu summary{
+    list-style: none;
+}
+
+.elemento-menu summary::-webkit-details-marker{
+    display: none;
+}
+
+.elemento-menu summary::after{
+    content: "⌄";
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.elemento-menu details[open] summary::after{
+    transform: rotate(180deg);
+}
+
+.submenu-registros{
+    list-style: none;
+    padding: 6px 0 6px 18px;
+    margin: 0;
+}
+
+.submenu-registros li a{
+    font-size: 14px;
+    padding: 9px 10px;
+}
+
+/* Cerrar sesion */
+
+.elemento-menu:last-child{
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.elemento-menu:last-child a{
+    color: #ff8585;
+    font-weight: 600;
+}
