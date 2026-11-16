@@ -4,7 +4,7 @@
     --primary-color: #39A900;
     --color-nombre-sistema: #b7c9d6;
     --color-links: #c5d4df;
-    --primary-dark: #007832; 
+    --primary-dark: #007832;
     --primary-light: #00304d;
     --accent-color: #50e5f9;
     --secondary-color: #71277A;
@@ -26,20 +26,28 @@
 
 /* Barra lateral */
 
+.contenedor-navegacion {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    align-self: flex-start;
+}
+
 .barra-lateral {
     width: 280px;
     min-width: 280px;
+    height: 100%;
     background-color: var(--sidebar-bg);
     color: #ffffff;
     padding: 24px;
-    height: 100%;
+    overflow: hidden;
 }
 
-.encabezado-navegacion{
+.encabezado-navegacion {
     margin-bottom: 24px;
 }
 
-.logo-sena{
+.logo-sena {
     width: 46px;
     height: 46px;
     background-color: var(--primary-color);
@@ -49,16 +57,16 @@
     font-weight: 700;
 }
 
-.nombre-sistema{
+.nombre-sistema {
     line-height: 1.2;
 }
 
-.nombre-sistema strong{
+.nombre-sistema strong {
     font-size: 18px;
     color: #ffffff;
 }
 
-.nombre-sistema small{
+.nombre-sistema small {
     color: var(--color-nombre-sistema);
     font-size: 12px;
     letter-spacing: 1px;
@@ -66,19 +74,19 @@
 
 /* Informacion del administrador */
 
-.informacion-administrador{
+.informacion-administrador {
     background-color: var(--sidebar-bg-light);
     margin-bottom: 28px;
 }
 
-.cargo-administrador{
+.cargo-administrador {
     color: var(--accent-color);
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
-.nombre-administrador{
+.nombre-administrador {
     color: #ffffff;
     font-size: 18px;
     font-weight: 600;
@@ -88,7 +96,7 @@
 
 /* Menu principal */
 
-.titulo-menu{
+.titulo-menu {
     color: var(--text-muted);
     font-size: 12px;
     font-weight: 700;
@@ -96,17 +104,36 @@
     margin-bottom: 16px;
 }
 
-.lista-menu{
+.lista-menu {
     list-style: none;
     padding: 0;
     margin: 0;
+    min-height: 0;
+    overflow-y: auto;
 }
 
-.elemento-menu{
+.lista-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lista-menu::-webkit-scrollbar-track {
+    background-color: var(--sidebar-bg);
+}
+
+.lista-menu::-webkit-scrollbar-thumb {
+    background-color: var(--sidebar-bg-light);
+}
+
+.menu-principal {
+    min-height: 0;
+}
+
+.elemento-menu {
     margin-bottom: 8px;
 }
 
-.elemento-menu a, .elemento-menu summary{
+.elemento-menu a,
+.elemento-menu summary {
     padding: 10px 8px;
     color: var(--color-links);
     text-decoration: none;
@@ -116,54 +143,81 @@
     cursor: pointer;
 }
 
-.elemento-menu a:hover, .elemento-menu summary:hover{
+.elemento-menu a:hover,
+.elemento-menu summary:hover {
     background-color: var(--sidebar-bg-light);
     color: #ffffff;
 }
 
 /* Submenu registrar */
 
-.elemento-menu details{
+.elemento-menu details {
     width: 100%;
 }
 
-.elemento-menu summary{
+.elemento-menu summary {
     list-style: none;
 }
 
-.elemento-menu summary::-webkit-details-marker{
+.elemento-menu summary::-webkit-details-marker {
     display: none;
 }
 
-.elemento-menu summary::after{
+.elemento-menu summary::after {
     content: "⌄";
     font-size: 20px;
     transition: transform 0.2s ease;
 }
 
-.elemento-menu details[open] summary::after{
+.elemento-menu details[open] summary::after {
     transform: rotate(180deg);
 }
 
-.submenu-registros{
+.submenu-registros {
     list-style: none;
     padding: 6px 0 6px 18px;
     margin: 0;
 }
 
-.submenu-registros li a{
+.submenu-registros li a {
     font-size: 14px;
     padding: 9px 10px;
 }
 
 /* Cerrar sesion */
 
-.elemento-menu:last-child{
+.cerrar-sesion {
+    flex-shrink: 0;
     padding-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.elemento-menu:last-child a{
-    color: #ff8585;
+.cerrar-sesion a {
+    padding: 10px 8px;
+    color: var(--danger-color);
+    font-size: 16px;
     font-weight: 600;
+    border-radius: 8px;
+}
+
+.cerrar-sesion a:hover {
+    background-color: var(--sidebar-bg-light);
+    color: white;
+}
+
+@media (max-width: 767.98px) {
+    .contenedor-navegacion{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 1051;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .estructura-administrativa.menu-abierto .contenedor-navegacion{
+        transform: translateY(0);
+    }
 }
