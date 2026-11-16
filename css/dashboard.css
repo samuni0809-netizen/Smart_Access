@@ -22,6 +22,10 @@
     --warning-color: #fdc300;
 }
 
+body{
+    background-color: var(--background-color);
+}
+
 /* Contenido principal */
 
 .contenido-aplicacion{
@@ -58,4 +62,240 @@
 .encabezado-dashboard p{
     color: var(--text-muted);
     font-size: 16px;
+}
+
+/* Actividad semanal */
+
+.seccion-actividad{
+    margin-top: 24px;
+    border-color: var(--border-color) !important;
+    margin-bottom: 24px;
+}
+
+.encabezado-actividad h3{
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.encabezado-actividad p{
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.grafica-actividad{
+    min-height: 260px;
+}
+
+/* Seccion ultimos registros */
+
+.seccion-ultimos-registros{
+    margin-top: 24px;
+    border-color: var(--border-color) !important;
+}
+
+.encabezado-registros h3{
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+
+.encabezado-registros p{
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Encabezados de la tabla */
+
+.tabla-ultimos-registros thead th{
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Pie de pagina */
+
+.pie-dashboard{
+    padding: 18px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.pie-dashboard p{
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .contenido-dashboard{
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .encabezado-pagina{
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+/* Tarjetas de estadísticas */
+
+.tarjeta-estadistica {
+    min-height: 120px;
+    padding: 16px 20px !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-estadistica:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Información de las tarjetas */
+
+.informacion-estadistica h3 {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+}
+
+.informacion-estadistica {
+    min-width: 0;
+    flex: 1;
+}
+
+.informacion-estadistica h3{
+    overflow-wrap: break-word;
+}
+
+.valor-estadistica {
+    color: var(--text-dark);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+/* Iconos */
+
+.icono-estadistica {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 22px;
+    flex: 0 0 46px;
+}
+
+/* Colores del icono de cada tarjeta */
+
+.estadisticas-dashboard > .col:nth-child(1) .icono-estadistica {
+    background-color: #dceaf1;
+}
+
+.estadisticas-dashboard > .col:nth-child(2) .icono-estadistica {
+    background-color: #d9f7fa;
+}
+
+.estadisticas-dashboard > .col:nth-child(3) .icono-estadistica {
+    background-color: #f1e3f3;
+}
+
+.estadisticas-dashboard > .col:nth-child(4) .icono-estadistica {
+    background-color: #fff4d3;
+}
+
+.estadisticas-dashboard > .col:nth-child(5) .icono-estadistica {
+    background-color: #dceaf1;
+}
+
+.estadisticas-dashboard > .col:nth-child(6) .icono-estadistica {
+    background-color: #def5d3;
+}
+
+.estadisticas-dashboard > .col:nth-child(7) .icono-estadistica {
+    background-color: #fff4d3;
+}
+
+/* Linea inferior de las tarjetas */
+
+.indicador-estadistica{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    border-radius: 10px;
+}
+
+.estadisticas-dashboard > .col:nth-child(1) .indicador-estadistica,
+.estadisticas-dashboard > .col:nth-child(5) .indicador-estadistica {
+    background-color: #00304d;
+}
+
+.estadisticas-dashboard > .col:nth-child(2) .indicador-estadistica {
+    background-color: #0891a7;
+}
+
+.estadisticas-dashboard > .col:nth-child(3) .indicador-estadistica {
+    background-color: #71277A;
+}
+
+.estadisticas-dashboard > .col:nth-child(4) .indicador-estadistica,
+.estadisticas-dashboard > .col:nth-child(7) .indicador-estadistica {
+    background-color: #fdc300;
+}
+
+.estadisticas-dashboard > .col:nth-child(6) .indicador-estadistica {
+    background-color: #39A900;
+}
+
+.fondo-menu{
+    display: none;
+}
+
+@media (max-width: 767.98px){
+    .fondo-menu{
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.35);
+        z-index: 1050;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3 ease;
+    }
+
+    .estructura-administrativa.menu-abierto .fondo-menu{
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+.boton-menu {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    flex-shrink: 0;
 }
