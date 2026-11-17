@@ -1,29 +1,33 @@
-// Seleccionar el boton 
+/* Elementos del menu */
 
 const botonMenu = document.getElementById("boton-menu");
 
-// Seleccionar la estructura principal
-
 const estructura = document.querySelector(".estructura-administrativa");
-
-// Seleccionar el fondo oscuro 
 
 const fondoMenu = document.getElementById("fondo-menu");
 
-// Abrir y cerrar el menu
+const navegacion = document.getElementById("navegacion-header");
 
-botonMenu.addEventListener("click", function (){
-    estructura.classList.toggle("menu-abierto");
+/* Comprobar que los elementos existen */
 
-    const menuAbierto = estructura.classList.contains("menu-abierto");
+if (botonMenu && estructura && fondoMenu && navegacion){
 
-    botonMenu.setAttribute("aria-expanded", menuAbierto)
-})
+    /* Abrir y cerrar el menu */
 
-// Cerrar el menu al pulsar la pantalla
+    botonMenu.addEventListener("click", function (){
 
-fondoMenu.addEventListener("click", function (){
-    estructura.classList.remove("menu-abierto");
+        const menuAbierto = estructura.classList.toggle("menu-abierto");
 
-    botonMenu.setAttribute("aria-expanded", "false")
-})
+        botonMenu.setAttribute("aria-expanded", menuAbierto);
+    });
+
+    /* Cerrar el menu al pulsar el fondo */
+
+    fondoMenu.addEventListener("click", function (){
+
+        estructura.classList.remove("menu-abierto");
+
+        botonMenu.setAttribute("aria-expanded", "false");
+
+    });
+}
