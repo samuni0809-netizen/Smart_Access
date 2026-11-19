@@ -1,0 +1,216 @@
+/* Variables de colores */
+
+:root {
+    --primary-color: #39A900;
+    --primary-dark: #007832;
+    --primary-light: #00304d;
+
+    --accent-color: #50e5f9;
+    --secondary-color: #71277A;
+    --secondary-bg: #f6f0f7;
+
+    --success-color: #39A900;
+    --success-bg: #dcf5cf;
+    --success-text: #007832;
+
+    --background-color: #f6f6f6;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+
+    --border-color: #e2e8f0;
+
+    --sidebar-bg: #00304d;
+    --sidebar-bg-light: #184a72;
+
+    --color-nombre-sistema: #b7c9d6;
+    --color-links: #c5d4df;
+
+    --muted-bg: #e2e8f0;
+    --muted-text: #475569;
+
+    --danger-color: #dc2626;
+    --warning-color: #fdc300;
+}
+
+/* Encabezado */
+
+.informacion-historial h2 {
+    color: var(--text-dark);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.informacion-historial p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Botones */
+
+.filtros-movimientos .btn,
+.acciones-historial .btn {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+/* Pasar el cursor */
+
+.filtros-movimientos .btn-success:hover{
+    background-color: var(--primary-dark);
+    border-color: var(--primary-color);
+}
+
+.acciones-historial .btn-success{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.acciones-historial .btn-success:hover{
+    background-color: #5d1666;
+    border-color: #5d1666;
+}
+
+/* Busqueda y contador de resultados */
+
+.campo-busqueda {
+    border-color: var()var(--border-color);
+    font-size: 14px;
+}
+
+.campo-busqueda:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(57, 169, 0, 0.12);
+}
+
+.cantidad-resultados {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-top: 18px;
+    padding: 4px 8px;
+    border: 1px solid var(--text-muted);
+    border-radius: 18px;
+    border-color: rgba(197, 193, 235, 0.608);
+    color: var(--text-dark);
+    background-color: rgba(197, 193, 235, 0.608);
+    max-width: 120px;
+    text-align: center;
+}
+
+/* Informacion de usuario */
+
+.iniciales-usuario {
+    width: 38px;
+    height: 38px;
+    background-color: #e2f3d9;
+    color: var(--success-text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.nombre-usuario {
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Etiquetas de movimiento y estado */
+
+.movimiento,
+.estado-elementos {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ingresos */
+
+.movimiento.ingreso {
+    background-color: #cffafe;
+    color: #0e7490;
+}
+
+/* Salidas */
+
+.movimiento.salida {
+    background-color: #fef3c7;
+    color: #a16207;
+}
+
+/* Elementos completos */
+
+.estado-elementos.completo {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+
+/* Elementos pendientes */
+
+.estado-elementos.pendiente {
+    background-color: #fef3c7;
+    color: #a16207;
+}
+
+/* Boton de accion */
+
+.boton-ver-registro {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.filtrar-fecha{
+    color: var(--text-dark);
+}
+
+.filtrar-fecha i{
+    color: var(--primary-color);
+}
+
+/* Tabla de historial */
+
+.tabla-ultimos-registros {
+    min-width: 1100px;
+}
+
+.tabla-ultimos-registros tbody td {
+    vertical-align: middle;
+    padding: 12px 10px;
+    white-space: nowrap;
+}
+
+/* Diseño responsive */
+
+@media (max-width: 767.98px) {
+    .informacion-historial h2 {
+        font-size: 20px;
+    }
+
+    .informacion-historial p {
+        font-size: 14px;
+    }
+
+    .filtros-movimientos .btn,
+    .acciones-historial .btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .cantidad-resultados{
+        font-size: 12px;
+    }
+}
+
