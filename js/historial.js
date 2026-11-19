@@ -37,14 +37,14 @@ function filtrarMovimientos(tipo) {
 
 // Eventos de los filtros
 
-filtroTodos.addEventListener("click", function (){
+filtroTodos.addEventListener("click", function () {
     filtrarMovimientos("todos");
 });
 
-filtroIngresos.addEventListener("click", function (){
+filtroIngresos.addEventListener("click", function () {
     filtrarMovimientos("ingreso");
 });
 
-filtroSalidas.addEventListener("click", function (){
+filtroSalidas.addEventListener("click", function () {
     filtrarMovimientos("salida");
 });
