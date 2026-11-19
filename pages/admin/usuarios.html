@@ -2,98 +2,372 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios | Panel Administrativo - SENA</title>
-    
-    <!-- Bootstrap -->
+
+    <title> Usuario | Panel Administrativo - SENA</title>
+
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-    <!-- CSS del Dashboard -->
+    <!-- CSS COMPARTIDO -->
     <link rel="stylesheet" href="../../css/nav.css">
+
+    <!-- ESTILOS REUTILIZADOS DEL DASHBOARD -->
+    <link rel="stylesheet" href="../../css/dashboard.css">
+
+    <!-- ESTILOS EXCLUSIVOS DEL HISTORIAL -->
+    <link rel="stylesheet" href="../../css/tablas.css">
+
 </head>
 
 <body>
 
-    <!-- NAVEGACIÓN COMPARTIDA ENTRE PÁGINAS  -->
+    <!-- ESTRUCTURA GENERAL DE LA APLICACIÓN -->
+    <div class="estructura-administrativa d-flex min-vh-100">
 
-    <header>
-        <div id="navegacion-header"></div>
+        <!-- NAVEGACIÓN LATERAL COMPARTIDA -->
+        <aside id="navegacion-header" class="contenedor-navegacion sticky-top vh-100" aria-label="Navegación principal">
+        </aside>
 
-        <div>
-            <button>
-                <p>Este es el boton para abrir la barra de navegación</p>
-            </button>
-            <div>
-                <h1>Usuarios de sistema</h1>
-                <p>Panel Administrativo</p>
-            </div>
-            <div>
-                <button type="button">Usuarios</button>
-                <button type="button">Vigilantes</button>
-                <button type="button">Administradores</button>
-            </div>
+        <!-- FONDO OSCURO PARA CELULARES -->
+        <div id="fondo-menu" class="fondo-menu"></div>
+
+
+        <!-- CONTENIDO DERECHO -->
+        <div class="contenido-aplicacion flex-grow-1">
+
+            <!-- ENCABEZADO SUPERIOR -->
+            <header class="encabezado-pagina d-flex align-items-center px-3 px-md-4 py-3">
+
+                <!-- BOTÓN DEL MENÚ PARA CELULARES -->
+                <button type="button" id="boton-menu"
+                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3"
+                    aria-label="Abrir menú" aria-expanded="false">
+
+                    <i class="bi bi-list" aria-hidden="true"></i>
+
+                </button>
+
+                <!-- INFORMACIÓN DE LA PÁGINA -->
+                <div class="informacion-pagina">
+
+                    <h1 class="mb-1">Usuarios</h1>
+
+                    <p class="mb-0">Panel Administrativo</p>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="contenido-dashboard container-fluid px-3 px-md-4 py-4">
+
+                <!-- PANEL GENERAL DEL HISTORIAL -->
+                <section class="panel-historial bg-white border rounded-4 p-3 p-md-4"
+                    aria-labelledby="titulo-historial">
+
+
+                    <!-- ENCABEZADO Y FILTROS -->
+                    <div class="encabezado-historial d-flex flex-column gap-3">
+
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+
+                            <!-- FILTROS DE MOVIMIENTO -->
+                            <div role="group" aria-label="Filtrar por tipo de movimiento"
+                                class="filtros-movimientos d-flex flex-wrap gap-2">
+
+                                <button type="button" id="filtro-todos" aria-pressed="true" class="btn btn-success">
+
+                                    Todos
+
+                                </button>
+
+                                <button type="button" id="filtro-ingresos" aria-pressed="false"
+                                    class="btn btn-outline-secondary">
+
+                                    Permanentes
+
+                                </button>
+
+                                <button type="button" id="filtro-salidas" aria-pressed="false"
+                                    class="btn btn-outline-secondary">
+
+                                    Temporales
+
+                                </button>
+
+                                <button type="button" id="boton-usuario" aria-pressed="true" class="btn btn-success">
+
+                                    Usuarios
+
+                                </button>
+
+                                <button type="button" id="boton-vigilante" aria-pressed="true" class="btn btn-outline-secondary">
+
+                                    Vigilante
+
+                                </button>
+
+                                <button type="button" id="boton-administradores" aria-pressed="true" class="btn btn-outline-secondary">
+
+                                    Administradores
+
+                                </button>
+
+                                <button type="button" id="boton-activos" aria-pressed="true" class="btn btn-success">
+
+                                    Activos
+
+                                </button>
+
+                                <button type="button" id="boton-inactivos" aria-pressed="true" class="btn btn-outline-secondary">
+
+                                    Inactivos
+
+                                </button>
+
+                            </div>
+
+                            <!-- ACCIONES DEL HISTORIAL -->
+                            <div class="acciones-historial d-flex flex-wrap gap-2">
+
+                                <button type="button" id="btn-filtrar-fecha" class="btn btn-outline-secondary filtrar-fecha">
+
+                                    <i aria-hidden="true" class="bi bi-calendar3 me-2"></i>
+
+                                    Filtrar por fecha
+
+                                </button>
+
+                                <button type="button" id="btn-generar-reporte" class="btn btn-success">
+
+                                    <i aria-hidden="true" class="bi bi-file-earmark-arrow-down"></i>
+
+                                    Generar reporte
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- FORMULARIO DE BÚSQUEDA -->
+                    <div
+                        class="busqueda-historial d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
+
+                        <form action="#" method="GET" id="formulario_busqueda" role="search" class="flex-grow-1">
+
+                            <div class="input-group pt-3">
+
+                                <span aria-hidden="true" class="input-group-text">
+                                    <i class="bi bi-search" aria-hidden="true"></i>
+                                </span>
+
+                                <input type="search" id="busqueda" name="busqueda"
+                                    placeholder="Buscar por usuario, documento, portero o centro"
+                                    aria-label="Buscar registros" class="form-control campo-busqueda">
+
+                            </div>
+
+                        </form>
+
+                        <!-- CANTIDAD DE RESULTADOS -->
+                        <div aria-live="polite">
+
+                            <p id="total-resultados" class="cantidad-resultados mb-0">
+                                135 resultados
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TABLA DEL HISTORIAL -->
+                    <div class="contenedor-tabla-registros table-responsive">
+
+                        <table class="tabla-ultimos-registros table table-hover align-middle mb-0">
+
+                            <thead class="table-light text-center">
+
+                                <tr>
+
+                                    <th scope="col" class="text-nowrap">Usuario</th>
+
+                                    <th scope="col" class="text-nowrap">Documento</th>
+
+                                    <th scope="col" class="text-nowrap">Correo</th>
+
+                                    <th scope="col" class="text-nowrap">Estado</th>
+
+                                    <th scope="col" class="text-nowrap">Centro</th>
+
+                                    <th scope="col" class="text-nowrap">Tipo de registro</th>
+
+                                    <th scope="col" class="text-nowrap">Fecha de registro</th>
+
+                                    <th scope="col" class="text-nowrap">Acción</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <!-- REGISTRO 1 -->
+                                <tr>
+
+                                    <td>
+
+                                        <div class="datos-usuario d-flex align-items-center gap-2">
+
+                                            <div class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                                aria-hidden="true">
+                                                CC
+                                            </div>
+
+                                            <div>
+                                                <span class="nombre-usuario">
+                                                    Cristian Camilo Duque Orozco
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>1065544332</td>
+
+                                    <td>
+                                        <span>
+                                            samuel@gmail.com
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="movimiento ingreso badge rounded-pill">
+                                            Activo
+                                        </span>
+                                    </td>
+
+                                    <td class="text-center">CTGI</td>
+
+                                    <td>
+                                        <span class="estado-elementos completo badge rounded-pill">
+                                            Permanente
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <time datetime="2026-11-11T19:56">
+                                            2026-11-11 19:56
+                                        </time>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <button type="button" class="boton-ver-registro btn btn-outline-secondary"
+                                            aria-label="Ver registro de Cristian Camilo Duque Orozco">
+
+                                            <i aria-hidden="true" class="bi bi-eye"></i>
+
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- REGISTRO 2 -->
+                                <tr>
+
+                                    <td>
+
+                                        <div class="datos-usuario d-flex align-items-center gap-2">
+
+                                            <div class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                                aria-hidden="true">
+                                                YA
+                                            </div>
+
+                                            <div>
+                                                <span class="nombre-usuario">
+                                                    Yeison Alberto Marín Quiceno
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>1092233445</td>
+
+                                    <td>gabriel@gmail.com</td>
+
+                                    <td>
+                                        <span class="movimiento salida badge rounded-pill">
+                                            Inactivo
+                                        </span>
+                                    </td>
+
+                                    <td class="text-center">CTMA</td>
+
+                                    <td>
+                                        <span class="movimiento salida badge rounded-pill">
+                                            Temporal
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <time datetime="2026-11-11T19:48">
+                                            2026-11-11 19:48
+                                        </time>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <button type="button" class="boton-ver-registro btn btn-outline-secondary"
+                                            aria-label="Ver registro de Yeison Alberto Marín Quiceno">
+
+                                            <i aria-hidden="true" class="bi bi-eye"></i>
+
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+            <!-- PIE DE PÁGINA -->
+            <footer class="pie-dashboard bg-white">
+
+                <p>Sistema de Control de Acceso - SENA</p>
+
+            </footer>
+
         </div>
-    </header>
 
-    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
-    <main>
-        <!-- TABLA DE USUARIOS -->
-        <section>
-            <div>
-                <h3>Usuarios</h3>
+    </div>
 
-                <button type="button">Todos</button>
-                <button type="button">Permanentes</button>
-                <button type="button">Temporales</button>
-                <button type="button">Activos</button>
-                <button type="button">Inactivos</button>
 
-                <button type="button">Filtrar por fecha</button>
-                <button type="button">Generar reporte</button>
+    <!-- ARCHIVOS JAVASCRIPT -->
+    <script src="../../js/nav.js"></script>
+    <script src="../../js/barra.js"></script>
+    <script src="../../js/historial.js"></script>
 
-                <form action="#" id="formulario_busqueda" role="search">
-                    <input type="search" id="busqueda" placeholder="Buscar por tipo de dato">
-                    <p>Resultados</p>
-                </form>
-            </div>
-
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Documento</th>
-                            <th>Estado</th>
-                            <th>Centro</th>
-                            <th>Tipo de registro</th>
-                            <th>Fecha de registro</th>
-                            <th>Acción</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                            <td>Aqui va la informacion de cada usuario traida de la BD</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
 </body>
-
-<script src="../../js/nav.js"></script>
-<script src="../../js/barra.js"></script>
 
 </html>
