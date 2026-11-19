@@ -88,7 +88,7 @@ body {
 
 .tarjeta-estadistica {
     min-height: 120px;
-    border: var(--border-color) !important;
+    border-color: var(--border-color) !important;
     padding: 16px 20px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     position: relative;
@@ -106,7 +106,6 @@ body {
 }
 
 .informacion-estadistica h3 {
-    column-rule: var(--text-muted);
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -355,7 +354,6 @@ body {
     .tabla-ultimos-registros tbody td {
         font-size: 12px;
     }
-
 
     /* PIE DE PÁGINA */
 
