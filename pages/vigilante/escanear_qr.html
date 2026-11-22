@@ -4,144 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escanear QR | Panel de Vigilancia - SENA</title>
-    <link rel="stylesheet" href="#">
+    <title>Ingresos - Control de Acceso</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS del Dashboard -->
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/escanear-qr.css">
 </head>
 
 <body>
 
-    <!-- NAVEGACIÓN COMPARTIDA ENTRE PÁGINAS -->
+    <!-- ESTRUCTURA GENERAL DE LA APLICACIÓN -->
+    <div class="estructura-administrativa d-flex min-vh-100">
 
-    <header>
-        <div id="navegacion-header_vigilante"></div>
+        <!-- NAVEGACIÓN LATERAL COMPARTIDA -->
+        <aside id="navegacion-header_vigilante" class="contenedor-navegacion sticky-top vh-100"
+            aria-label="Navegación principal">
+        </aside>
 
-        <div>
-            <button>
-                <p>Este es el botón para abrir la barra de navegación</p>
-            </button>
+        <!-- FONDO OSCURO PARA CELULARES -->
+        <div id="fondo-menu" class="fondo-menu"></div>
 
-            <div>
-                <h1>Escanear QR</h1>
-                <p>Panel de Vigilancia</p>
-            </div>
 
-            <div>
-                <p>Turno activo</p>
-                <p>Juan</p>
-                <p>Vigilante</p>
-            </div>
-        </div>
-    </header>
+        <!-- CONTENIDO DERECHO -->
+        <div class="contenido-aplicacion flex-grow-1">
 
-    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+            <!-- ENCABEZADO SUPERIOR -->
+            <header class="encabezado-pagina d-flex align-items-center px-3 px-md-4 py-3">
 
-    <main>
+                <!-- BOTÓN DEL MENÚ PARA CELULARES -->
+                <button type="button" id="boton-menu"
+                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3"
+                    aria-label="Abrir menú" aria-expanded="false">
 
-        <section>
-            <h2>Escanear Código QR</h2>
-            <p>Escanea el QR del usuario para registrar ingreso o salida.</p>
-        </section>
+                    <i class="bi bi-list"></i>
 
-        <!-- LECTOR DE CÓDIGO QR -->
+                </button>
 
-        <section>
-            <h3>Lector de Código QR</h3>
-            <p>Apunta la cámara al código QR del usuario.</p>
-            <p>Cámara activa</p>
-        </section>
+                <!-- INFORMACIÓN DE LA PÁGINA -->
+                <div class="informacion-pagina">
 
-        <!-- BÚSQUEDA MANUAL POR CÓDIGO -->
+                    <h1 class="mb-1">Escanear QR</h1>
 
-        <section>
-            <h3>Código Manual</h3>
+                    <p class="mb-0">Panel de Vigilancia</p>
 
-            <form action="#">
-                <label for="codigo_qr">Código:</label>
-                <input type="text" id="codigo_qr" name="codigo_qr" placeholder="Código">
-                <button type="button">Ingresar</button>
-            </form>
-
-            <p>No se encontró ningún usuario con ese código.</p>
-        </section>
-
-        <!-- GENERAR CÓDIGO QR DE PRUEBA -->
-
-        <section>
-            <h3>Generar QR de Prueba</h3>
-
-            <form action="#">
-                <label for="usuario_prueba">Seleccionar usuario:</label>
-
-                <select id="usuario_prueba" name="usuario_prueba">
-                    <option value="">Selecciona un usuario de prueba...</option>
-                </select>
-
-                <button type="button">Generar</button>
-            </form>
-
-            <div>
-                <h4>Código QR generado</h4>
-                <div>
-                    Aquí se mostrará el código QR.
                 </div>
 
-                <p>Aquí se mostrará el código del usuario.</p>
+            </header>
 
-                <button type="button">Simular Escaneo de este QR</button>
-            </div>
-        </section>
 
-        <!-- USUARIOS DE PRUEBA -->
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="contenido-dashboard container-fluid px-3 px-md-4 py-4">
 
-        <section>
-            <h3>Usuarios de Prueba Disponibles</h3>
+                <section aria-labelledby="titulo-escanear-qr">
+                    <header class="encabezado-escaner mb-4">
+                        <h2 id="titulo-escanear-qr"> Escanear Código QR</h2>
+                        <p>Escanea el QR del usuario para registrar ingreso o salida</p>
+                    </header>
 
-            <div>
-                Aquí se mostrarán los usuarios de prueba disponibles.
-            </div>
-        </section>
+                    <div class="row g-4">
 
-        <!-- INFORMACIÓN DEL USUARIO ESCANEADO -->
+                        <div class="col-12 col-lg-7">
+                            <article aria-label="Lector de código QR" class="tarjeta-lector">
 
-        <section>
-            <h2>Información del Usuario</h2>
+                                <div class="area-escaneo">
+                                    <i class="bi bi-qr-code-scan" aria-hidden="true"></i>
+                                </div>
 
-            <p>
-                Escanea o ingresa un código QR para ver la información del usuario.
-            </p>
+                                <h3>Apunta la cámara al código QR del usuario</h3>
 
-            <div>
-                Aquí se mostrará la información del usuario, sus dispositivos,
-                sus vehículos y el estado de sus ingresos o salidas.
-            </div>
+                                <hr>
 
-            <div>
-                <h3>Ingreso actual</h3>
-                <p>Aquí se mostrará la hora de ingreso.</p>
-            </div>
+                                <p>Área de escaneo</p>
+                            </article>
+                        </div>
 
-            <div>
-                <h3>Elementos registrados</h3>
-                <p>Aquí se mostrarán los computadores y vehículos registrados.</p>
-            </div>
+                        <div class="col-12 col-lg-5">
+                            <article aria-label="Información del usuario" class="tarjeta-informacion">
 
-            <div>
-                <h3>Resumen de elementos seleccionados</h3>
-                <p>Aquí se mostrarán los elementos seleccionados para el registro.</p>
-            </div>
+                                <div class="icono-usuario">
+                                    <i class="bi bi-person-fill" aria-hidden="true"></i>
+                                </div>
 
-            <button type="button">Confirmar Ingreso</button>
+                                <p>Escanea o ingresa un código QR para
+                                    ver la información del usuario</p>
+                            </article>
+                        </div>
 
-            <p>Aquí se mostrará el resultado del registro.</p>
 
-            <button type="button">Escanear Otro Usuario</button>
-        </section>
+                    </div>
 
-    </main>
+                    <section class="codigo-manual" aria-labelledby="titulo-codigo-manual">
 
-    <!-- JAVASCRIPT DE LA NAVEGACIÓN COMPARTIDA -->
+                        <form class="formulario-codigo">
 
+                            <div>
+                                <label for="codigo-usuario">Código del Usuario</label>
+
+                                <input type="text" id="codigo-usuario" name="codigo-usuario"
+                                    placeholder="Ingrese el código">
+                            </div>
+
+                            <button type="button">Ingresar</button>
+                        </form>
+                    </section>
+                </section>
+
+            </main>
+
+            <!-- PIE DE PÁGINA -->
+            <footer class="pie-dashboard bg-white">
+
+                <p>Sistema de Control de Acceso - SENA</p>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+    <!-- ARCHIVO DE NAVEGACIÓN COMPARTIDA -->
     <script src="../../js/nav.js"></script>
+    <script src="../../js/barra.js"></script>
 
 </body>
 

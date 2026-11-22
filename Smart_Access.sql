@@ -37,9 +37,9 @@ CREATE TABLE usuario (
 	FOREIGN KEY (id_codigo) REFERENCES codigo_qr(id_codigo)
 );
 
--- Porteros
-CREATE TABLE portero (
-    id_portero INT AUTO_INCREMENT PRIMARY KEY,
+-- vigilantes
+CREATE TABLE vigilante (
+    id_vigilante INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL UNIQUE,
     telefono VARCHAR(20) NULL,
 	FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
@@ -52,8 +52,8 @@ CREATE TABLE usuario_temporal (
     apellidos VARCHAR(100) NOT NULL,
     documento VARCHAR(20) NOT NULL UNIQUE,
     fecha_registro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    id_portero INT NOT NULL,
-    FOREIGN KEY (id_portero) REFERENCES portero(id_portero)
+    id_vigilante INT NOT NULL,
+    FOREIGN KEY (id_vigilante) REFERENCES vigilante(id_vigilante)
 );
 
 -- Accesos
@@ -61,13 +61,13 @@ CREATE TABLE registro_acceso (
     id_registro INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NULL,
     id_temporal INT NULL,
-    id_portero INT NOT NULL,
+    id_vigilante INT NOT NULL,
     tipo_movimiento ENUM('ENTRADA', 'SALIDA') NOT NULL,
     fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     observaciones TEXT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
     FOREIGN KEY (id_temporal) REFERENCES usuario_temporal(id_temporal),
-    FOREIGN KEY (id_portero) REFERENCES portero(id_portero)
+    FOREIGN KEY (id_vigilante) REFERENCES vigilante(id_vigilante)
 );
 
 -- Dispositivos
@@ -121,12 +121,3 @@ CREATE TABLE auditoria (
     fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_usuario_actor) REFERENCES usuario(id_usuario)
 );
-
--- Inserts para definir cada rol
-
-INSERT INTO rol (id_rol, tipo) VALUES 
-(1, 'usuario'),
-(2, 'vigilante'),
-(3, 'admin');
-
-INSERT INTO codigo_qr (codigo_qr, codigo_numero) values ('QR-123', 'QRE-321');
