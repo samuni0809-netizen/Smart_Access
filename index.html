@@ -17,11 +17,11 @@
 
         <div class="row g-0">
 
-            <!-- PANEL INFORMATIVO IZQUIERDO -->
+            <!-- panel informativo izquierdo -->
             <section id="panel-informativo" 
             class="panel-informativo col-12 col-lg-6 min-vh-100 d-flex flex-column justify-content-between p-4 p-lg-5">
 
-                <!-- LOGO Y NOMBRE INSTITUCIONAL -->
+                <!-- logo y nombre institucional -->
                 <header class="encabezado-institucional d-flex align-items-center gap-4 ">
 
                     <div class="logo-sena" aria-label="Logotipo SENA">
@@ -35,7 +35,7 @@
 
                 </header>
 
-                <!-- INFORMACIÓN DEL SISTEMA -->
+                <!-- información del sistema -->
                 <div class="contenido-informativo">
 
                     <h1 class="titulo-informativo fs-1 fw-bold mb-4 ">Sistema de Control de Acceso</h1>
@@ -46,7 +46,7 @@
                         de las instalaciones.
                     </p>
 
-                    <!-- LISTA DE FUNCIONALIDADES -->
+                    <!-- lista de funcionalidades -->
                     <ul class="lista-funcionalidades list-unstyled">
 
                         <li class="d-flex align-items-center gap-3 mb-3">
@@ -73,7 +73,7 @@
 
                 </div>
 
-                <!-- PIE DEL PANEL INFORMATIVO -->
+                <!-- pie del panel informativo -->
                 <footer class="pie-informativo">
 
                     <p>© 2026 SENA — Servicio Nacional de Aprendizaje</p>
@@ -82,22 +82,22 @@
 
             </section>
 
-            <!-- PANEL DERECHO DE AUTENTICACIÓN -->
+            <!-- panel derecho de autenticación -->
             <section id="panel-autenticacion" class="col-12 col-lg-6 min-vh-100 d-flex justify-content-center align-items-center p-5
             panel-autenticacion" aria-label="Autenticación del usuario">
 
                 <div class="contenedor-autenticacion col-10 col-lg-8">
 
-                    <!-- OPCIONES DE INGRESO Y REGISTRO -->
+                    <!-- opciones de ingreso y registro -->
                     <nav class="pestanas-autenticacion nav d-flex gap-3">
 
-                        <button type="button" id="btn-login" class="nav-link">
+                        <button id="btn-login" class="nav-link" type="button">
 
                             Iniciar Sesión
 
                         </button>
 
-                        <button type="button" id="btn-registro" class="nav-link"> 
+                        <button id="btn-registro" class="nav-link" type="button"> 
 
                             Registrarse
 
@@ -106,8 +106,8 @@
                     </nav>
 
 
-                    <!-- FORMULARIO DE INICIO DE SESIÓN -->
-                    <section id="formulario-login" class="formulario-login" role="tabpanel" aria-labelledby="btn-login">
+                    <!-- formulario de inicio de sesión -->
+                    <section id="formulario-login" class="formulario-login" aria-labelledby="btn-login" role="tabpanel">
 
                         <header class="encabezado-formulario">
 
@@ -117,48 +117,48 @@
 
                         </header>
 
-                        <form action="" method="POST" id="form-login">
+                        <form id="form-login" action="" method="POST">
 
-                            <!-- DOCUMENTO -->
+                            <!-- documento -->
                             <div class="campo-documento mb-3">
 
-                                <label for="login_documento"
-                                class="form-label">
+                                <label
+                                class="form-label" for="login-documento">
                                     Documento
                                 </label>
 
-                                <input type="text" name="documento" id="login_documento"
-                                    placeholder="Número de documento" autocomplete="username"
-                                    class="form-control" required>
+                                <input id="login-documento"
+                                    class="form-control" name="documento" type="text"
+                                    placeholder="Número de documento" autocomplete="username" required>
 
                             </div>
 
-                            <!-- CONTRASEÑA -->
+                            <!-- contraseña -->
                             <div class="campo-contrasena mb-3">
 
-                                <label for="login_contrasena"
-                                class="form-label">
+                                <label
+                                class="form-label" for="login-contrasena">
                                     Contraseña
                                 </label>
 
-                                <input type="password" name="contrasena" id="login_contrasena" placeholder="Contraseña"
-                                    autocomplete="current-password"
-                                    class="form-control" required>
+                                <input id="login-contrasena"
+                                    class="form-control" name="contrasena" type="password" placeholder="Contraseña"
+                                    autocomplete="current-password" required>
 
                             </div>
 
-                            <!-- BOTÓN DE INGRESO -->
-                            <button type="submit" id="btn-iniciar-sesion"
-                            class="btn w-100">
+                            <!-- botón de ingreso -->
+                            <button id="btn-iniciar-sesion"
+                            class="btn w-100" type="submit">
                                 Iniciar Sesión
                             </button>
 
                         </form>
 
-                        <!-- RECUPERACIÓN DE CONTRASEÑA -->
+                        <!-- recuperación de contraseña -->
                         <div class="recuperacion-contrasena mt-2">
 
-                            <a href="pages/login/recuperar-contrasena.html" class="d-inline-block">
+                            <a class="d-inline-block" href="pages/login/recuperar-contrasena.html">
                                 ¿Olvidaste tu contraseña?
                             </a>
 
@@ -167,9 +167,9 @@
                     </section>
 
 
-                    <!-- FORMULARIO DE REGISTRO -->
-                    <section id="formulario-registro" class="formulario-registro" role="tabpanel"
-                        aria-labelledby="btn-registro" hidden>
+                    <!-- formulario de registro -->
+                    <section id="formulario-registro" class="formulario-registro"
+                        aria-labelledby="btn-registro" role="tabpanel" hidden>
 
                         <header class="encabezado-formulario">
 
@@ -182,58 +182,58 @@
 
                         </header>
 
-                        <form action="" method="POST" id="form-registro">
+                        <form id="form-registro" action="" method="POST">
 
-                            <!-- NOMBRE COMPLETO -->
+                            <!-- nombre completo -->
                             <div class="campo-nombre mb-3">
 
-                                <label for="registro_nombre"
-                                class="form-label">
+                                <label
+                                class="form-label" for="registro-nombre">
                                     Nombre completo
                                 </label>
 
-                                <input type="text" name="nombre" 
-                                class="form-control"
-                                id="registro_nombre" placeholder="Nombre completo"
+                                <input
+                                id="registro-nombre" 
+                                class="form-control" name="nombre" type="text" placeholder="Nombre completo"
                                     autocomplete="name" required>
 
                             </div>
 
-                            <!-- CORREO ELECTRÓNICO -->
+                            <!-- correo electrónico -->
                             <div class="campo-correo mb-3">
 
-                                <label for="registro_correo"
-                                class="form-label">
+                                <label
+                                class="form-label" for="registro-correo">
                                     Correo electrónico
                                 </label>
 
-                                <input type="email" name="correo" id="registro_correo" placeholder="correo@gmail.com"
-                                    autocomplete="email" class="form-control" required>
+                                <input id="registro-correo" class="form-control" name="correo" type="email" placeholder="correo@gmail.com"
+                                    autocomplete="email" required>
 
                             </div>
 
-                            <!-- DOCUMENTO -->
+                            <!-- documento -->
                             <div class="campo-documento mb-3">
 
-                                <label for="registro_documento"
-                                class="form-label">
+                                <label
+                                class="form-label" for="registro-documento">
                                     Número de documento
                                 </label>
 
-                                <input type="text" name="documento" id="registro_documento"
-                                    placeholder="Número de documento" class="form-control" required>
+                                <input id="registro-documento" class="form-control" name="documento" type="text"
+                                    placeholder="Número de documento" required>
 
                             </div>
 
                             <div class="campo-centro mb-3">
 
-                                <label for="registro_centro"
-                                class="form-label">
+                                <label
+                                class="form-label" for="registro-centro">
                                     Centro
                                 </label>
 
-                                <select type="text" name="centro" id="registro_centro"
-                                    placeholder="Centro - SENA" class="form-control" required>
+                                <select id="registro-centro" class="form-control" name="centro" type="text"
+                                    placeholder="Centro - SENA" required>
                                 <option value="seleccion" disabled selected>Selecciona</option>
                                 <option value="CTGI">CTGI</option>
                                 <option value="CTGI">CTMA</option>
@@ -242,37 +242,37 @@
 
                             </div>
 
-                            <!-- CONTRASEÑA -->
+                            <!-- contraseña -->
                             <div class="campo-contrasena mb-3">
 
-                                <label for="registro_contrasena"
-                                class="form-label">
+                                <label
+                                class="form-label" for="registro-contrasena">
                                     Contraseña
                                 </label>
 
-                                <input type="password" name="contrasena" id="registro_contrasena"
-                                    placeholder="Mínimo 6 caracteres" minlength="6" autocomplete="new-password"
-                                    class="form-control" required>
+                                <input id="registro-contrasena"
+                                    class="form-control" name="contrasena" type="password"
+                                    placeholder="Mínimo 6 caracteres" minlength="6" autocomplete="new-password" required>
 
                             </div>
 
-                            <!-- CONFIRMAR CONTRASEÑA -->
+                            <!-- confirmar contraseña -->
                             <div class="campo-confirmar-contrasena mb-3">
 
-                                <label for="registro_confirmar_contrasena"
-                                class="form-label">
+                                <label
+                                class="form-label" for="registro-confirmar-contrasena">
                                     Confirmar contraseña
                                 </label>
 
-                                <input type="password" name="confirmar_contrasena" id="registro_confirmar_contrasena"
-                                    placeholder="Confirmar contraseña" minlength="6" autocomplete="new-password"
-                                    class="form-control" required>
+                                <input id="registro-confirmar-contrasena"
+                                    class="form-control" name="confirmar_contrasena" type="password"
+                                    placeholder="Confirmar contraseña" minlength="6" autocomplete="new-password" required>
 
                             </div>
 
-                            <!-- BOTÓN DE REGISTRO -->
-                            <button type="submit" id="btn-crear-cuenta" 
-                            class="btn w-100 mb-3">
+                            <!-- botón de registro -->
+                            <button id="btn-crear-cuenta" 
+                            class="btn w-100 mb-3" type="submit">
                                 Crear cuenta
                             </button>
 

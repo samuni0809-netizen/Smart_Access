@@ -1,12 +1,12 @@
-// 1. Identificar los botones
+/* 1. identificar los botones */
 const btnLogin = document.getElementById("btn-login");
 const btnRegistro = document.getElementById("btn-registro");
 
-// 2. Identificar los formularios
+/* 2. identificar los formularios */
 const formularioLogin = document.getElementById("formulario-login");
 const formularioRegistro = document.getElementById("formulario-registro");
 
-// 3. Cuando se presiona Iniciar Sesión
+/* 3. cuando se presiona iniciar sesión */
 btnLogin.addEventListener("click", function () {
     formularioLogin.hidden = false;
     formularioRegistro.hidden = true;
@@ -15,7 +15,7 @@ btnLogin.addEventListener("click", function () {
     btnRegistro.classList.remove("active");
 });
 
-// 4. Cuando se presiona Registrarse
+/* 4. cuando se presiona registrarse */
 btnRegistro.addEventListener("click", function () {
     formularioLogin.hidden = true;
     formularioRegistro.hidden = false;
@@ -24,5 +24,5 @@ btnRegistro.addEventListener("click", function () {
     btnLogin.classList.remove("active");
 });
 
-// 5. Pestaña inicial seleccionada
+/* 5. pestaña inicial seleccionada */
 btnLogin.classList.add("active");

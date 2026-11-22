@@ -6,37 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Usuario - Control de Acceso</title>
 
-    <!-- Bootstrap -->
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
+    <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS del proyecto -->
+    <!-- css del proyecto -->
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/registrar.css">
 </head>
 
 <body>
-    <!-- ESTRUCTURA GENERAL -->
+    <!-- estructura general -->
     <div class="estructura-administrativa d-flex min-vh-100">
 
-        <!-- NAVEGACIÓN LATERAL -->
-        <aside id="navegacion-header_vigilante" class="contenedor-navegacion sticky-top vh-100 align-self-start flex-shrink-0"
+        <!-- navegación lateral -->
+        <aside id="navegacion-header-vigilante" class="contenedor-navegacion sticky-top vh-100 align-self-start flex-shrink-0"
             aria-label="Navegación principal">
         </aside>
 
-        <div class="fondo-menu" id="fondo-menu"></div>
+        <div id="fondo-menu" class="fondo-menu"></div>
 
-        <!-- CONTENIDO DERECHO -->
+        <!-- contenido derecho -->
         <div class="contenido-aplicacion flex-grow-1">
 
-            <!-- ENCABEZADO -->
+            <!-- encabezado -->
             <header class="encabezado-pagina d-flex align-items-center px-3 px-md-4 py-3">
 
-                <button type="button" class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3"
-                    id="boton-menu" aria-label="Abrir menú" aria-expanded="false">
+                <button
+                    id="boton-menu" class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button" aria-label="Abrir menú" aria-expanded="false">
 
                     <i class="bi bi-list" aria-hidden="true"></i>
 
@@ -49,54 +49,54 @@
 
             </header>
 
-            <!-- CONTENIDO PRINCIPAL -->
+            <!-- contenido principal -->
             <main class="contenido-dashboard container-fluid px-3 px-md-4 py-4">
 
                 <section>
 
-                    <!-- TARJETA PRINCIPAL -->
+                    <!-- tarjeta principal -->
                     <div class="card p-3 p-md-4">
 
-                        <!-- FORMULARIO -->
+                        <!-- formulario -->
                         <form id="formulario-temporal" aria-label="Registro temporal">
 
                             <h2 id="titulo-temporal" class="mb-4"> Registrar computador </h2>
 
-                            <!-- REGISTRO DE DISPOSITIVO -->
-                            <section class="mt-4" aria-labelledby="titulo-dispositivo">
+                            <!-- registro de dispositivo -->
+                            <section class="mt-4" aria-labelledby="titulo-temporal">
 
                                 <div class="row g-3">
 
                                     <div class="col-12 col-md-6">
-                                        <label for="documento-propietario" class="form-label">
+                                        <label class="form-label" for="documento-propietario">
                                             Documento del propietario
                                         </label>
-                                        <input type="text" class="form-control" id="documento-propietario"
-                                            name="documento-propietario" placeholder="">
+                                        <input id="documento-propietario" class="form-control"
+                                            name="documento-propietario" type="text" placeholder="">
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <label for="marca-modelo" class="form-label">
+                                        <label class="form-label" for="marca-modelo">
                                             Marca / Modelo
                                         </label>
-                                        <input type="text" class="form-control" id="marca-modelo"
-                                            name="marca-modelo" placeholder="">
+                                        <input id="marca-modelo" class="form-control"
+                                            name="marca-modelo" type="text" placeholder="">
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <label for="numero-serial" class="form-label">
+                                        <label class="form-label" for="numero-serial">
                                             Número de Serial
                                         </label>
-                                        <input type="text" class="form-control" id="numero-serial"
-                                            name="numero-serial" placeholder="">
+                                        <input id="numero-serial" class="form-control"
+                                            name="numero-serial" type="text" placeholder="">
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <label for="observaciones" class="form-label">
+                                        <label class="form-label" for="observaciones">
                                             Observaciones
                                         </label>
-                                        <input type="text" class="form-control" id="observaciones"
-                                            name="observaciones" placeholder="">
+                                        <input id="observaciones" class="form-control"
+                                            name="observaciones" type="text" placeholder="">
                                     </div>
 
                                     <div class="col-12 col-md-6">
@@ -108,12 +108,12 @@
 
                                             <h5>Foto del dispositivo</h5>
 
-                                            <button type="button" class="btn btn-outline-success">
+                                            <button class="btn btn-outline-success" type="button">
                                                 <i class="bi bi-camera me-1" aria-hidden="true"></i>
                                                 Abrir cámara
                                             </button>
 
-                                            <label for="foto-dispositivo" class="form-label mt-3 d-block">
+                                            <label class="form-label mt-3 d-block" for="foto-dispositivo">
                                                 Fotografía del dispositivo
                                             </label>
 
@@ -128,7 +128,7 @@
                             </section>
 
                             <div class="mt-4">
-                                <button type="button" class="btn btn-success px-4 boton-registrar">
+                                <button class="btn btn-success px-4 boton-registrar" type="button">
                                     Registrar
                                 </button>
                             </div>
@@ -141,7 +141,7 @@
 
             </main>
 
-            <!-- PIE DE PÁGINA -->
+            <!-- pie de página -->
             <footer class="pie-dashboard bg-white">
                 <p>Sistema de Control de Acceso - SENA</p>
             </footer>
@@ -150,7 +150,7 @@
 
     </div>
 
-    <!-- ARCHIVOS DE NAVEGACIÓN -->
+    <!-- archivos de navegación -->
     <script src="../../js/nav.js"></script>
     <script src="../../js/barra.js"></script>
 

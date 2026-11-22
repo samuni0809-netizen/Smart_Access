@@ -1,4 +1,4 @@
-/* Variables de colores */
+/* variables de colores */
 
 :root {
     --primary-color: #39A900;
@@ -32,7 +32,7 @@
     --warning-color: #fdc300;
 }
 
-/* Barra lateral */
+/* barra lateral */
 
 .barra-lateral{
     width: 280px;
@@ -50,7 +50,7 @@
     font-weight: 700;
 }
 
-/* Nombre del sistema */
+/* nombre del sistema */
 
 .nombre-sistema{
     line-height: 1.2;
@@ -96,7 +96,7 @@
     padding-left: 8px;
 }
 
-/* Enlaces */
+/* enlaces */
 
 .elemento-menu a, 
 .elemento-menu summary {
@@ -111,13 +111,13 @@
     color: white;
 }
 
-/* Enlaces submenu */
+/* enlaces submenu */
 
 .submenu-registros li a{
     font-size: 14px;
 }
 
-/* Flecha submenu */
+/* flecha submenu */
 
 .elemento-menu summary{
     list-style: none;
@@ -137,7 +137,7 @@
     transform: rotate(180deg);
 }
 
-/* Distribución del desplazamiento del menu */
+/* distribución del desplazamiento del menu */
 
 .menu-principal{
     min-height: 0;
@@ -147,7 +147,7 @@
     min-height: 0;
 }
 
-/* Barra de desplazamiento del menu */
+/* barra de desplazamiento del menu */
 
 .lista-menu::-webkit-scrollbar {
     width: 6px;
@@ -161,7 +161,7 @@
     background-color: var(--sidebar-bg-light);
 }
 
-/* Cerrar Sesion */
+/* cerrar sesion */
 
 .cerrar-sesion {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -172,7 +172,7 @@
     color: var(--danger-color);
 }
 
-/* Navegacion responsive */
+/* navegacion responsive */
 
 @media (max-width: 767.98px){
     .contenedor-navegacion{
@@ -191,7 +191,7 @@
     }
 }
 
-/* Fondo oscuro de celulares */
+/* fondo oscuro de celulares */
 
 .fondo-menu{
     display: none;

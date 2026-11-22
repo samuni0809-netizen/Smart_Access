@@ -5,7 +5,7 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* Titulo principal */
+/* titulo principal */
 
 #titulo-permanente,
 #titulo-temporal {
@@ -29,7 +29,7 @@
     margin-bottom: 8px;
 }
 
-/* CAMPOS DE TEXTO */
+/* campos de texto */
 .form-control,
 .form-select {
     min-height: 44px;
@@ -38,14 +38,14 @@
     font-size: 16px;
 }
 
-/* ESTADO CUANDO SE SELECCIONA UN CAMPO */
+/* estado cuando se selecciona un campo */
 .form-control:focus,
 .form-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.2rem rgba(57, 169, 0, 0.15);
 }
 
-/* TÍTULOS DE LAS SECCIONES OPCIONALES */
+/* títulos de las secciones opcionales */
 #titulo-dispositivo,
 #titulo-vehiculo {
     color: var(--text-dark);
@@ -53,25 +53,25 @@
     font-weight: 700;
 }
 
-/* ÁREAS PARA LAS FOTOGRAFÍAS */
+/* áreas para las fotografías */
 .area-fotografia {
     background-color: var(--background-color);
     border-color: var(--border-color) !important;
 }
 
-/* TÍTULOS DE LAS FOTOGRAFÍAS */
+/* títulos de las fotografías */
 .border.rounded h5 {
     color: var(--text-dark);
     font-size: 1rem;
     font-weight: 600;
 }
 
-/* DESCRIPCIONES DE LAS FOTOGRAFÍAS */
+/* descripciones de las fotografías */
 .border.rounded p {
     font-size: 14px;
 }
 
-/* BOTONES DE REGISTRO */
+/* botones de registro */
 .boton-registrar {
     min-width: 140px;
     border-radius: 8px;
@@ -81,13 +81,13 @@
     transition: all 0.2s ease;
 }
 
-/* EFECTO AL PASAR EL CURSOR */
+/* efecto al pasar el cursor */
 .boton-registrar:hover {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
 }
 
-/* ADAPTACIÓN PARA CELULARES */
+/* adaptación para celulares */
 @media (max-width: 576px) {
 
     #boton-permanente,
@@ -103,7 +103,7 @@
     }
 }
 
-/* SELECTOR DE FOTOGRAFÍAS */
+/* selector de fotografías */
 .selector-fotografia {
     min-height: auto;
     padding: 6px;
@@ -114,7 +114,7 @@
     cursor: pointer;
 }
 
-/* BOTÓN PARA SELECCIONAR ARCHIVO */
+/* botón para seleccionar archivo */
 .selector-fotografia::file-selector-button {
     background-color: var(--muted-bg);
     color: var(--text-dark);
@@ -126,7 +126,7 @@
     transition: background-color 0.2s ease;
 }
 
-/* EFECTO AL PASAR EL CURSOR */
+/* efecto al pasar el cursor */
 .selector-fotografia::file-selector-button:hover {
     background-color: var(--border-color);
 }

@@ -16,11 +16,11 @@
 
         <div class="row g-0">
 
-            <!-- PANEL INFORMATIVO IZQUIERDO -->
+            <!-- panel informativo izquierdo -->
             <section id="panel-informativo" 
             class="panel-informativo col-lg-6 min-vh-100 d-flex flex-column justify-content-between p-4 p-lg-5">
 
-                <!-- LOGO Y NOMBRE INSTITUCIONAL -->
+                <!-- logo y nombre institucional -->
                 <header class="encabezado-institucional d-flex align-items-center gap-4 ">
 
                     <div class="logo-sena" aria-label="Logotipo SENA">
@@ -34,7 +34,7 @@
 
                 </header>
 
-                <!-- INFORMACIÓN DEL SISTEMA -->
+                <!-- información del sistema -->
                 <div class="contenido-informativo">
 
                     <h1 class="titulo-informativo fs-1 fw-bold mb-4 ">Sistema de Control de Acceso</h1>
@@ -45,7 +45,7 @@
                         de las instalaciones.
                     </p>
 
-                    <!-- LISTA DE FUNCIONALIDADES -->
+                    <!-- lista de funcionalidades -->
                     <ul class="lista-funcionalidades list-unstyled">
 
                         <li class="d-flex align-items-center gap-3 mb-3">
@@ -72,7 +72,7 @@
 
                 </div>
 
-                <!-- PIE DEL PANEL INFORMATIVO -->
+                <!-- pie del panel informativo -->
                 <footer class="pie-informativo">
 
                     <p>© 2026 SENA — Servicio Nacional de Aprendizaje</p>
@@ -81,65 +81,65 @@
 
             </section>
 
-            <!-- PANEL DERECHO DE AUTENTICACIÓN -->
+            <!-- panel derecho de autenticación -->
             <section id="panel-autenticacion" class=" col-lg-6 min-vh-100 d-flex justify-content-center align-items-center p-5
             panel-autenticacion" aria-label="Autenticación del usuario">
 
                 <div class="contenedor-autenticacion col-10 col-lg-8">
 
-                    <!-- FORMULARIO DE INICIO DE SESIÓN -->
-                    <section id="formulario-login" class="formulario-login" role="tabpanel" aria-labelledby="btn-login">
+                    <!-- formulario de inicio de sesión -->
+                    <section id="formulario-login" class="formulario-login" aria-labelledby="titulo-recuperacion" role="tabpanel">
 
                         <header class="encabezado-formulario">
 
-                            <h2>Recuperar Contraseña </h2>
+                            <h2 id="titulo-recuperacion">Recuperar Contraseña </h2>
 
                             <p>Ingresa tus credenciales</p>
 
                         </header>
 
-                        <form action="" method="POST" id="form-recuperar">
+                        <form id="form-recuperar" action="" method="POST">
 
-                            <!-- Correo -->
+                            <!-- correo -->
                             <div class="campo-documento mb-3">
 
-                                <label for="login_documento"
-                                class="form-label">
+                                <label
+                                class="form-label" for="login-correo">
                                     Correo Electrónico
                                 </label>
 
-                                <input type="text" name="documento" id="login_correo"
-                                    placeholder="Correo Electrónico" autocomplete="email"
-                                    class="form-control" required>
+                                <input id="login-correo"
+                                    class="form-control" name="documento" type="text"
+                                    placeholder="Correo Electrónico" autocomplete="email" required>
 
                             </div>
 
-                            <!-- CONTRASEÑA -->
+                            <!-- contraseña -->
                             <div class="campo-contrasena mb-3">
 
-                                <label for="login_contrasena"
-                                class="form-label">
+                                <label
+                                class="form-label" for="login-contrasena">
                                     Contraseña
                                 </label>
 
-                                <input type="password" name="contrasena" id="login_contrasena" placeholder="Contraseña"
-                                    autocomplete="current-password"
-                                    class="form-control" required>
+                                <input id="login-contrasena"
+                                    class="form-control" name="contrasena" type="password" placeholder="Contraseña"
+                                    autocomplete="current-password" required>
 
                             </div>
 
-                            <!-- BOTÓN DE INGRESO -->
-                            <button type="submit" id="btn-iniciar-sesion"
-                            class="btn w-100">
+                            <!-- botón de ingreso -->
+                            <button id="btn-iniciar-sesion"
+                            class="btn w-100" type="submit">
                                 Iniciar Sesión
                             </button>
 
                         </form>
 
-                        <!-- Volver al inicio de sesion -->
+                        <!-- volver al inicio de sesion -->
                         <div class="recuperacion-contrasena mt-2">
 
-                            <a href="../../index.html" class="d-inline-block">
+                            <a class="d-inline-block" href="../../index.html">
                                 Regresar
                             </a>
 
