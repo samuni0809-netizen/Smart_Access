@@ -1,4 +1,4 @@
-/* Variables de colores */
+/* variables de colores */
 
 :root {
     --primary-color: #39A900;
@@ -40,7 +40,7 @@ body {
     min-width: 0;
 }
 
-/* Encabezado */
+/* encabezado */
 
 .encabezado-pagina {
     background-color: white;
@@ -59,7 +59,7 @@ body {
     font-size: 14px;
 }
 
-/* Boton del menu */
+/* boton del menu */
 
 .boton-menu {
     width: 42px;
@@ -71,7 +71,7 @@ body {
     border-radius: 8px;
 }
 
-/* Encabezado del dashboard */
+/* encabezado del dashboard */
 
 .encabezado-dashboard h2 {
     color: var(--text-dark);
@@ -84,7 +84,7 @@ body {
     font-size: 16px;
 }
 
-/* Tarjetas de estadisticas */
+/* tarjetas de estadisticas */
 
 .tarjeta-estadistica {
     min-height: 120px;
@@ -127,7 +127,7 @@ body {
 }
 
 
-/* Colores de tarjetas */
+/* colores de tarjetas */
 
 .estadisticas-dashboard .col:nth-child(1) .icono-estadistica {
     background-color: #dcf5cf;
@@ -164,7 +164,7 @@ body {
     color: #4338ca;
 }
 
-/* Indicadores inferiores */
+/* indicadores inferiores */
 
 .indicador-estadistica {
     position: absolute;
@@ -175,7 +175,7 @@ body {
     border-radius: 10px;
 }
 
-/* COLORES DE LOS INDICADORES */
+/* colores de los indicadores */
 
 .estadisticas-dashboard .col:nth-child(1) .indicador-estadistica {
     background-color: #39A900;
@@ -205,7 +205,7 @@ body {
     background-color: #4338ca;
 }
 
-/* Actividad semanal */
+/* actividad semanal */
 
 .seccion-actividad {
     border-color: var(--border-color) !important;
@@ -235,7 +235,7 @@ body {
     font-weight: 600;
 }
 
-/* Seccion de utlimos registro */
+/* seccion de utlimos registro */
 
 .seccion-ultimos-registros {
     border-color: var(--border-color) !important;
@@ -247,7 +247,8 @@ body {
     font-weight: 600;
 }
 
-.tabla-ultimos-registros thead th {
+.tabla-ultimos-registros thead th,
+.tabla-registros thead th {
     color: var(--text-muted);
     font-size: 12px;
     font-weight: 700;
@@ -256,7 +257,8 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-.tabla-ultimos-registros tbody td {
+.tabla-ultimos-registros tbody td,
+.tabla-registros tbody td {
     color: var(--text-dark);
     font-size: 14px;
 }
@@ -265,7 +267,7 @@ body {
     width: 100%;
 }
 
-/* Pie de pagina */
+/* pie de pagina */
 
 .pie-dashboard {
     padding: 18px 24px;
@@ -279,7 +281,7 @@ body {
     margin-bottom: 0;
 }
 
-/* Diseño responsive */
+/* diseño responsive */
 
 @media (max-width: 767.98px) {
     .encabezado-pagina {
@@ -302,7 +304,7 @@ body {
         font-size: 14px;
     }
 
-    /* Tarjetas de estadisticas */
+    /* tarjetas de estadisticas */
 
     .tarjeta-estadistica {
         min-height: 110px;
@@ -328,7 +330,7 @@ body {
         font-size: 18px;
     }
 
-    /* Seccion de actividad y registros */
+    /* seccion de actividad y registros */
 
     .encabezado-actividad h3,
     .encabezado-registros h3 {
@@ -345,17 +347,19 @@ body {
     }
 
 
-    /* TABLA */
+    /* tabla */
 
-    .tabla-ultimos-registros thead th {
+    .tabla-ultimos-registros thead th,
+    .tabla-registros thead th {
         font-size: 11px;
     }
 
-    .tabla-ultimos-registros tbody td {
+    .tabla-ultimos-registros tbody td,
+    .tabla-registros tbody td {
         font-size: 12px;
     }
 
-    /* PIE DE PÁGINA */
+    /* pie de página */
 
     .pie-dashboard {
         padding: 16px;

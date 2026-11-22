@@ -1,4 +1,4 @@
-/* Elementos del menu */
+/* elementos del menu */
 
 const botonMenu = document.getElementById("boton-menu");
 
@@ -8,15 +8,15 @@ const fondoMenu = document.getElementById("fondo-menu");
 
 const navegacion = document.getElementById("navegacion-header");
 
-const navegacion_u = document.getElementById("navegacion-header_Usuario");
+const navegacion_u = document.getElementById("navegacion-header-usuario");
 
-const navegacion_v = document.getElementById("navegacion-header_vigilante");
+const navegacion_v = document.getElementById("navegacion-header-vigilante");
 
-/* Comprobar que los elementos existen Administrador */
+/* comprobar que los elementos existen administrador */
 
 if (botonMenu && estructura && fondoMenu && navegacion){
 
-    /* Abrir y cerrar el menu */
+    /* abrir y cerrar el menu */
 
     botonMenu.addEventListener("click", function (){
 
@@ -25,7 +25,7 @@ if (botonMenu && estructura && fondoMenu && navegacion){
         botonMenu.setAttribute("aria-expanded", menuAbierto);
     });
 
-    /* Cerrar el menu al pulsar el fondo */
+    /* cerrar el menu al pulsar el fondo */
 
     fondoMenu.addEventListener("click", function (){
 
@@ -36,11 +36,11 @@ if (botonMenu && estructura && fondoMenu && navegacion){
     });
 }
 
-/* Comprobar que los elementos existen Usuario */
+/* comprobar que los elementos existen usuario */
 
 if (botonMenu && estructura && fondoMenu && navegacion_u){
 
-    /* Abrir y cerrar el menu */
+    /* abrir y cerrar el menu */
 
     botonMenu.addEventListener("click", function (){
 
@@ -49,7 +49,7 @@ if (botonMenu && estructura && fondoMenu && navegacion_u){
         botonMenu.setAttribute("aria-expanded", menuAbierto);
     });
 
-    /* Cerrar el menu al pulsar el fondo */
+    /* cerrar el menu al pulsar el fondo */
 
     fondoMenu.addEventListener("click", function (){
 
@@ -60,11 +60,11 @@ if (botonMenu && estructura && fondoMenu && navegacion_u){
     });
 }
 
-/* Comprobar que los elementos existen Vigilante */
+/* comprobar que los elementos existen vigilante */
 
 if (botonMenu && estructura && fondoMenu && navegacion_v){
 
-    /* Abrir y cerrar el menu */
+    /* abrir y cerrar el menu */
 
     botonMenu.addEventListener("click", function (){
 
@@ -73,7 +73,7 @@ if (botonMenu && estructura && fondoMenu && navegacion_v){
         botonMenu.setAttribute("aria-expanded", menuAbierto);
     });
 
-    /* Cerrar el menu al pulsar el fondo */
+    /* cerrar el menu al pulsar el fondo */
 
     fondoMenu.addEventListener("click", function (){
 

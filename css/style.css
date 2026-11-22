@@ -1,4 +1,4 @@
-/* Variables de colores */
+/* variables de colores */
 
 :root {
     --primary-color: #39A900;
@@ -22,7 +22,7 @@
     --warning-color: #fdc300;
 }
 
-/* Panel informativo */
+/* panel informativo */
 
 .panel-informativo{
     background-color: var(--primary-dark);
@@ -41,7 +41,7 @@
     max-width: 520px;
 }
 
-/* Logo */
+/* logo */
 
 .logo-sena{
     width: 46px;
@@ -59,13 +59,13 @@
     font-weight: bold;
 }
 
-/* Titulo informativo */
+/* titulo informativo */
 
 .titulo-informativo{
     color: white;
 }
 
-/* Panel de auteticacion */
+/* panel de auteticacion */
 
 .panel-autenticacion{
     padding: 40px;
@@ -76,7 +76,7 @@
     max-width: 520px;
 }
 
-/* Pestañas de autenticacion */
+/* pestañas de autenticacion */
 
 .pestanas-autenticacion{
     margin-bottom: 32px;
@@ -100,7 +100,7 @@
     color: var(--primary-color);
 }
 
-/* Formularios */
+/* formularios */
 
 .panel-autenticacion{
     background-color: var(--background-color);
@@ -121,7 +121,7 @@
     margin-bottom: 0;
 }
 
-/* Etiqueta de los campos */
+/* etiqueta de los campos */
 
 .form-label{
     display: block;
@@ -130,7 +130,7 @@
     margin-bottom: 8px;
 }
 
-/* Campos de texto y contraseña */
+/* campos de texto y contraseña */
 
 .form-control{
     min-height: 48px;
@@ -139,7 +139,7 @@
     font-size: 15px;
 }
 
-/* Botones */
+/* botones */
 
 .panel-autenticacion .btn{
     width: 100%;
@@ -151,7 +151,7 @@
     color: white;
 }
 
-/* Recuperar contraseña */
+/* recuperar contraseña */
 
 .recuperacion-contrasena{
     margin-top: 8px;
@@ -165,7 +165,7 @@
 }
 
 
-/* Diseño responsive - tablets celulares*/
+/* diseño responsive - tablets celulares */
 
 @media (max-width: 991.98px){
     /* panel informativo */
@@ -187,7 +187,7 @@
     }
 }
 
-/* Diseño resposive - celulares */
+/* diseño resposive - celulares */
 
 @media (max-width: 575.98px){
     /* panel informativo */
@@ -227,7 +227,7 @@
     }
 }
 
-/* Efectos de campos */
+/* efectos de campos */
 
 .form-control{
     border: 1px solid var(--border-color);
@@ -240,7 +240,7 @@
     outline: none;
 }
 
-/* Efectos de los botones */
+/* efectos de los botones */
 
 .panel-autenticacion .btn{
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -261,7 +261,7 @@
     color: var(--primary-color);
 }
 
-/* Animacion de formularios */
+/* animacion de formularios */
 
 @keyframes aparecerFormulario{
     from{
@@ -275,13 +275,13 @@
     }
 }
 
-/* Animación al mostrar el inicio de sesión */
+/* animación al mostrar el inicio de sesión */
 
 #formulario-login:not([hidden]){
     animation: aparecerFormulario 0.4s ease;
 }
 
-/* Animación al mostrar el registro */
+/* animación al mostrar el registro */
 #formulario-registro:not([hidden]){
     animation: aparecerFormulario 0.4s ease;
 }
@@ -293,7 +293,7 @@
     }
 }
 
-/* Contenedor de autenticacion */
+/* contenedor de autenticacion */
 
 .contenedor-autenticacion {
     width: 100%;
@@ -301,7 +301,7 @@
     padding: 10px;
 }
 
-/* Estados de los enlaces */
+/* estados de los enlaces */
 
 .recuperacion-contrasena a{
     transition: color 0.2s ease;
@@ -312,7 +312,7 @@
     text-decoration: underline;
 }
 
-/* Accesibilidad del teclado */
+/* accesibilidad del teclado */
 
 .pestanas-autenticacion .nav-link:focus-visible,
 .panel-autenticacion .btn:focus-visible{
@@ -320,7 +320,7 @@
     outline-offset: 3px;
 }
 
-/* Lista de funcionalidades */
+/* lista de funcionalidades */
 
 .lista-funcionalidades{
     width: 100%;
@@ -337,7 +337,7 @@
     line-height: 1.5;
 }
 
-/* Pie de pagina */
+/* pie de pagina */
 
 .pie-informativo{
     margin-top: 40px;
@@ -350,7 +350,7 @@
     line-height: 1.5;
 }
 
-/* Contenido informativo */
+/* contenido informativo */
 
 .contenido-informativo{
     width: 100%;

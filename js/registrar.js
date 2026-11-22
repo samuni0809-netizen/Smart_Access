@@ -1,16 +1,16 @@
-// IDENTIFICAR LOS BOTONES
+/* identificar los botones */
 const botonPermanente = document.getElementById("boton-permanente");
 const botonTemporal = document.getElementById("boton-temporal");
 
-// IDENTIFICAR LOS FORMULARIOS
+/* identificar los formularios */
 const formularioPermanente = document.getElementById("formulario-permanente");
 const formularioTemporal = document.getElementById("formulario-temporal");
 
-// OCULTAR EL FORMULARIO TEMPORAL AL INICIAR
+/* ocultar el formulario temporal al iniciar */
 formularioTemporal.classList.add("d-none");
 
 
-// CAMBIAR AL FORMULARIO PERMANENTE
+/* cambiar al formulario permanente */
 botonPermanente.addEventListener("click", function () {
 
     formularioPermanente.classList.remove("d-none");
@@ -24,7 +24,7 @@ botonPermanente.addEventListener("click", function () {
 
 });
 
-// CAMBIAR AL FORMULARIO TEMPORAL
+/* cambiar al formulario temporal */
 botonTemporal.addEventListener("click", function () {
 
     formularioTemporal.classList.remove("d-none");

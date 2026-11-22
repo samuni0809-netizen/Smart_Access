@@ -1,4 +1,4 @@
-/* Titulo principal */
+/* titulo principal */
 
 .encabezado-perfil h2 {
     color: var(--text-dark);
@@ -11,7 +11,7 @@
     font-size: 15px;
 }
 
-/* Avatar del perfil */
+/* avatar del perfil */
 
 .avatar-perfil {
     width: 76px;
@@ -22,7 +22,7 @@
     font-weight: 700;
 }
 
-/* Informacion de identificacion */
+/* informacion de identificacion */
 
 .nombre-perfil {
     color: var(--text-dark);
@@ -35,7 +35,7 @@
     font-size: 14px;
 }
 
-/* Estado de cuenta */
+/* estado de cuenta */
 
 .estado-cuenta {
     background-color: var(--success-bg);
@@ -45,7 +45,7 @@
     padding: 8px 12px;
 }
 
-/* Fecha de registro */
+/* fecha de registro */
 
 .etiqueta-perfil {
     color: var(--text-muted);
@@ -60,7 +60,7 @@
     font-weight: 600;
 }
 
-/* Datos personales */
+/* datos personales */
 
 .titulo-perfil {
     color: var(--text-dark);
@@ -94,14 +94,14 @@
     overflow-wrap: anywhere;
 }
 
-/* Encabezado de datos personales */
+/* encabezado de datos personales */
 
 .encabezado-datos-perfil {
     width: 100%;
 }
 
 
-/* Botones */
+/* botones */
 
 .acciones-perfil .btn {
     padding: 8px 12px;
@@ -117,7 +117,7 @@
     color: var(--text-dark);
 }
 
-/* SECCION DEL CODIGO QR */
+/* seccion del codigo qr */
 
 .seccion-codigo-qr {
     width: 100%;
@@ -149,7 +149,7 @@
     font-weight: 600;
 }
 
-/* Responsive */
+/* responsive */
 
 @media (max-width: 767.98px) {
     .encabezado-perfil h2 {
@@ -179,7 +179,7 @@
         padding: 12px 8px;
     }
 
-    /* QR */
+    /* qr */
 
     .imagen-codigo-qr {
         width: 145px;
