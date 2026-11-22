@@ -1,0 +1,162 @@
+/* Variables de colores */
+
+:root {
+    --primary-color: #39A900;
+    --primary-dark: #007832;
+    --primary-light: #00304d;
+
+    --accent-color: #50e5f9;
+    --secondary-color: #71277A;
+    --secondary-bg: #f6f0f7;
+
+    --success-color: #39A900;
+    --success-bg: #dcf5cf;
+    --success-text: #007832;
+
+    --background-color: #f6f6f6;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+
+    --border-color: #e2e8f0;
+
+    --sidebar-bg: #00304d;
+    --sidebar-bg-light: #184a72;
+
+    --color-nombre-sistema: #b7c9d6;
+    --color-links: #c5d4df;
+
+    --muted-bg: #e2e8f0;
+    --muted-text: #475569;
+
+    --danger-color: #dc2626;
+    --warning-color: #fdc300;
+}
+
+/* Encabezado */
+
+.encabezado-dispositivo h2{
+    color: var(--text-dark);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.encabezado-dispositivo p{
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* Nombre */
+
+.nombre-dispositivo{
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Serial */
+
+.serial-dispositivo{
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.linea-dispositivo{
+    width: 55px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Titulo observaciones */
+
+.titulo-dispositivo {
+    color: var(--text-dark);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Datos */
+
+.dato-dispositivo{
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dato-dispositivo dt{
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.dato-dispositivo dd{
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Fotografia del dispositivo */
+
+.imagen-dispositivo{
+    width: 100%;
+    max-width: 288px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--background-color);
+}
+
+.imagen-dispositivo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Aviso informativo */
+
+.aviso-dispositivo{
+    background-color: #eaf6fc;
+    border: 1px solid #c9e5f3;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.aviso-dispositivo h4{
+    color: #176b91;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.aviso-dispositivo h4 i{
+    margin-right: 6px;
+}
+
+.aviso-dispositivo p{
+    color: #36596b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Responsive */
+
+@media (max-width: 767.98px){
+
+    .encabezado-dispositivo h2{
+        font-size: 22px;
+    }
+
+    .imagen-dispositivo{
+        max-width: 240px;
+        height: 190px;
+    }
+
+    .titulo-dispositivo{
+        font-size: 20px;
+    }
+}

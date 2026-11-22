@@ -1,35 +1,102 @@
-<!-- Navegación compartida en todos los archivos del administrador, mediante el archivo "nav.js" -->
+<!-- CONTENEDOR DE LA BARRA LATERAL -->
+<div class="barra-lateral d-flex flex-column h-100 p-4 overflow-hidden">
 
-<!-- NOMBRE Y LOGO -->
+    <!-- LOGO Y NOMBRE DEL SISTEMA -->
+    <header class="encabezado-navegacion d-flex align-items-center gap-3">
 
-<div>
-    <img src="#" alt="Logotipo SENA">
-    <h1>Smart Access</h1>
-</div>
+        <span class="logo-sena d-flex align-items-center justify-content-center flex-shrink-0" aria-hidden="true">
+            S
+        </span>
 
-<div>
-    <nav>
-        <ul>
+        <span class="nombre-sistema d-flex flex-column">
 
-            <li>
-                <a href="../usuario/mi_computador.html">Mi dispositivo</a>
+            <strong>Sena</strong>
+
+            <small>Control Acceso</small>
+
+        </span>
+
+    </header>
+
+    <!-- INFORMACIÓN DEL ADMINISTRADOR -->
+    <section class="informacion-administrador p-3 rounded-3 mb-4" aria-label="Información del administrador">
+
+        <p class="cargo-administrador">
+            Usuario
+        </p>
+
+        <h2 class="nombre-administrador">
+            Juan Pablo Pérez
+        </h2>
+
+    </section>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu-principal d-flex flex-column flex-grow-1" aria-label="Menú principal">
+
+        <p class="titulo-menu mb-3">
+            Mi cuenta
+        </p>
+
+        <ul class="lista-menu d-flex flex-column flex-grow-1 gap-2 list-unstyled p-0 m-0 overflow-y-auto">
+
+            <!-- MI PERFIL -->
+            <li class="elemento-menu">
+
+                <a href="perfil_usuario.html"
+                    class="d-flex align-items-center px-2 py-2 rounded-3 text-decoration-none fw-medium gap-3">
+                    <i class="bi bi-person-fill"></i>
+                    <span>Mi Perfil</span>
+                </a>
+
             </li>
 
-            <!-- MENÚ DESPLEGABLE PARA LOS REGISTROS -->
+            <!-- HISTORIAL DE INGRESOS -->
+            <li class="elemento-menu">
 
-            <li>
-                <a href="../usuario/mi_vehiculo.html"> Mi vehiculo</a>
+                <a href="mis_accesos.html"
+                    class="d-flex align-items-center px-2 py-2 rounded-3 text-decoration-none fw-medium gap-3">
+                    <i class="bi bi-clock-history"></i>
+                    <span>Mis accesos</span>
+                </a>
+
             </li>
 
-            <hr>
 
-            <li>
-                <a href="../usuario/mis _accesos.html">Mis ingresos</a>
+            <!-- DISPOSITIVOS -->
+            <li class="elemento-menu">
+
+                <a href="mi_computador.html"
+                    class="d-flex align-items-center px-2 py-2 rounded-3 text-decoration-none fw-medium gap-3">
+                    <i class="bi bi-laptop"></i>
+                    <span>Mis Dispositivos</span>
+                </a>
+
             </li>
 
-            <li>
-                <a href="../usuario/perfil_usuario.html"> Mi perfil</a>
+            <!-- VEHÍCULOS -->
+            <li class="elemento-menu">
+
+                <a href="mi_vehiculo.html"
+                    class="d-flex align-items-center px-2 py-2 rounded-3 text-decoration-none fw-medium gap-3">
+                    <i class="bi bi-car-front-fill"></i>
+                    <span>Mis Vehículos</span>
+                </a>
+
             </li>
         </ul>
+
+        <!-- CERRAR SESIÓN -->
+        <div class="elemento-menu cerrar-sesion mt-auto flex-shrink-0">
+
+            <a href="../../index.html"
+                class="d-flex align-items-center px-2 py-2 rounded-3 text-decoration-none fw-medium gap-3">
+                <i class="bi bi-box-arrow-left"></i>
+                <span>Cerrar Sesion</span>
+            </a>
+
+        </div>
+
     </nav>
+
 </div>

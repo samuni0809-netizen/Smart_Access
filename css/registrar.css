@@ -1,0 +1,132 @@
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Titulo principal */
+
+#titulo-permanente,
+#titulo-temporal {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+#boton-permanente,
+#boton-temporal {
+    min-width: 140px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.form-label {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* CAMPOS DE TEXTO */
+.form-control,
+.form-select {
+    min-height: 44px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* ESTADO CUANDO SE SELECCIONA UN CAMPO */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(57, 169, 0, 0.15);
+}
+
+/* TÍTULOS DE LAS SECCIONES OPCIONALES */
+#titulo-dispositivo,
+#titulo-vehiculo {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* ÁREAS PARA LAS FOTOGRAFÍAS */
+.area-fotografia {
+    background-color: var(--background-color);
+    border-color: var(--border-color) !important;
+}
+
+/* TÍTULOS DE LAS FOTOGRAFÍAS */
+.border.rounded h5 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* DESCRIPCIONES DE LAS FOTOGRAFÍAS */
+.border.rounded p {
+    font-size: 14px;
+}
+
+/* BOTONES DE REGISTRO */
+.boton-registrar {
+    min-width: 140px;
+    border-radius: 8px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.2s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.boton-registrar:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 576px) {
+
+    #boton-permanente,
+    #boton-temporal {
+        min-width: 0;
+        flex: 1;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .boton-registrar {
+        width: 100%;
+    }
+}
+
+/* SELECTOR DE FOTOGRAFÍAS */
+.selector-fotografia {
+    min-height: auto;
+    padding: 6px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* BOTÓN PARA SELECCIONAR ARCHIVO */
+.selector-fotografia::file-selector-button {
+    background-color: var(--muted-bg);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.selector-fotografia::file-selector-button:hover {
+    background-color: var(--border-color);
+}

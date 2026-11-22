@@ -1,0 +1,192 @@
+/* Titulo principal */
+
+.encabezado-perfil h2 {
+    color: var(--text-dark);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.encabezado-perfil p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* Avatar del perfil */
+
+.avatar-perfil {
+    width: 76px;
+    height: 76px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* Informacion de identificacion */
+
+.nombre-perfil {
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.rol-perfil {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Estado de cuenta */
+
+.estado-cuenta {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+/* Fecha de registro */
+
+.etiqueta-perfil {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.valor-perfil {
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Datos personales */
+
+.titulo-perfil {
+    color: var(--text-dark);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.datos-personales {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.dato-perfil {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border-color);
+    min-height: 76px;
+}
+
+.dato-perfil dt {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.dato-perfil dd {
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Encabezado de datos personales */
+
+.encabezado-datos-perfil {
+    width: 100%;
+}
+
+
+/* Botones */
+
+.acciones-perfil .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.acciones-perfil .btn:hover {
+    background-color: var(--muted-bg);
+    border-color: var(--text-muted);
+    color: var(--text-dark);
+}
+
+/* SECCION DEL CODIGO QR */
+
+.seccion-codigo-qr {
+    width: 100%;
+}
+
+.contenido-qr {
+    padding: 12px 0px;
+}
+
+.imagen-codigo-qr {
+    width: 170px;
+    height: 170px;
+    flex-shrink: 0;
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    background-color: var(--background-color);
+}
+
+.informacion-codigo-qr p:first-child {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.informacion-codigo-qr p:nth-child(2) {
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+    .encabezado-perfil h2 {
+        font-size: 22px;
+    }
+
+    .nombre-perfil {
+        font-size: 18px;
+    }
+
+    .titulo-perfil {
+        font-size: 20px;
+    }
+
+    .avatar-perfil {
+        width: 68px;
+        height: 68px;
+        font-size: 22px;
+    }
+
+    .acciones-perfil .btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .dato-perfil {
+        padding: 12px 8px;
+    }
+
+    /* QR */
+
+    .imagen-codigo-qr {
+        width: 145px;
+        height: 145px;
+    }
+
+    .contenido-qr {
+        gap: 16px
+    }
+}
