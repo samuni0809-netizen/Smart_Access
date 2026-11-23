@@ -31,7 +31,7 @@
     <div class="estructura-administrativa d-flex min-vh-100">
 
         <!-- navegación lateral compartida -->
-        <aside id="navegacion-header" class="contenedor-navegacion sticky-top vh-100" aria-label="Navegación principal">
+        <aside id="navegacion-header" class="contenedor-navegacion sticky-top vh-100">
         </aside>
 
         <!-- fondo oscuro para celulares -->
@@ -46,10 +46,9 @@
 
                 <!-- botón del menú para celulares -->
                 <button id="boton-menu"
-                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button"
-                    aria-label="Abrir menú" aria-expanded="false">
+                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button">
 
-                    <i class="bi bi-list" aria-hidden="true"></i>
+                    <i class="bi bi-list"></i>
 
                 </button>
 
@@ -69,8 +68,7 @@
             <main class="contenido-dashboard container-fluid px-3 px-md-4 py-4">
 
                 <!-- panel general del historial -->
-                <section class="panel-registros bg-white border rounded-4 p-3 p-md-4"
-                    aria-labelledby="titulo-registros-dispositivos">
+                <section class="panel-registros bg-white border rounded-4 p-3 p-md-4">
 
 
                     <!-- encabezado y filtros -->
@@ -81,50 +79,50 @@
 
                             <!-- filtros de movimiento -->
                             <div
-                                class="filtros-registros d-flex flex-wrap gap-2" aria-label="Filtrar por tipo de registro" role="group">
+                                class="filtros-registros d-flex flex-wrap gap-2" role="group">
 
-                                <button id="filtro-todos" class="btn btn-success" type="button" aria-pressed="true">
+                                <button id="filtro-todos" class="btn btn-success" type="button">
 
                                     Todos
 
                                 </button>
 
                                 <button id="filtro-permanentes"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="false">
+                                    class="btn btn-outline-secondary" type="button">
 
                                     Permanentes
 
                                 </button>
 
                                 <button id="filtro-temporales"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="false">
+                                    class="btn btn-outline-secondary" type="button">
 
                                     Temporales
 
                                 </button>
 
-                                <button id="boton-activos" class="btn btn-success" type="button" aria-pressed="true">
+                                <button id="boton-activos" class="btn btn-success" type="button">
 
                                     Activos
 
                                 </button>
 
                                 <button id="boton-inactivos"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="true">
+                                    class="btn btn-outline-secondary" type="button">
 
                                     Inactivos
 
                                 </button>
 
                                 <button id="boton-instalaciones"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="true">
+                                    class="btn btn-outline-secondary" type="button">
 
                                     En instalaciones
 
                                 </button>
 
                                 <button id="boton-fuera-instalaciones"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="true">
+                                    class="btn btn-outline-secondary" type="button">
 
                                     Fuera de instalaciones
 
@@ -138,7 +136,7 @@
                                 <button id="btn-filtrar-fecha"
                                     class="btn btn-outline-secondary filtrar-fecha" type="button">
 
-                                    <i class="bi bi-calendar3 me-2" aria-hidden="true"></i>
+                                    <i class="bi bi-calendar3 me-2"></i>
 
                                     Filtrar por fecha
 
@@ -146,7 +144,7 @@
 
                                 <button id="btn-generar-reporte" class="btn btn-success" type="button">
 
-                                    <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i>
+                                    <i class="bi bi-file-earmark-arrow-down"></i>
 
                                     Generar reporte
 
@@ -166,12 +164,11 @@
 
                             <div class="input-group pt-3">
 
-                                <span class="input-group-text" aria-hidden="true">
-                                    <i class="bi bi-search" aria-hidden="true"></i>
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
                                 </span>
 
                                 <input id="busqueda" class="form-control campo-busqueda" name="busqueda" type="search"
-                                    aria-label="Buscar registros"
                                     placeholder="Buscar por usuario, documento, portero o centro">
 
                             </div>
@@ -179,7 +176,7 @@
                         </form>
 
                         <!-- cantidad de resultados -->
-                        <div aria-live="polite">
+                        <div>
 
                             <p id="total-resultados" class="cantidad-resultados mb-0">
                                 135 resultados
@@ -259,17 +256,15 @@
 
                                     <td>
                                         <button class="boton-ver-registro btn btn-outline-secondary" type="button"
-                                            data-bs-toggle="modal" data-bs-target="#modal-detalle-computador"
-                                            aria-label="Ver registro de Cristian Camilo Duque Orozco">
-                                            <i class="bi bi-eye" aria-hidden="true"></i>
+                                            data-bs-toggle="modal" data-bs-target="#modal-detalle-computador">
+                                            <i class="bi bi-eye"></i>
                                         </button>
 
                                         <!-- botón editar -->
                                         <button class="boton-editar-registro btn btn-outline-secondary" type="button"
-                                            data-bs-toggle="modal" data-bs-target="#modal-editar-computador"
-                                            aria-label="Editar registro de Cristian Camilo Duque Orozco">
+                                            data-bs-toggle="modal" data-bs-target="#modal-editar-computador">
 
-                                            <i class="bi bi-pencil" aria-hidden="true"></i>
+                                            <i class="bi bi-pencil"></i>
 
                                         </button>
                                     </td>
@@ -281,8 +276,7 @@
 
                     </div>
 
-                    <div id="modal-detalle-computador" class="modal fade"
-                        aria-labelledby="titulo-detalle-computador" aria-hidden="true" tabindex="-1">
+                    <div id="modal-detalle-computador" class="modal fade" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered modal-lg">
 
@@ -295,7 +289,7 @@
                                         Detalle del computador
                                     </h2>
 
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal">
                                     </button>
 
                                 </div>
@@ -307,7 +301,7 @@
                                     <!-- presentación del dispositivo principal -->
                                     <div class="detalle-equipo-principal">
 
-                                        <i class="bi bi-laptop" aria-hidden="true"></i>
+                                        <i class="bi bi-laptop"></i>
 
                                         <h3>Marca / Modelo: HP / —</h3>
 
@@ -384,8 +378,7 @@
                         </div>
                     </div>
 
-                    <div id="modal-editar-computador" class="modal fade"
-                        aria-labelledby="titulo-editar-computador" aria-hidden="true" tabindex="-1">
+                    <div id="modal-editar-computador" class="modal fade" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered">
 
@@ -398,7 +391,7 @@
                                         Editar computador
                                     </h2>
 
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal">
                                     </button>
 
                                 </div>

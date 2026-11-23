@@ -22,7 +22,6 @@ if (botonMenu && estructura && fondoMenu && navegacion){
 
         const menuAbierto = estructura.classList.toggle("menu-abierto");
 
-        botonMenu.setAttribute("aria-expanded", menuAbierto);
     });
 
     /* cerrar el menu al pulsar el fondo */
@@ -31,7 +30,6 @@ if (botonMenu && estructura && fondoMenu && navegacion){
 
         estructura.classList.remove("menu-abierto");
 
-        botonMenu.setAttribute("aria-expanded", "false");
 
     });
 }
@@ -46,7 +44,6 @@ if (botonMenu && estructura && fondoMenu && navegacion_u){
 
         const menuAbierto = estructura.classList.toggle("menu-abierto");
 
-        botonMenu.setAttribute("aria-expanded", menuAbierto);
     });
 
     /* cerrar el menu al pulsar el fondo */
@@ -55,7 +52,6 @@ if (botonMenu && estructura && fondoMenu && navegacion_u){
 
         estructura.classList.remove("menu-abierto");
 
-        botonMenu.setAttribute("aria-expanded", "false");
 
     });
 }
@@ -70,7 +66,6 @@ if (botonMenu && estructura && fondoMenu && navegacion_v){
 
         const menuAbierto = estructura.classList.toggle("menu-abierto");
 
-        botonMenu.setAttribute("aria-expanded", menuAbierto);
     });
 
     /* cerrar el menu al pulsar el fondo */
@@ -79,7 +74,6 @@ if (botonMenu && estructura && fondoMenu && navegacion_v){
 
         estructura.classList.remove("menu-abierto");
 
-        botonMenu.setAttribute("aria-expanded", "false");
 
     });
 }

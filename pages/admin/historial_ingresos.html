@@ -31,7 +31,7 @@
     <div class="estructura-administrativa d-flex min-vh-100">
 
         <!-- navegación lateral compartida -->
-        <aside id="navegacion-header" class="contenedor-navegacion sticky-top vh-100" aria-label="Navegación principal">
+        <aside id="navegacion-header" class="contenedor-navegacion sticky-top vh-100">
         </aside>
 
         <!-- fondo oscuro para celulares -->
@@ -46,8 +46,7 @@
 
                 <!-- botón del menú para celulares -->
                 <button id="boton-menu"
-                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button"
-                    aria-label="Abrir menú" aria-expanded="false">
+                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button">
 
                     <i class="bi bi-list"></i>
 
@@ -69,8 +68,7 @@
             <main class="contenido-dashboard container-fluid px-3 px-md-4 py-4">
 
                 <!-- panel general del historial -->
-                <section class="panel-registros bg-white border rounded-4 p-3 p-md-4"
-                    aria-labelledby="titulo-historial">
+                <section class="panel-registros bg-white border rounded-4 p-3 p-md-4">
 
 
                     <!-- encabezado y filtros -->
@@ -93,8 +91,7 @@
                         <div class="d-flex flex-column flex-column gap-3">
 
                             <!-- filtros de movimiento -->
-                            <div class="filtros-registros d-flex flex-wrap gap-2"
-                                aria-label="Filtrar por tipo de movimiento" role="group">
+                            <div class="filtros-registros d-flex flex-wrap gap-2" role="group">
 
                                 <button id="filtro-todos" class="btn btn-success" type="button">
 
@@ -179,7 +176,6 @@
                                 </span>
 
                                 <input id="busqueda" class="form-control campo-busqueda" name="busqueda" type="search"
-                                    aria-label="Buscar movimientos por usuario, documento, correo, computador, serial, vehículo, placa, centro o vigilante"
                                     placeholder="Buscar por usuario, documento, correo, computador, serial, vehículo, placa, centro o vigilante">
 
                             </div>
@@ -187,7 +183,7 @@
                         </form>
 
                         <!-- cantidad de resultados -->
-                        <div aria-live="polite">
+                        <div>
 
                             <p id="total-resultados" class="cantidad-resultados mb-0">
                                 135 resultados
@@ -293,9 +289,8 @@
                                     <td>
                                         <!-- botón ver -->
                                         <button class="boton-ver-registro btn btn-outline-secondary" type="button"
-                                            data-bs-toggle="modal" data-bs-target="#modal-detalle-movimiento"
-                                            aria-label="Ver registro de Cristian Camilo Duque Orozco">
-                                            <i class="bi bi-eye" aria-hidden="true"></i>
+                                            data-bs-toggle="modal" data-bs-target="#modal-detalle-movimiento">
+                                            <i class="bi bi-eye"></i>
                                         </button>
                                     </td>
 
@@ -307,8 +302,7 @@
 
                     </div>
 
-                    <div id="modal-detalle-movimiento" class="modal fade" aria-labelledby="titulo-detalle-movimiento"
-                        aria-hidden="true" tabindex="-1">
+                    <div id="modal-detalle-movimiento" class="modal fade" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered modal-lg">
 
@@ -321,7 +315,7 @@
                                         Detalle del movimiento
                                     </h2>
 
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal">
                                     </button>
 
                                 </div>
