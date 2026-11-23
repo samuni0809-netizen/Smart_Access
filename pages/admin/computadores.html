@@ -81,7 +81,7 @@
 
                             <!-- filtros de movimiento -->
                             <div
-                                class="filtros-registros d-flex flex-wrap gap-2" aria-label="Filtrar por tipo de movimiento" role="group">
+                                class="filtros-registros d-flex flex-wrap gap-2" aria-label="Filtrar por tipo de registro" role="group">
 
                                 <button id="filtro-todos" class="btn btn-success" type="button" aria-pressed="true">
 
@@ -89,14 +89,14 @@
 
                                 </button>
 
-                                <button id="filtro-ingresos"
+                                <button id="filtro-permanentes"
                                     class="btn btn-outline-secondary" type="button" aria-pressed="false">
 
                                     Permanentes
 
                                 </button>
 
-                                <button id="filtro-salidas"
+                                <button id="filtro-temporales"
                                     class="btn btn-outline-secondary" type="button" aria-pressed="false">
 
                                     Temporales
@@ -199,7 +199,7 @@
 
                                 <tr>
 
-                                    <th class="text-nowrap" scope="col">Tipo</th>
+                                    <th class="text-nowrap" scope="col">Estado</th>
 
                                     <th class="text-nowrap" scope="col">Propietario</th>
 
@@ -227,7 +227,11 @@
                                 <!-- registro 1 -->
                                 <tr class="text-center">
 
-                                    <td>Portátil</td>
+                                    <td>
+                                        <span class="estado-elementos completo badge rounded-pill">
+                                            Activo
+                                        </span>
+                                    </td>
 
                                     <td>
                                         <div>
@@ -239,15 +243,11 @@
 
                                     <td>1234567890</td>
 
-                                    <td>HP</td>
+                                    <td>HP / —</td>
 
                                     <td>ASDDS-1233</td>
 
-                                    <td>
-                                        <span class="estado-elementos completo badge rounded-pill">
-                                            Activo
-                                        </span>
-                                    </td>
+                                    <td>Permanente</td>
 
                                     <td>En instalaciones</td>
 
@@ -292,7 +292,7 @@
                                 <div class="modal-header modal-detalle-encabezado">
 
                                     <h2 id="titulo-detalle-computador" class="modal-title fs-5">
-                                        Detalle de Usuario
+                                        Detalle del computador
                                     </h2>
 
                                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
@@ -309,9 +309,9 @@
 
                                         <i class="bi bi-laptop" aria-hidden="true"></i>
 
-                                        <h3>Lenovo ThinkPad E14</h3>
+                                        <h3>Marca / Modelo: HP / —</h3>
 
-                                        <p>Serial LNV-2024-0001</p>
+                                        <p>Serial ASDDS-1233</p>
 
                                     </div>
 
@@ -319,28 +319,18 @@
                                     <div class="row g-3">
 
                                         <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Nombre completo</p>
+                                            <p class="fw-bold mb-1">Usuario propietario</p>
                                             <p>Cristian Camilo Duque Orozco</p>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Documento</p>
-                                            <p>1065544332</p>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Correo electrónico</p>
-                                            <p>samuel@gmail.com</p>
+                                            <p class="fw-bold mb-1">Documento del usuario</p>
+                                            <p>1234567890</p>
                                         </div>
 
                                         <div class="col-md-6">
                                             <p class="fw-bold mb-1">Estado</p>
                                             <p>Activo</p>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Centro</p>
-                                            <p>CTGI</p>
                                         </div>
 
                                         <div class="col-md-6">
@@ -350,7 +340,31 @@
 
                                         <div class="col-md-6">
                                             <p class="fw-bold mb-1">Fecha de registro</p>
-                                            <p>11/11/2026 - 19:56</p>
+                                            <p>2026-11-11 19:56</p>
+                                        </div>
+
+                                        <!-- bloque replicado para mostrar el código del dispositivo -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Código del dispositivo</p>
+                                            <p>—</p>
+                                        </div>
+
+                                        <!-- bloque replicado para mostrar los detalles del equipo -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Detalles</p>
+                                            <p>—</p>
+                                        </div>
+
+                                        <!-- bloque replicado para mostrar la fotografía del equipo -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Fotografía</p>
+                                            <p>—</p>
+                                        </div>
+
+                                        <!-- bloque replicado para mostrar la ubicación actual -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Ubicación actual</p>
+                                            <p>En instalaciones</p>
                                         </div>
 
                                     </div>
@@ -381,7 +395,7 @@
                                 <div class="modal-header modal-editar-encabezado">
 
                                     <h2 id="titulo-editar-computador" class="modal-title fs-5">
-                                        Editar Usuario
+                                        Editar computador
                                     </h2>
 
                                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
@@ -397,27 +411,53 @@
                                         <div class="row g-3">
 
                                             <div class="col-12">
-                                                <label class="form-label" for="editar-nombre">
-                                                    Nombre completo
+                                                <label class="form-label" for="editar-marca">
+                                                    Marca
                                                 </label>
-                                                <input id="editar-nombre" class="form-control" type="text"
-                                                    value="Carlos Andrés Rodríguez Gómez">
+                                                <input id="editar-marca" class="form-control" type="text"
+                                                    value="HP">
                                             </div>
 
                                             <div class="col-md-6">
-                                                <label class="form-label" for="editar-documento">
-                                                    N.º de documento
+                                                <label class="form-label" for="editar-modelo">
+                                                    Modelo
                                                 </label>
-                                                <input id="editar-documento" class="form-control" type="text"
-                                                    value="1098765432">
+                                                <input id="editar-modelo" class="form-control" type="text"
+                                                    value="" placeholder="—">
                                             </div>
 
-                                            <div class="col-12">
-                                                <label class="form-label" for="editar-correo">
-                                                    Correo electrónico
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="editar-numero-serial">
+                                                    Número de serial
                                                 </label>
-                                                <input id="editar-correo" class="form-control" type="email"
-                                                    value="carlos.rodriguez@soy.sena.edu.co">
+                                                <input id="editar-numero-serial" class="form-control" type="text"
+                                                    value="ASDDS-1233">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="editar-documento-propietario">
+                                                    Número de documento del propietario
+                                                </label>
+                                                <input id="editar-documento-propietario" class="form-control" type="text"
+                                                    value="1234567890">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="editar-detalles">
+                                                    Detalles
+                                                </label>
+                                                <input id="editar-detalles" class="form-control" type="text"
+                                                    value="" placeholder="—">
+                                            </div>
+
+                                            <!-- cambiar fotografía -->
+                                            <div class="col-12">
+                                                <label class="form-label" for="editar-fotografia">
+                                                    Fotografía actualizada
+                                                </label>
+
+                                                <input id="editar-fotografia" class="form-control" type="file"
+                                                    accept="image/png, image/jpeg, image/webp">
                                             </div>
 
                                             <div class="col-md-6">
@@ -431,51 +471,13 @@
                                             </div>
 
                                             <div class="col-md-6">
-                                                <label class="form-label" for="editar-centro">
-                                                    Centro
-                                                </label>
-                                                <select id="editar-centro" class="form-select">
-                                                    <option selected>CTGI</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <label class="form-label" for="editar-tipo">
+                                                <label class="form-label" for="editar-tipo-registro">
                                                     Tipo de registro
                                                 </label>
-                                                <select id="editar-tipo" class="form-select">
+                                                <select id="editar-tipo-registro" class="form-select">
                                                     <option selected>Permanente</option>
                                                     <option>Temporal</option>
                                                 </select>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <label class="form-label" for="editar-rol">
-                                                    Rol
-                                                </label>
-                                                <select id="editar-rol" class="form-select">
-                                                    <option selected>Usuario</option>
-                                                    <option>Vigilante</option>
-                                                    <option>Administrador</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <label class="form-label" for="editar-contrasena">
-                                                    Contraseña del prototipo
-                                                </label>
-                                                <input id="editar-contrasena" class="form-control" type="text"
-                                                    value="usuario123">
-                                            </div>
-
-                                            <!-- cambiar fotografía -->
-                                            <div class="col-12">
-                                                <label class="form-label" for="editar-fotografia">
-                                                    Cambiar fotografía
-                                                </label>
-
-                                                <input id="editar-fotografia" class="form-control" type="file"
-                                                    accept="image/png, image/jpeg, image/webp">
                                             </div>
 
                                         </div>

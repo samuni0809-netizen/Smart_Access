@@ -80,8 +80,8 @@
                         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
 
                             <!-- filtros de movimiento -->
-                            <div
-                                class="filtros-registros d-flex flex-wrap gap-2" aria-label="Filtrar por tipo de movimiento" role="group">
+                            <div class="filtros-registros d-flex flex-wrap gap-2"
+                                aria-label="Filtrar por tipo de movimiento" role="group">
 
                                 <button id="filtro-todos" class="btn btn-success" type="button" aria-pressed="true">
 
@@ -89,15 +89,15 @@
 
                                 </button>
 
-                                <button id="filtro-ingresos"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="false">
+                                <button id="filtro-ingresos" class="btn btn-outline-secondary" type="button"
+                                    aria-pressed="false">
 
                                     Permanentes
 
                                 </button>
 
-                                <button id="filtro-salidas"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="false">
+                                <button id="filtro-salidas" class="btn btn-outline-secondary" type="button"
+                                    aria-pressed="false">
 
                                     Temporales
 
@@ -109,15 +109,15 @@
 
                                 </button>
 
-                                <button id="boton-vigilante"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="true">
+                                <button id="boton-vigilante" class="btn btn-outline-secondary" type="button"
+                                    aria-pressed="true">
 
-                                    Vigilante
+                                    Vigilantes
 
                                 </button>
 
-                                <button id="boton-administradores"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="true">
+                                <button id="boton-administradores" class="btn btn-outline-secondary" type="button"
+                                    aria-pressed="true">
 
                                     Administradores
 
@@ -129,8 +129,8 @@
 
                                 </button>
 
-                                <button id="boton-inactivos"
-                                    class="btn btn-outline-secondary" type="button" aria-pressed="true">
+                                <button id="boton-inactivos" class="btn btn-outline-secondary" type="button"
+                                    aria-pressed="true">
 
                                     Inactivos
 
@@ -141,8 +141,8 @@
                             <!-- acciones del historial -->
                             <div class="acciones-registros d-flex flex-wrap gap-2">
 
-                                <button id="btn-filtrar-fecha"
-                                    class="btn btn-outline-secondary filtrar-fecha" type="button">
+                                <button id="btn-filtrar-fecha" class="btn btn-outline-secondary filtrar-fecha"
+                                    type="button">
 
                                     <i class="bi bi-calendar3 me-2" aria-hidden="true"></i>
 
@@ -178,7 +178,7 @@
 
                                 <input id="busqueda" class="form-control campo-busqueda" name="busqueda" type="search"
                                     aria-label="Buscar registros"
-                                    placeholder="Buscar por usuario, documento, portero o centro">
+                                    placeholder="Buscar por usuario, documento, vigilante o centro">
 
                             </div>
 
@@ -205,11 +205,17 @@
 
                                 <tr>
 
-                                    <th class="text-nowrap" scope="col">Usuario</th>
+                                    <th class="text-nowrap" scope="col">Nombre</th>
 
-                                    <th class="text-nowrap" scope="col">Documento</th>
+                                    <th class="text-nowrap" scope="col">Número de documento</th>
 
-                                    <th class="text-nowrap" scope="col">Correo</th>
+                                    <th class="text-nowrap" scope="col">Correo electrónico</th>
+
+                                    <!-- columna replicada para mostrar el computador asociado -->
+                                    <th class="text-nowrap" scope="col">Computador</th>
+
+                                    <!-- columna replicada para mostrar el vehículo asociado -->
+                                    <th class="text-nowrap" scope="col">Vehículo</th>
 
                                     <th class="text-nowrap" scope="col">Estado</th>
 
@@ -256,6 +262,12 @@
                                         </span>
                                     </td>
 
+                                    <!-- celda replicada para mostrar el computador asociado -->
+                                    <td>Lenovo ThinkPad E14</td>
+
+                                    <!-- celda replicada para mostrar el vehículo asociado -->
+                                    <td>—</td>
+
                                     <td>
                                         <span class="movimiento ingreso badge rounded-pill">
                                             Activo
@@ -289,9 +301,9 @@
                                             </button>
 
                                             <!-- botón editar -->
-                                            <button
-                                                class="boton-editar-registro btn btn-outline-secondary" type="button"
-                                                data-bs-toggle="modal" data-bs-target="#modal-editar-usuario"
+                                            <button class="boton-editar-registro btn btn-outline-secondary"
+                                                type="button" data-bs-toggle="modal"
+                                                data-bs-target="#modal-editar-usuario"
                                                 aria-label="Editar registro de Cristian Camilo Duque Orozco">
 
                                                 <i class="bi bi-pencil" aria-hidden="true"></i>
@@ -312,8 +324,8 @@
                     </div>
 
 
-                    <div id="modal-detalle-usuario" class="modal fade"
-                        aria-labelledby="titulo-detalle-usuario" aria-hidden="true" tabindex="-1">
+                    <div id="modal-detalle-usuario" class="modal fade" aria-labelledby="titulo-detalle-usuario"
+                        aria-hidden="true" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered modal-lg">
 
@@ -342,13 +354,25 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Documento</p>
+                                            <p class="fw-bold mb-1">Número de documento</p>
                                             <p>1065544332</p>
                                         </div>
 
                                         <div class="col-md-6">
                                             <p class="fw-bold mb-1">Correo electrónico</p>
                                             <p>samuel@gmail.com</p>
+                                        </div>
+
+                                        <!-- dato replicado para mostrar el rol del usuario -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Rol</p>
+                                            <p>Usuario</p>
+                                        </div>
+
+                                        <!-- dato replicado para mostrar el teléfono de vigilantes -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Teléfono (para vigilantes)</p>
+                                            <p>No aplica</p>
                                         </div>
 
                                         <div class="col-md-6">
@@ -378,7 +402,7 @@
                                     <div class="detalle-dispositivos">
 
                                         <h3 class="titulo-dispositivos">
-                                            Dispositivos registrados (3)
+                                            Dispositivos registrados (1)
                                         </h3>
 
                                         <!-- dispositivo 1 -->
@@ -395,12 +419,12 @@
                                             </div>
 
                                             <div class="detalle-dispositivo-fila">
-                                                <span>Condición</span>
+                                                <span>Tipo de registro</span>
                                                 <strong>Permanente</strong>
                                             </div>
 
                                             <div class="detalle-dispositivo-fila">
-                                                <span>Ubicación</span>
+                                                <span>Ubicación actual</span>
                                                 <strong>En instalaciones</strong>
                                             </div>
 
@@ -416,7 +440,7 @@
                                     <div class="detalle-dispositivos">
 
                                         <h3 class="titulo-dispositivos">
-                                            Vehiculos registrados (0)
+                                            Vehículos registrados (0)
                                         </h3>
                                     </div>
 
@@ -436,8 +460,8 @@
                         </div>
                     </div>
 
-                    <div id="modal-editar-usuario" class="modal fade"
-                        aria-labelledby="titulo-editar-usuario" aria-hidden="true" tabindex="-1">
+                    <div id="modal-editar-usuario" class="modal fade" aria-labelledby="titulo-editar-usuario"
+                        aria-hidden="true" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered">
 
@@ -467,15 +491,15 @@
                                                     Nombre completo
                                                 </label>
                                                 <input id="editar-nombre" class="form-control" type="text"
-                                                    value="Carlos Andrés Rodríguez Gómez">
+                                                    value="Cristian Camilo Duque Orozco">
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label class="form-label" for="editar-documento">
-                                                    N.º de documento
+                                                    Número de documento
                                                 </label>
                                                 <input id="editar-documento" class="form-control" type="text"
-                                                    value="1098765432">
+                                                    value="1065544332">
                                             </div>
 
                                             <div class="col-12">
@@ -483,7 +507,7 @@
                                                     Correo electrónico
                                                 </label>
                                                 <input id="editar-correo" class="form-control" type="email"
-                                                    value="carlos.rodriguez@soy.sena.edu.co">
+                                                    value="samuel@gmail.com">
                                             </div>
 
                                             <div class="col-md-6">
@@ -528,10 +552,21 @@
 
                                             <div class="col-md-6">
                                                 <label class="form-label" for="editar-contrasena">
-                                                    Contraseña del prototipo
+                                                    Contraseña
                                                 </label>
-                                                <input id="editar-contrasena" class="form-control" type="text"
-                                                    value="usuario123">
+                                                <input id="editar-contrasena" class="form-control" type="password"
+                                                    placeholder="Nueva contraseña" minlength="6"
+                                                    autocomplete="new-password">
+                                            </div>
+
+                                            <!-- campo replicado del registro permanente para confirmar la contraseña -->
+                                            <div class="col-12 col-md-6">
+                                                <label class="form-label" for="editar-confirmar-contrasena">
+                                                    Confirmar contraseña
+                                                </label>
+                                                <input id="editar-confirmar-contrasena" class="form-control"
+                                                    type="password" placeholder="Confirmar contraseña" minlength="6"
+                                                    autocomplete="new-password">
                                             </div>
 
                                         </div>
@@ -555,27 +590,17 @@
                             </div>
                         </div>
                     </div>
+                </section>
+            </main>
 
+            <!-- pie de página -->
+            <footer class="pie-dashboard bg-white">
 
+                <p>Sistema de Control de Acceso - SENA</p>
+
+            </footer>
         </div>
-
     </div>
-
-    </section>
-
-    </main>
-
-    <!-- pie de página -->
-    <footer class="pie-dashboard bg-white">
-
-        <p>Sistema de Control de Acceso - SENA</p>
-
-    </footer>
-
-    </div>
-
-    </div>
-
 
     <!-- archivos javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
