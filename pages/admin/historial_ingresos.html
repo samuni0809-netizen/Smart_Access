@@ -84,17 +84,17 @@
                             </h2>
 
                             <p class="mb-0">
-                                Buscar nombre, documento, centro, fecha,
-                                matrícula, serial, portero
+                                Consultar movimientos por usuario, documento, correo, computador, serial,
+                                vehículo, placa, centro, fecha o vigilante
                             </p>
 
                         </div>
 
-                        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+                        <div class="d-flex flex-column flex-column gap-3">
 
                             <!-- filtros de movimiento -->
-                            <div
-                                class="filtros-registros d-flex flex-wrap gap-2" aria-label="Filtrar por tipo de movimiento" role="group">
+                            <div class="filtros-registros d-flex flex-wrap gap-2"
+                                aria-label="Filtrar por tipo de movimiento" role="group">
 
                                 <button id="filtro-todos" class="btn btn-success" type="button">
 
@@ -114,13 +114,37 @@
 
                                 </button>
 
+                                <button id="filtro-activos" class="btn btn-outline-secondary" type="button">
+
+                                    Activos
+
+                                </button>
+
+                                <button id="filtro-inactivos" class="btn btn-outline-secondary" type="button">
+
+                                    Inactivos
+
+                                </button>
+
+                                <button id="filtro-permanente" class="btn btn-outline-secondary" type="button">
+
+                                    Permanentes
+
+                                </button>
+
+                                <button id="filtro-temporal" class="btn btn-outline-secondary" type="button">
+
+                                    Temporales
+
+                                </button>
+
                             </div>
 
                             <!-- acciones del historial -->
                             <div class="acciones-registros d-flex flex-wrap gap-2">
 
-                                <button id="btn-filtrar-fecha"
-                                    class="btn btn-outline-secondary filtrar-fecha" type="button">
+                                <button id="btn-filtrar-fecha" class="btn btn-outline-secondary filtrar-fecha"
+                                    type="button">
 
                                     <i class="bi bi-calendar3 me-2"></i>
 
@@ -155,8 +179,8 @@
                                 </span>
 
                                 <input id="busqueda" class="form-control campo-busqueda" name="busqueda" type="search"
-                                    aria-label="Buscar registros"
-                                    placeholder="Buscar por usuario, documento, portero o centro">
+                                    aria-label="Buscar movimientos por usuario, documento, correo, computador, serial, vehículo, placa, centro o vigilante"
+                                    placeholder="Buscar por usuario, documento, correo, computador, serial, vehículo, placa, centro o vigilante">
 
                             </div>
 
@@ -187,17 +211,23 @@
 
                                     <th class="text-nowrap" scope="col">Documento</th>
 
+                                    <th class="text-nowrap" scope="col">Correo</th>
+
                                     <th class="text-nowrap" scope="col">Movimiento</th>
 
                                     <th class="text-nowrap" scope="col">Fecha y hora</th>
 
-                                    <th class="text-nowrap" scope="col">Computadores</th>
+                                    <th class="text-nowrap" scope="col">Computador (equipo y serial)</th>
 
-                                    <th class="text-nowrap" scope="col">Vehículos</th>
+                                    <th class="text-nowrap" scope="col">Vehículo (vehículo y placa)</th>
+
+                                    <th class="text-nowrap" scope="col">Centro</th>
 
                                     <th class="text-nowrap" scope="col">Estado de elementos</th>
 
-                                    <th class="text-nowrap" scope="col">Portero</th>
+                                    <th class="text-nowrap" scope="col">Vigilante responsable</th>
+
+                                    <th class="text-nowrap" scope="col">Tipo de registro</th>
 
                                     <th class="text-nowrap" scope="col">Acción</th>
 
@@ -230,6 +260,8 @@
 
                                     <td>1065544332</td>
 
+                                    <td>—</td>
+
                                     <td>
                                         <span class="movimiento ingreso badge rounded-pill">
                                             Ingreso
@@ -242,9 +274,11 @@
                                         </time>
                                     </td>
 
-                                    <td>Asus ZenBook 14</td>
+                                    <td>Asus ZenBook 14 / Serial: —</td>
 
-                                    <td>Sin vehículo</td>
+                                    <td>Sin vehículo / Placa: —</td>
+
+                                    <td>CTGI</td>
 
                                     <td>
                                         <span class="estado-elementos completo badge rounded-pill">
@@ -254,10 +288,12 @@
 
                                     <td>Rosa Elena Muñoz Agudelo</td>
 
+                                    <td>Permanente</td>
+
                                     <td>
                                         <!-- botón ver -->
                                         <button class="boton-ver-registro btn btn-outline-secondary" type="button"
-                                            data-bs-toggle="modal" data-bs-target="#modal-detalle-usuario"
+                                            data-bs-toggle="modal" data-bs-target="#modal-detalle-movimiento"
                                             aria-label="Ver registro de Cristian Camilo Duque Orozco">
                                             <i class="bi bi-eye" aria-hidden="true"></i>
                                         </button>
@@ -271,8 +307,8 @@
 
                     </div>
 
-                    <div id="modal-detalle-usuario" class="modal fade"
-                        aria-labelledby="titulo-detalle-usuario" aria-hidden="true" tabindex="-1">
+                    <div id="modal-detalle-movimiento" class="modal fade" aria-labelledby="titulo-detalle-movimiento"
+                        aria-hidden="true" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered modal-lg">
 
@@ -281,8 +317,8 @@
                                 <!-- encabezado -->
                                 <div class="modal-header modal-detalle-encabezado">
 
-                                    <h2 id="titulo-detalle-usuario" class="modal-title fs-5">
-                                        Detalle de Usuario
+                                    <h2 id="titulo-detalle-movimiento" class="modal-title fs-5">
+                                        Detalle del movimiento
                                     </h2>
 
                                     <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
@@ -296,23 +332,23 @@
                                     <div class="row g-3">
 
                                         <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Nombre completo</p>
+                                            <p class="fw-bold mb-1">Nombre del usuario</p>
                                             <p>Cristian Camilo Duque Orozco</p>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Documento</p>
+                                            <p class="fw-bold mb-1">Número de documento</p>
                                             <p>1065544332</p>
                                         </div>
 
                                         <div class="col-md-6">
                                             <p class="fw-bold mb-1">Correo electrónico</p>
-                                            <p>samuel@gmail.com</p>
+                                            <p>—</p>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Estado</p>
-                                            <p>Activo</p>
+                                            <p class="fw-bold mb-1">Tipo de movimiento</p>
+                                            <p>Ingreso</p>
                                         </div>
 
                                         <div class="col-md-6">
@@ -326,59 +362,67 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <p class="fw-bold mb-1">Fecha de registro</p>
-                                            <p>11/11/2026 - 19:56</p>
+                                            <p class="fw-bold mb-1">Fecha y hora del movimiento</p>
+                                            <p>2026-11-11 19:56</p>
+                                        </div>
+
+                                        <!-- bloque de estado de elementos replicado desde los datos del movimiento -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Estado de elementos</p>
+                                            <p>Completo</p>
+                                        </div>
+
+                                        <!-- bloque de vigilante responsable replicado desde los datos del movimiento -->
+                                        <div class="col-md-6">
+                                            <p class="fw-bold mb-1">Vigilante responsable</p>
+                                            <p>Rosa Elena Muñoz Agudelo</p>
                                         </div>
 
                                     </div>
 
-
-                                    <!-- dispositivos registrados -->
+                                    <!-- computador asociado al movimiento -->
                                     <div class="detalle-dispositivos">
 
                                         <h3 class="titulo-dispositivos">
-                                            Dispositivos registrados (3)
+                                            Computadores asociados (1)
                                         </h3>
 
-                                        <!-- dispositivo 1 -->
                                         <div class="detalle-dispositivo">
 
                                             <div class="detalle-dispositivo-fila">
                                                 <span>Equipo</span>
-                                                <strong>Lenovo ThinkPad E14</strong>
+                                                <strong>Asus ZenBook 14</strong>
                                             </div>
 
                                             <div class="detalle-dispositivo-fila">
                                                 <span>Serial</span>
-                                                <strong>LNV-2024-0001</strong>
-                                            </div>
-
-                                            <div class="detalle-dispositivo-fila">
-                                                <span>Condición</span>
-                                                <strong>Permanente</strong>
-                                            </div>
-
-                                            <div class="detalle-dispositivo-fila">
-                                                <span>Ubicación</span>
-                                                <strong>En instalaciones</strong>
-                                            </div>
-
-                                            <div class="detalle-dispositivo-fila">
-                                                <span>Estado</span>
-                                                <strong>Activo</strong>
+                                                <strong>—</strong>
                                             </div>
 
                                         </div>
                                     </div>
 
-                                    <!-- dispositivos registrados -->
+                                    <!-- bloque de vehículo replicado desde el patrón de detalle del computador -->
                                     <div class="detalle-dispositivos">
 
                                         <h3 class="titulo-dispositivos">
-                                            Vehiculos registrados (0)
+                                            Vehículos asociados (0)
                                         </h3>
-                                    </div>
 
+                                        <div class="detalle-dispositivo">
+
+                                            <div class="detalle-dispositivo-fila">
+                                                <span>Vehículo</span>
+                                                <strong>Sin vehículo</strong>
+                                            </div>
+
+                                            <div class="detalle-dispositivo-fila">
+                                                <span>Placa</span>
+                                                <strong>—</strong>
+                                            </div>
+
+                                        </div>
+                                    </div>
 
                                 </div>
 

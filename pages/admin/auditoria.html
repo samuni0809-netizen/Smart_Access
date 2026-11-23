@@ -101,6 +101,13 @@
 
                                 </button>
 
+                                <!-- selector replicado a partir de los campos de selección existentes -->
+                                <select class="form-select" aria-label="Formato del reporte">
+                                    <option value="" selected disabled>Formato</option>
+                                    <option value="pdf">PDF</option>
+                                    <option value="csv">CSV</option>
+                                </select>
+
                                 <button id="btn-generar-reporte" class="btn btn-success" type="button">
 
                                     <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i>
@@ -129,7 +136,7 @@
 
                                 <input id="busqueda" class="form-control campo-busqueda" name="busqueda" type="search"
                                     aria-label="Buscar registros"
-                                    placeholder="Buscar por usuario, documento, portero o centro">
+                                    placeholder="Buscar por usuario, tipo de acción o módulo">
 
                             </div>
 
@@ -156,13 +163,22 @@
 
                                 <tr>
 
-                                    <th class="text-nowrap" scope="col">Usuario</th>
+                                    <th class="text-nowrap" scope="col">Usuario responsable</th>
 
-                                    <th class="text-nowrap" scope="col">Acción</th>
+                                    <!-- columna replicada para mostrar el rol del usuario -->
+                                    <th class="text-nowrap" scope="col">Rol</th>
+
+                                    <th class="text-nowrap" scope="col">Tipo de acción</th>
+
+                                    <!-- columna replicada para mostrar el módulo afectado -->
+                                    <th class="text-nowrap" scope="col">Módulo</th>
 
                                     <th class="text-nowrap" scope="col">Fecha</th>
 
                                     <th class="text-nowrap" scope="col">Hora</th>
+
+                                    <!-- columna replicada para mostrar el detalle de la acción -->
+                                    <th class="text-nowrap" scope="col">Detalle de la acción</th>
 
                                 </tr>
 
@@ -191,11 +207,17 @@
                                         </div>
                                     </td>
 
-                                    <td>Actualización de datos</td>
+                                    <!-- celda replicada para mostrar el rol del usuario -->
+                                    <td>—</td>
+
+                                    <td>Modificación</td>
+
+                                    <!-- celda replicada para mostrar el módulo afectado -->
+                                    <td>—</td>
 
                                     <td>
-                                        <time datetime="2026-11-11T19:56">
-                                            2026-11-11 19:56
+                                        <time datetime="2026-11-11">
+                                            2026-11-11
                                         </time>
                                     </td>
 
@@ -204,6 +226,9 @@
                                             19:56
                                         </time>
                                     </td>
+
+                                    <!-- celda replicada para mostrar el detalle de la acción -->
+                                    <td>Actualización de datos</td>
 
                                 </tr>
 
@@ -230,19 +255,28 @@
 
                                     </td>
 
-                                    <td>Cambio de contraseña</td>
+                                    <!-- celda replicada para mostrar el rol del usuario -->
+                                    <td>—</td>
+
+                                    <td>Modificación</td>
+
+                                    <!-- celda replicada para mostrar el módulo afectado -->
+                                    <td>—</td>
 
                                     <td>
-                                        <time datetime="2026-11-11T19:48">
+                                        <time datetime="2026-11-11">
                                             2026-11-11
                                         </time>
                                     </td>
 
                                     <td>
-                                        <time datetime="2026-11-11T19:48">
+                                        <time datetime="2026-11-11T19:03">
                                             19:03
                                         </time>
                                     </td>
+
+                                    <!-- celda replicada para mostrar el detalle de la acción -->
+                                    <td>Cambio de contraseña</td>
                                 </tr>
 
                             </tbody>
