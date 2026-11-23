@@ -28,8 +28,7 @@
 
         <!-- navegación lateral -->
 
-        <aside id="navegacion-header-vigilante" class="contenedor-navegacion sticky-top vh-100 align-self-start flex-shrink-0"
-            aria-label="Navegación principal"></aside>
+        <aside id="navegacion-header-vigilante" class="contenedor-navegacion sticky-top vh-100 align-self-start flex-shrink-0"></aside>
 
         <div id="fondo-menu" class="fondo-menu"></div>
 
@@ -42,10 +41,9 @@
             <header class="encabezado-pagina d-flex align-items-center px-3 px-md-4 py-3">
 
                 <button id="boton-menu"
-                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button"
-                    aria-label="Abrir menú" aria-expanded="false">
+                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button">
 
-                    <i class="bi bi-list" aria-hidden="true"></i>
+                    <i class="bi bi-list"></i>
                 </button>
 
                 <div class="informacion-pagina">
@@ -66,15 +64,15 @@
 
                 <!-- información del perfil -->
 
-                <section class="row g-4 align-items-stretch" aria-label="Información del perfil">
+                <section class="row g-4 align-items-stretch">
 
                     <!-- tarjeta de identificación -->
 
-                    <article class="col-12 col-lg-4" aria-label="Resumen de la cuenta">
+                    <article class="col-12 col-lg-4">
 
                         <div class="bg-white border rounded-4 p-4 h-100 text-center">
                             <div
-                                class="avatar-perfil rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" aria-label="Iniciales del vigilante">
+                                class="avatar-perfil rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
                                 DA
                             </div>
 
@@ -83,7 +81,7 @@
                             <p class="rol-perfil mb-3">Vigilante</p>
 
                             <p class="estado-cuenta badge rounded-pill mb-3">
-                                <i class="bi bi-check-circle-fill me-1" aria-hidden="true"></i>
+                                <i class="bi bi-check-circle-fill me-1"></i>
                                 Activo
                             </p>
 
@@ -99,7 +97,7 @@
 
                     <!-- datos personales -->
 
-                    <article class="col-12 col-lg-8" aria-labelledby="titulo-datos-personales">
+                    <article class="col-12 col-lg-8">
 
                         <div class="bg-white border rounded-4 p-4 h-100">
                             <header
@@ -107,24 +105,24 @@
 
                                 <h3 id="titulo-datos-personales" class="titulo-perfil mb-0">Datos personales</h3>
 
-                                <div class="acciones-perfil d-flex flex-wrap flex-xl-nowrap gap-2" aria-label="Acciones de edición">
+                                <div class="acciones-perfil d-flex flex-wrap flex-xl-nowrap gap-2">
 
                                     <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal"
                                         data-bs-target="#modal-editar-correo-vigilante">
-                                        <i class="bi bi-envelope me-1" aria-hidden="true"></i>
+                                        <i class="bi bi-envelope me-1"></i>
                                         Editar correo
                                     </button>
 
                                     <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal"
                                         data-bs-target="#modal-cambiar-contrasena-vigilante">
-                                        <i class="bi bi-key me-1" aria-hidden="true"></i>
+                                        <i class="bi bi-key me-1"></i>
                                         Cambiar contraseña
                                     </button>
 
                                 </div>
                             </header>
 
-                            <section aria-label="Datos de la cuenta">
+                            <section>
 
 
                                 <dl class="row g-0 datos-personales">
@@ -178,8 +176,7 @@
 
 
                     <!-- modal replicado desde usuarios.html para cambiar la contraseña del vigilante -->
-                    <div id="modal-cambiar-contrasena-vigilante" class="modal fade"
-                        aria-labelledby="titulo-cambiar-contrasena-vigilante" aria-hidden="true" tabindex="-1">
+                    <div id="modal-cambiar-contrasena-vigilante" class="modal fade" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered">
 
@@ -191,7 +188,7 @@
                                         Cambiar contraseña
                                     </h2>
 
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal">
                                     </button>
 
                                 </div>
@@ -250,8 +247,7 @@
 
 
                     <!-- modal replicado desde usuarios.html para editar el correo del vigilante -->
-                    <div id="modal-editar-correo-vigilante" class="modal fade"
-                        aria-labelledby="titulo-editar-correo-vigilante" aria-hidden="true" tabindex="-1">
+                    <div id="modal-editar-correo-vigilante" class="modal fade" tabindex="-1">
 
                         <div class="modal-dialog modal-dialog-centered">
 
@@ -263,7 +259,7 @@
                                         Editar correo electrónico
                                     </h2>
 
-                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar">
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal">
                                     </button>
 
                                 </div>
