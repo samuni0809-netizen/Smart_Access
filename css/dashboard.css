@@ -1,0 +1,418 @@
+/* variables de colores */
+
+:root {
+    --primary-color: #39A900;
+    --primary-dark: #007832;
+    --primary-light: #00304d;
+
+    --accent-color: #50e5f9;
+    --secondary-color: #71277A;
+    --secondary-bg: #f6f0f7;
+
+    --success-color: #39A900;
+    --success-bg: #dcf5cf;
+    --success-text: #007832;
+
+    --background-color: #f6f6f6;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+
+    --border-color: #e2e8f0;
+
+    --sidebar-bg: #00304d;
+    --sidebar-bg-light: #184a72;
+
+    --color-nombre-sistema: #b7c9d6;
+    --color-links: #c5d4df;
+
+    --muted-bg: #e2e8f0;
+    --muted-text: #475569;
+
+    --danger-color: #dc2626;
+    --warning-color: #fdc300;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.contenido-aplicacion {
+    min-width: 0;
+}
+
+/* encabezado */
+
+.encabezado-pagina {
+    background-color: white;
+    min-height: 84px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.informacion-pagina h1 {
+    color: var(--text-dark);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.informacion-pagina p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* boton del menu */
+
+.boton-menu {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: white;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* encabezado del dashboard */
+
+.encabezado-dashboard h2 {
+    color: var(--text-dark);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.encabezado-dashboard p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* tarjetas de estadisticas */
+
+.tarjeta-estadistica {
+    min-height: 120px;
+    border-color: var(--border-color) !important;
+    padding: 16px 20px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-estadistica:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.09);
+}
+
+.informacion-estadistica {
+    min-width: 0;
+}
+
+.informacion-estadistica h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+}
+
+.valor-estadistica {
+    color: var(--text-dark);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.icono-estadistica {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+
+/* colores de tarjetas */
+
+.estadisticas-dashboard .col:nth-child(1) .icono-estadistica {
+    background-color: #dcf5cf;
+    color: #00304d;
+}
+
+.estadisticas-dashboard .col:nth-child(2) .icono-estadistica {
+    background-color: #dbeafe;
+    color: #50e5f9;
+}
+
+.estadisticas-dashboard .col:nth-child(3) .icono-estadistica {
+    background-color: #fef3c7;
+    color: #71277A;
+}
+
+.estadisticas-dashboard .col:nth-child(4) .icono-estadistica {
+    background-color: #f3e8ff;
+    color: #fdc300;
+}
+
+.estadisticas-dashboard .col:nth-child(5) .icono-estadistica {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.estadisticas-dashboard .col:nth-child(6) .icono-estadistica {
+    background-color: #ccfbf1;
+    color: #0f766e;
+}
+
+.estadisticas-dashboard .col:nth-child(7) .icono-estadistica {
+    background-color: #e0e7ff;
+    color: #4338ca;
+
+}
+
+.estadisticas-dashboard .col:nth-child(8) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #007832;
+}
+
+.estadisticas-dashboard .col:nth-child(9) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #50e5f9;
+}
+
+.estadisticas-dashboard .col:nth-child(10) .icono-estadistica {
+    background-color: #e0e7ff;
+    color: #39A900;
+}
+
+.estadisticas-dashboard .col:nth-child(11) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #fdc300;
+}
+
+.estadisticas-dashboard .col:nth-child(12) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #dc2626;
+}
+
+/* indicadores inferiores */
+
+.indicador-estadistica {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    border-radius: 10px;
+}
+
+/* colores de los indicadores */
+
+.estadisticas-dashboard .col:nth-child(1) .indicador-estadistica {
+    background-color: #00304d;
+}
+
+.estadisticas-dashboard .col:nth-child(2) .indicador-estadistica {
+    background-color: #50e5f9;
+}
+
+.estadisticas-dashboard .col:nth-child(3) .indicador-estadistica {
+    background-color: #71277A;
+}
+
+.estadisticas-dashboard .col:nth-child(4) .indicador-estadistica {
+    background-color: #fdc300;
+}
+
+.estadisticas-dashboard .col:nth-child(5) .indicador-estadistica {
+    background-color: #dc2626;
+}
+
+.estadisticas-dashboard .col:nth-child(6) .indicador-estadistica {
+    background-color: #0f766e;
+}
+
+.estadisticas-dashboard .col:nth-child(7) .indicador-estadistica {
+    background-color: #4338ca;
+}
+
+.estadisticas-dashboard .col:nth-child(8) .indicador-estadistica {
+    background-color: #007832;
+}
+
+.estadisticas-dashboard .col:nth-child(9) .indicador-estadistica {
+    background-color: #50e5f9;
+}
+
+.estadisticas-dashboard .col:nth-child(10) .indicador-estadistica {
+    background-color: #39A900;
+}
+
+.estadisticas-dashboard .col:nth-child(11) .indicador-estadistica {
+    background-color: #475569;
+}
+
+.estadisticas-dashboard .col:nth-child(12) .indicador-estadistica {
+    background-color: #dc2626;
+}
+
+/* actividad semanal */
+
+.seccion-actividad {
+    border-color: var(--border-color) !important;
+}
+
+.encabezado-actividad h3 {
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.encabezado-actividad p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.grafica-actividad {
+    min-height: 260px;
+}
+
+.seccion-actividad {
+    border-color: var(--border-color) !important;
+}
+
+.encabezado-actividad h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* seccion de utlimos registro */
+
+.seccion-ultimos-registros {
+    border-color: var(--border-color) !important;
+}
+
+.encabezado-registros h3 {
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tabla-ultimos-registros thead th,
+.tabla-registros thead th {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tabla-ultimos-registros tbody td,
+.tabla-registros tbody td {
+    color: var(--text-dark);
+    font-size: 14px;
+}
+
+.contenedor-tabla-registros {
+    width: 100%;
+}
+
+/* pie de pagina */
+
+.pie-dashboard {
+    padding: 18px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.pie-dashboard p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* diseño responsive */
+
+@media (max-width: 767.98px) {
+    .encabezado-pagina {
+        min-height: 72px;
+    }
+
+    .informacion-pagina h1 {
+        font-size: 20px;
+    }
+
+    .informacion-pagina p {
+        font-size: 12px;
+    }
+
+    .encabezado-dashboard h2 {
+        font-size: 24px;
+    }
+
+    .encabezado-dashboard p {
+        font-size: 14px;
+    }
+
+    /* tarjetas de estadisticas */
+
+    .tarjeta-estadistica {
+        min-height: 110px;
+        padding: 12px !important;
+    }
+
+    .informacion-estadistica h3 {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .valor-estadistica {
+        font-size: 27px;
+    }
+
+    .valor-estadistica {
+        font-size: 28px;
+    }
+
+    .icono-estadistica {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    /* seccion de actividad y registros */
+
+    .encabezado-actividad h3,
+    .encabezado-registros h3 {
+        font-size: 18px;
+    }
+
+    .encabezado-actividad p,
+    .encabezado-registros p {
+        font-size: 13px;
+    }
+
+    .grafica-actividad {
+        min-height: 220px;
+    }
+
+
+    /* tabla */
+
+    .tabla-ultimos-registros thead th,
+    .tabla-registros thead th {
+        font-size: 11px;
+    }
+
+    .tabla-ultimos-registros tbody td,
+    .tabla-registros tbody td {
+        font-size: 12px;
+    }
+
+    /* pie de página */
+
+    .pie-dashboard {
+        padding: 16px;
+    }
+
+    .pie-dashboard p {
+        font-size: 12px;
+    }
+
+}
