@@ -126,27 +126,26 @@ body {
     font-size: 22px;
 }
 
-
 /* colores de tarjetas */
 
 .estadisticas-dashboard .col:nth-child(1) .icono-estadistica {
     background-color: #dcf5cf;
-    color: #007832;
+    color: #00304d;
 }
 
 .estadisticas-dashboard .col:nth-child(2) .icono-estadistica {
     background-color: #dbeafe;
-    color: #2563eb;
+    color: #50e5f9;
 }
 
 .estadisticas-dashboard .col:nth-child(3) .icono-estadistica {
     background-color: #fef3c7;
-    color: #d97706;
+    color: #71277A;
 }
 
 .estadisticas-dashboard .col:nth-child(4) .icono-estadistica {
     background-color: #f3e8ff;
-    color: #9333ea;
+    color: #fdc300;
 }
 
 .estadisticas-dashboard .col:nth-child(5) .icono-estadistica {
@@ -162,6 +161,32 @@ body {
 .estadisticas-dashboard .col:nth-child(7) .icono-estadistica {
     background-color: #e0e7ff;
     color: #4338ca;
+
+}
+
+.estadisticas-dashboard .col:nth-child(8) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #007832;
+}
+
+.estadisticas-dashboard .col:nth-child(9) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #50e5f9;
+}
+
+.estadisticas-dashboard .col:nth-child(10) .icono-estadistica {
+    background-color: #e0e7ff;
+    color: #39A900;
+}
+
+.estadisticas-dashboard .col:nth-child(11) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #fdc300;
+}
+
+.estadisticas-dashboard .col:nth-child(12) .icono-estadistica{
+    background-color:#e0e7ff;
+    color: #dc2626;
 }
 
 /* indicadores inferiores */
@@ -178,19 +203,19 @@ body {
 /* colores de los indicadores */
 
 .estadisticas-dashboard .col:nth-child(1) .indicador-estadistica {
-    background-color: #39A900;
+    background-color: #00304d;
 }
 
 .estadisticas-dashboard .col:nth-child(2) .indicador-estadistica {
-    background-color: #2563eb;
+    background-color: #50e5f9;
 }
 
 .estadisticas-dashboard .col:nth-child(3) .indicador-estadistica {
-    background-color: #d97706;
+    background-color: #71277A;
 }
 
 .estadisticas-dashboard .col:nth-child(4) .indicador-estadistica {
-    background-color: #9333ea;
+    background-color: #fdc300;
 }
 
 .estadisticas-dashboard .col:nth-child(5) .indicador-estadistica {
@@ -203,6 +228,26 @@ body {
 
 .estadisticas-dashboard .col:nth-child(7) .indicador-estadistica {
     background-color: #4338ca;
+}
+
+.estadisticas-dashboard .col:nth-child(8) .indicador-estadistica {
+    background-color: #007832;
+}
+
+.estadisticas-dashboard .col:nth-child(9) .indicador-estadistica {
+    background-color: #50e5f9;
+}
+
+.estadisticas-dashboard .col:nth-child(10) .indicador-estadistica {
+    background-color: #39A900;
+}
+
+.estadisticas-dashboard .col:nth-child(11) .indicador-estadistica {
+    background-color: #475569;
+}
+
+.estadisticas-dashboard .col:nth-child(12) .indicador-estadistica {
+    background-color: #dc2626;
 }
 
 /* actividad semanal */
