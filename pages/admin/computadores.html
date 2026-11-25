@@ -78,63 +78,35 @@
                         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
 
                             <!-- filtros de movimiento -->
-                            <div
-                                class="filtros-registros d-flex flex-wrap gap-2" role="group">
+                            <div class="filtros-registros d-flex flex-wrap gap-2" role="group">
 
-                                <button id="filtro-todos" class="btn btn-success" type="button">
-
-                                    Todos
-
-                                </button>
-
-                                <button id="filtro-permanentes"
-                                    class="btn btn-outline-secondary" type="button">
-
-                                    Permanentes
-
-                                </button>
-
-                                <button id="filtro-temporales"
-                                    class="btn btn-outline-secondary" type="button">
-
-                                    Temporales
-
-                                </button>
-
-                                <button id="boton-activos" class="btn btn-success" type="button">
-
-                                    Activos
-
-                                </button>
-
-                                <button id="boton-inactivos"
-                                    class="btn btn-outline-secondary" type="button">
-
-                                    Inactivos
-
-                                </button>
-
-                                <button id="boton-instalaciones"
-                                    class="btn btn-outline-secondary" type="button">
-
-                                    En instalaciones
-
-                                </button>
-
-                                <button id="boton-fuera-instalaciones"
-                                    class="btn btn-outline-secondary" type="button">
-
-                                    Fuera de instalaciones
-
-                                </button>
+                                <div>
+                                    <select class="form-select">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Permanentes</option>
+                                        <option value="">Temporales</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="form-select">
+                                        <option value="">Activos</option>
+                                        <option value="">Inactivos</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="form-select">
+                                        <option value="" selected>En instalaciones</option>
+                                        <option value="">Fuera de instalaciones</option>
+                                    </select>
+                                </div>
 
                             </div>
 
                             <!-- acciones del historial -->
                             <div class="acciones-registros d-flex flex-wrap gap-2">
 
-                                <button id="btn-filtrar-fecha"
-                                    class="btn btn-outline-secondary filtrar-fecha" type="button">
+                                <button id="btn-filtrar-fecha" class="btn btn-outline-secondary filtrar-fecha"
+                                    type="button">
 
                                     <i class="bi bi-calendar3 me-2"></i>
 
@@ -206,8 +178,6 @@
 
                                     <th class="text-nowrap" scope="col">Serial</th>
 
-                                    <th class="text-nowrap" scope="col">Tipo de registro</th>
-
                                     <th class="text-nowrap" scope="col">Ubicación actual</th>
 
                                     <th class="text-nowrap" scope="col">Fecha de registro</th>
@@ -224,34 +194,29 @@
                                 <!-- registro 1 -->
                                 <tr class="text-center">
 
+                                    <!-- Agregar completo o incompleto para cambiar el color -->
                                     <td>
-                                        <span class="estado-elementos completo badge rounded-pill">
-                                            Activo
+                                        <span class="estado-elementos badge rounded-pill">
+                                            
                                         </span>
                                     </td>
 
                                     <td>
                                         <div>
                                             <span class="nombre-usuario">
-                                                Cristian Camilo Duque Orozco
                                             </span>
                                         </div>
                                     </td>
 
-                                    <td>1234567890</td>
+                                    <td></td>
 
-                                    <td>HP / —</td>
+                                    <td></td>
 
-                                    <td>ASDDS-1233</td>
+                                    <td></td>
 
-                                    <td>Permanente</td>
-
-                                    <td>En instalaciones</td>
+                                    <td></td>
 
                                     <td>
-                                        <time datetime="2026-11-11T19:56">
-                                            2026-11-11 19:56
-                                        </time>
                                     </td>
 
                                     <td>
@@ -407,16 +372,15 @@
                                                 <label class="form-label" for="editar-marca">
                                                     Marca
                                                 </label>
-                                                <input id="editar-marca" class="form-control" type="text"
-                                                    value="HP">
+                                                <input id="editar-marca" class="form-control" type="text" value="HP">
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label class="form-label" for="editar-modelo">
                                                     Modelo
                                                 </label>
-                                                <input id="editar-modelo" class="form-control" type="text"
-                                                    value="" placeholder="—">
+                                                <input id="editar-modelo" class="form-control" type="text" value=""
+                                                    placeholder="—">
                                             </div>
 
                                             <div class="col-md-6">
@@ -431,16 +395,16 @@
                                                 <label class="form-label" for="editar-documento-propietario">
                                                     Número de documento del propietario
                                                 </label>
-                                                <input id="editar-documento-propietario" class="form-control" type="text"
-                                                    value="1234567890">
+                                                <input id="editar-documento-propietario" class="form-control"
+                                                    type="text" value="1234567890">
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label class="form-label" for="editar-detalles">
                                                     Detalles
                                                 </label>
-                                                <input id="editar-detalles" class="form-control" type="text"
-                                                    value="" placeholder="—">
+                                                <input id="editar-detalles" class="form-control" type="text" value=""
+                                                    placeholder="—">
                                             </div>
 
                                             <!-- cambiar fotografía -->

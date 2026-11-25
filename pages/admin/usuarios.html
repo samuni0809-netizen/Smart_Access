@@ -80,53 +80,33 @@
                             <!-- filtros de movimiento -->
                             <div class="filtros-registros d-flex flex-wrap gap-2" role="group">
 
-                                <button id="filtro-todos" class="btn btn-success" type="button">
-
-                                    Todos
-
-                                </button>
-
-                                <button id="filtro-ingresos" class="btn btn-outline-secondary" type="button">
-
-                                    Permanentes
-
-                                </button>
-
-                                <button id="filtro-salidas" class="btn btn-outline-secondary" type="button">
-
-                                    Temporales
-
-                                </button>
-
-                                <button id="boton-usuario" class="btn btn-success" type="button">
-
-                                    Usuarios
-
-                                </button>
-
-                                <button id="boton-vigilante" class="btn btn-outline-secondary" type="button">
-
-                                    Vigilantes
-
-                                </button>
-
-                                <button id="boton-administradores" class="btn btn-outline-secondary" type="button">
-
-                                    Administradores
-
-                                </button>
-
-                                <button id="boton-activos" class="btn btn-success" type="button">
-
-                                    Activos
-
-                                </button>
-
-                                <button id="boton-inactivos" class="btn btn-outline-secondary" type="button">
-
-                                    Inactivos
-
-                                </button>
+                                <div>
+                                    <select class="form-select">
+                                        <option value="" selected>Todos</option>
+                                        <option value="">Usuario</option>
+                                        <option value="">Vigilante</option>
+                                        <option value="">Administrador</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="form-select">
+                                        <option value="">Activos</option>
+                                        <option value="">Inactivos</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="form-select">
+                                        <option value="" select>Permanentes</option>
+                                        <option value="">Temporales</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select class="form-select">
+                                        <option value="" selected>CTGI</option>
+                                        <option value="">-</option>
+                                        <option value="">-</option>
+                                    </select>
+                                </div>
 
                             </div>
 
@@ -200,8 +180,6 @@
 
                                     <th class="text-nowrap" scope="col">Número de documento</th>
 
-                                    <th class="text-nowrap" scope="col">Correo electrónico</th>
-
                                     <!-- columna replicada para mostrar el computador asociado -->
                                     <th class="text-nowrap" scope="col">Computador</th>
 
@@ -209,8 +187,6 @@
                                     <th class="text-nowrap" scope="col">Vehículo</th>
 
                                     <th class="text-nowrap" scope="col">Estado</th>
-
-                                    <th class="text-nowrap" scope="col">Centro</th>
 
                                     <th class="text-nowrap" scope="col">Tipo de registro</th>
 
@@ -232,50 +208,40 @@
 
                                         <div class="datos-usuario d-flex align-items-center gap-2">
 
-                                            <div class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                                                CC
+                                            <div
+                                                class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+
                                             </div>
 
                                             <div>
                                                 <span class="nombre-usuario">
-                                                    Cristian Camilo Duque Orozco
                                                 </span>
                                             </div>
                                         </div>
                                     </td>
 
-                                    <td>1065544332</td>
+                                    <td></td>
 
+
+                                    <td></td>
+
+                                    <!-- Agregar activo o inactivo para cambiar el color -->
                                     <td>
-                                        <span>
-                                            samuel@gmail.com
+                                        <span class="movimiento badge rounded-pill">
+
                                         </span>
                                     </td>
 
-                                    <!-- celda replicada para mostrar el computador asociado -->
-                                    <td>Lenovo ThinkPad E14</td>
+                                    <td class="text-center"></td>
 
-                                    <!-- celda replicada para mostrar el vehículo asociado -->
-                                    <td>—</td>
-
+                                    <!-- Agregar permanente o temporal para cambiar el color -->
                                     <td>
-                                        <span class="movimiento ingreso badge rounded-pill">
-                                            Activo
-                                        </span>
-                                    </td>
+                                        <span class="estado-elementos badge rounded-pill">
 
-                                    <td class="text-center">CTGI</td>
-
-                                    <td>
-                                        <span class="estado-elementos completo badge rounded-pill">
-                                            Permanente
                                         </span>
                                     </td>
 
                                     <td>
-                                        <time datetime="2026-11-11T19:56">
-                                            2026-11-11 19:56
-                                        </time>
                                     </td>
 
 

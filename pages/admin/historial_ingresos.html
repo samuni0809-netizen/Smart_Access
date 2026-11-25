@@ -93,47 +93,7 @@
                             <!-- filtros de movimiento -->
                             <div class="filtros-registros d-flex flex-wrap gap-2" role="group">
 
-                                <button id="filtro-todos" class="btn btn-success" type="button">
 
-                                    Todos
-
-                                </button>
-
-                                <button id="filtro-ingresos" class="btn btn-outline-secondary" type="button">
-
-                                    Ingresos
-
-                                </button>
-
-                                <button id="filtro-salidas" class="btn btn-outline-secondary" type="button">
-
-                                    Salidas
-
-                                </button>
-
-                                <button id="filtro-activos" class="btn btn-outline-secondary" type="button">
-
-                                    Activos
-
-                                </button>
-
-                                <button id="filtro-inactivos" class="btn btn-outline-secondary" type="button">
-
-                                    Inactivos
-
-                                </button>
-
-                                <button id="filtro-permanente" class="btn btn-outline-secondary" type="button">
-
-                                    Permanentes
-
-                                </button>
-
-                                <button id="filtro-temporal" class="btn btn-outline-secondary" type="button">
-
-                                    Temporales
-
-                                </button>
 
                             </div>
 
@@ -165,27 +125,53 @@
 
                     <!-- formulario de búsqueda -->
                     <div
-                        class="busqueda-registros d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
+                        class="busqueda-registros flex-wrap d-flex flex-column flex-md-row align-items-md-center gap-3 mb-3 pt-3">
 
-                        <form id="formulario-busqueda" class="flex-grow-1" action="#" method="GET" role="search">
+                        <form id="formulario-busqueda" class="form-busqueda" action="#" method="GET" role="search">
 
-                            <div class="input-group pt-3">
+                            <div class="input-group">
 
                                 <span class="input-group-text">
                                     <i class="bi bi-search"></i>
                                 </span>
 
-                                <input id="busqueda" class="form-control campo-busqueda" name="busqueda" type="search"
-                                    placeholder="Buscar por usuario, documento, correo, computador, serial, vehículo, placa, centro o vigilante">
-
+                                <input id="busqueda" class="form-control campo-busqueda " name="busqueda" type="search"
+                                    placeholder="Buscar por campo de la tabla">
                             </div>
 
                         </form>
 
+                        <div>
+                            <select class="form-select">
+                                <option value="" selected>Ingresos</option>
+                                <option value="">Salidas</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select">
+                                <option value="" selected>Todos</option>
+                                <option value="">Usuario</option>
+                                <option value="">Vigilante</option>
+                                <option value="">Administrador</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select">
+                                <option value="">Activos</option>
+                                <option value="">Inactivos</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select">
+                                <option value=""select>Permanentes</option>
+                                <option value="">Temporales</option>
+                            </select>
+                        </div>
+
                         <!-- cantidad de resultados -->
                         <div>
 
-                            <p id="total-resultados" class="cantidad-resultados mb-0">
+                            <p id="total-resultados" class="cantidad-resultados">
                                 135 resultados
                             </p>
 
@@ -207,15 +193,9 @@
 
                                     <th class="text-nowrap" scope="col">Documento</th>
 
-                                    <th class="text-nowrap" scope="col">Correo</th>
-
                                     <th class="text-nowrap" scope="col">Movimiento</th>
 
                                     <th class="text-nowrap" scope="col">Fecha y hora</th>
-
-                                    <th class="text-nowrap" scope="col">Computador (equipo y serial)</th>
-
-                                    <th class="text-nowrap" scope="col">Vehículo (vehículo y placa)</th>
 
                                     <th class="text-nowrap" scope="col">Centro</th>
 
@@ -243,48 +223,44 @@
 
                                             <div
                                                 class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
-                                                CC
+                                                
                                             </div>
 
                                             <div>
                                                 <span class="nombre-usuario">
-                                                    Cristian Camilo Duque Orozco
+                                                    
                                                 </span>
                                             </div>
                                         </div>
                                     </td>
 
-                                    <td>1065544332</td>
-
-                                    <td>—</td>
+                                    <td></td>
 
                                     <td>
-                                        <span class="movimiento ingreso badge rounded-pill">
-                                            Ingreso
+                                        <!-- Agregar ingreso o salida para cambiar color -->
+                                        <span class="movimiento badge rounded-pill">
+                                            
                                         </span>
                                     </td>
 
                                     <td>
-                                        <time datetime="2026-11-11T19:56">
-                                            2026-11-11 19:56
-                                        </time>
-                                    </td>
-
-                                    <td>Asus ZenBook 14 / Serial: —</td>
-
-                                    <td>Sin vehículo / Placa: —</td>
-
-                                    <td>CTGI</td>
-
-                                    <td>
-                                        <span class="estado-elementos completo badge rounded-pill">
-                                            Completo
+                                        <span>
+                                            
                                         </span>
                                     </td>
 
-                                    <td>Rosa Elena Muñoz Agudelo</td>
+                                    <td></td>
 
-                                    <td>Permanente</td>
+                                    <td></td>
+
+                                    <td></td>
+
+                                    <td>
+                                        <!-- Agregar completo o incompleto para cambiar el color -->
+                                        <span class="estado-elementos badge rounded-pill">
+                                            
+                                        </span>
+                                    </td>
 
                                     <td>
                                         <!-- botón ver -->
