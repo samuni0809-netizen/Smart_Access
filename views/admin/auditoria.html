@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Auditoría | Panel Administrativo - SENA</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- css compartido -->
+    <link rel="stylesheet" href="../../public/assets/css/nav.css">
+
+    <!-- estilos reutilizados del dashboard -->
+    <link rel="stylesheet" href="../../public/assets/css/dashboard.css">
+
+    <!-- estilos exclusivos del historial -->
+    <link rel="stylesheet" href="../../public/assets/css/tablas.css">
+
+</head>
+
+<body>
+
+    <!-- estructura general de la aplicación -->
+    <div class="estructura-administrativa d-flex min-vh-100">
+
+        <!-- navegación lateral compartida -->
+        <aside id="navegacion-header" class="contenedor-navegacion sticky-top vh-100">
+        </aside>
+
+        <!-- fondo oscuro para celulares -->
+        <div id="fondo-menu" class="fondo-menu"></div>
+
+
+        <!-- contenido derecho -->
+        <div class="contenido-aplicacion flex-grow-1">
+
+            <!-- encabezado superior -->
+            <header class="encabezado-pagina d-flex align-items-center px-3 px-md-4 py-3">
+
+                <!-- botón del menú para celulares -->
+                <button id="boton-menu"
+                    class="boton-menu d-flex align-items-center justify-content-center d-md-none me-3" type="button">
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+                <!-- información de la página -->
+                <div class="informacion-pagina">
+
+                    <h1 class="mb-1">Auditoría</h1>
+
+                    <p class="mb-0">Panel Administrativo</p>
+
+                </div>
+
+            </header>
+
+
+            <!-- contenido principal -->
+            <main class="contenido-dashboard container-fluid px-3 px-md-4 py-4">
+
+                <!-- panel general del historial -->
+                <section class="panel-registros bg-white border rounded-4 p-3 p-md-4">
+
+                    <!-- encabezado y filtros -->
+                    <div class="encabezado-registros d-flex flex-column gap-3">
+
+                        <!-- título y descripción -->
+                        <div class="informacion-registros">
+
+                            <h2 id="titulo-historial" class="mb-1">
+                                Auditoría
+                            </h2>
+
+                            <p class="mb-0">
+                                Registro completo de acciones realizadas en el sistema
+                            </p>
+
+                        </div>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+
+                            <!-- acciones del historial -->
+                            <div class="acciones-registros d-flex flex-wrap gap-2">
+
+                                <button id="btn-filtrar-fecha" class="btn btn-outline-secondary filtrar-fecha" type="button">
+
+                                    <i class="bi bi-calendar3 me-2"></i>
+
+                                    Filtrar por fecha
+
+                                </button>
+
+                                <!-- selector replicado a partir de los campos de selección existentes -->
+                                <select class="form-select">
+                                    <option value="" selected disabled>Formato</option>
+                                    <option value="pdf">PDF</option>
+                                    <option value="csv">CSV</option>
+                                </select>
+
+                                <button id="btn-generar-reporte" class="btn btn-success" type="button">
+
+                                    <i class="bi bi-file-earmark-arrow-down"></i>
+
+                                    Generar reporte
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- formulario de búsqueda -->
+                    <div
+                        class="busqueda-registros d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
+
+                        <form id="formulario-busqueda" class="flex-grow-1" action="#" method="GET">
+
+                            <div class="input-group pt-3">
+
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
+                                </span>
+
+                                <input id="busqueda" class="form-control campo-busqueda" name="busqueda" type="search"
+                                    placeholder="Buscar por usuario, tipo de acción o módulo">
+
+                            </div>
+
+                        </form>
+
+                        <!-- cantidad de resultados -->
+                        <div>
+
+                            <p id="total-resultados" class="cantidad-resultados mb-0">
+                                135 resultados
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- tabla del historial -->
+                    <div class="contenedor-tabla-registros table-responsive">
+
+                        <table class="tabla-registros table table-hover align-middle mb-0">
+
+                            <thead class="table-light text-center">
+
+                                <tr>
+
+                                    <th class="text-nowrap" scope="col">Usuario responsable</th>
+
+                                    <!-- columna replicada para mostrar el rol del usuario -->
+                                    <th class="text-nowrap" scope="col">Rol</th>
+
+                                    <th class="text-nowrap" scope="col">Tipo de acción</th>
+
+                                    <!-- columna replicada para mostrar el módulo afectado -->
+                                    <th class="text-nowrap" scope="col">Módulo</th>
+
+                                    <th class="text-nowrap" scope="col">Fecha</th>
+
+                                    <th class="text-nowrap" scope="col">Hora</th>
+
+                                    <!-- columna replicada para mostrar el detalle de la acción -->
+                                    <th class="text-nowrap" scope="col">Detalle de la acción</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <!-- registro 1 -->
+                                <tr class="text-center">
+
+                                    <td>
+
+                                        <div class="datos-usuario d-flex align-items-center gap-2">
+
+                                            <div class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                                CC
+                                            </div>
+
+                                            <div>
+                                                <span class="nombre-usuario">
+                                                    Cristian Camilo Duque Orozco
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <!-- celda replicada para mostrar el rol del usuario -->
+                                    <td>—</td>
+
+                                    <td>Modificación</td>
+
+                                    <!-- celda replicada para mostrar el módulo afectado -->
+                                    <td>—</td>
+
+                                    <td>
+                                        <time datetime="2026-11-11">
+                                            2026-11-11
+                                        </time>
+                                    </td>
+
+                                    <td>
+                                        <time datetime="2026-11-11T19:56">
+                                            19:56
+                                        </time>
+                                    </td>
+
+                                    <!-- celda replicada para mostrar el detalle de la acción -->
+                                    <td>Actualización de datos</td>
+
+                                </tr>
+
+
+                                <!-- registro 2 -->
+                                <tr class="text-center">
+
+                                    <td>
+
+                                        <div class="datos-usuario d-flex align-items-center gap-2">
+
+                                            <div class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                                YA
+                                            </div>
+
+                                            <div>
+                                                <span class="nombre-usuario">
+                                                    Yeison Alberto Marín Quiceno
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <!-- celda replicada para mostrar el rol del usuario -->
+                                    <td>—</td>
+
+                                    <td>Modificación</td>
+
+                                    <!-- celda replicada para mostrar el módulo afectado -->
+                                    <td>—</td>
+
+                                    <td>
+                                        <time datetime="2026-11-11">
+                                            2026-11-11
+                                        </time>
+                                    </td>
+
+                                    <td>
+                                        <time datetime="2026-11-11T19:03">
+                                            19:03
+                                        </time>
+                                    </td>
+
+                                    <!-- celda replicada para mostrar el detalle de la acción -->
+                                    <td>Cambio de contraseña</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+            <!-- pie de página -->
+            <footer class="pie-dashboard bg-white">
+
+                <p>Sistema de Control de Acceso - SENA</p>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <!-- archivos javascript -->
+    <script src="../../public/assets/js/nav.js"></script>
+    <script src="../../public/assets/js/barra.js"></script>
+
+</body>
+
+</html>
