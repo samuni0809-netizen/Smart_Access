@@ -99,4 +99,14 @@ class UsuarioController
             $idRol
         );
     }
+
+    public function obtenerUsuarios()
+    {
+        return $this->usuarioRepository->obtenerTodos();
+    }
+
+    public function actualizarUsuario(array $datos): bool
+    {
+        return $this->usuarioRepository->actualizar($datos);
+    }
 }

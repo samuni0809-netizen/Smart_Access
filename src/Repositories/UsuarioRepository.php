@@ -87,4 +87,67 @@ class UsuarioRepository
 
         return $statement->fetchColumn() > 0;
     }
+
+    public function obtenerTodos()
+    {
+        $sql = "SELECT
+                id_usuario,
+                nombres,
+                apellidos,
+                documento,
+                correo,
+                centro,
+                tipo_cuenta,
+                fecha_registro,
+                estado,
+                id_rol
+            FROM usuario
+            ORDER BY id_usuario DESC";
+
+        $statement = $this->connection->prepare($sql);
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function actualizar(array $datos): bool
+    {
+        $sql = "UPDATE usuario
+            SET nombres = :nombres,
+                apellidos = :apellidos,
+                documento = :documento,
+                correo = :correo,
+                estado = :estado,
+                centro = :centro,
+                tipo_cuenta = :tipo_cuenta,
+                id_rol = :id_rol";
+
+        // Si se ingresó una nueva contraseña, también se actualiza.
+        if (isset($datos['contrasena_hash'])) {
+            $sql .= ", contrasena_hash = :contrasena_hash";
+        }
+
+        $sql .= " WHERE id_usuario = :id_usuario";
+
+        $statement = $this->connection->prepare($sql);
+
+        $parametros = [
+            ':nombres' => $datos['nombres'],
+            ':apellidos' => $datos['apellidos'],
+            ':documento' => $datos['documento'],
+            ':correo' => $datos['correo'],
+            ':estado' => $datos['estado'],
+            ':centro' => $datos['centro'],
+            ':tipo_cuenta' => $datos['tipo_cuenta'],
+            ':id_rol' => $datos['id_rol'],
+            ':id_usuario' => $datos['id_usuario']
+        ];
+
+        if (isset($datos['contrasena_hash'])) {
+            $parametros[':contrasena_hash'] = $datos['contrasena_hash'];
+        }
+
+        return $statement->execute($parametros);
+    }
 }

@@ -1,3 +1,13 @@
+<?php
+
+require_once __DIR__ . '/../../src/Controllers/UsuarioController.php';
+
+$usuarioController = new UsuarioController();
+
+$usuarios = $usuarioController->obtenerUsuarios();
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -159,7 +169,7 @@
                         <div>
 
                             <p id="total-resultados" class="cantidad-resultados mb-0">
-                                135 resultados
+                                Cargando usuarios
                             </p>
 
                         </div>
@@ -176,7 +186,9 @@
 
                                 <tr>
 
-                                    <th class="text-nowrap" scope="col">Nombre</th>
+                                    <th class="text-nowrap" scope="col">Nombres</th>
+
+                                    <th class="text-nowrap" scope="col">Apellidos</th>
 
                                     <th class="text-nowrap" scope="col">Número de documento</th>
 
@@ -199,78 +211,132 @@
                             </thead>
 
 
-                            <tbody>
+                            <tbody id="tabla-usuarios" class="text-center">
 
-                                <!-- registro 1 -->
-                                <tr>
+                                <?php if (empty($usuarios)): ?>
 
-                                    <td>
+                                    <tr>
+                                        <td colspan="9" class="text-center">
+                                            No hay usuarios registrados
+                                        </td>
+                                    </tr>
 
-                                        <div class="datos-usuario d-flex align-items-center gap-2">
+                                <?php else: ?>
 
-                                            <div
-                                                class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <?php foreach ($usuarios as $usuario):
 
-                                            </div>
+                                        $nombres = $usuario['nombres'] ?? '-';
+                                        $apellidos = $usuario['apellidos'] ?? '-';
 
-                                            <div>
-                                                <span class="nombre-usuario">
+                                        $iniciales = mb_strtoupper(
+                                            mb_substr($nombres, 0, 1, 'UTF-8') .
+                                                mb_substr($apellidos, 0, 1, 'UTF-8'),
+                                            'UTF-8'
+                                        );
+
+                                        $documento = $usuario['documento'] ?? '-';
+                                        $estado = $usuario['estado'] ?? '-';
+                                        $tipoCuenta = $usuario['tipo_cuenta'] ?? '-';
+                                        $fechaRegistro = $usuario['fecha_registro'] ?? '-';
+                                    ?>
+
+                                        <tr>
+                                            <!-- nombres -->
+                                            <td>
+                                                <div class="datos-usuario d-flex align-items-center gap-2">
+
+                                                    <div class="iniciales-usuario rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                                        <?= htmlspecialchars($iniciales, ENT_QUOTES, 'UTF-8') ?>
+                                                    </div>
+
+                                                    <div>
+                                                        <span>
+                                                            <?= htmlspecialchars($nombres, ENT_QUOTES, 'UTF-8') ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <!-- Apellidos -->
+                                            <td>
+                                                <?= htmlspecialchars($apellidos, ENT_QUOTES, 'UTF-8') ?>
+                                            </td>
+
+                                            <!-- Documento -->
+                                            <td>
+                                                <?= htmlspecialchars($documento, ENT_QUOTES, 'UTF-8') ?>
+                                            </td>
+
+                                            <!-- Computador -->
+                                            <td>
+                                                —
+                                            </td>
+
+                                            <!-- Vehículo -->
+                                            <td>
+                                                —
+                                            </td>
+
+                                            <!-- Estado -->
+                                            <td class="text-center">
+                                                <span class="movimiento badge rounded-pill ingreso">
+                                                    <?= htmlspecialchars($estado, ENT_QUOTES, 'UTF-8') ?>
                                                 </span>
-                                            </div>
-                                        </div>
-                                    </td>
+                                            </td>
 
-                                    <td></td>
+                                            <!-- Tipo de registro -->
+                                            <td>
+                                                <span class="estado-elementos badge rounded-pill completo">
+                                                    <?= htmlspecialchars($tipoCuenta, ENT_QUOTES, 'UTF-8') ?>
+                                                </span>
+                                            </td>
 
+                                            <!-- Fecha de registro -->
+                                            <td>
+                                                <?= htmlspecialchars((string) $fechaRegistro, ENT_QUOTES, 'UTF-8') ?>
+                                            </td>
 
-                                    <td></td>
+                                            <!-- Acciones -->
+                                            <td class="text-center">
 
-                                    <!-- Agregar activo o inactivo para cambiar el color -->
-                                    <td>
-                                        <span class="movimiento badge rounded-pill">
+                                                <div class="d-flex justify-content-center gap-2">
 
-                                        </span>
-                                    </td>
+                                                    <!-- botón ver -->
+                                                    <button class="boton-ver-registro btn btn-outline-secondary"
+                                                        type="button"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modal-detalle-usuario">
 
-                                    <td class="text-center"></td>
+                                                        <i class="bi bi-eye"></i>
 
-                                    <!-- Agregar permanente o temporal para cambiar el color -->
-                                    <td>
-                                        <span class="estado-elementos badge rounded-pill">
+                                                    </button>
 
-                                        </span>
-                                    </td>
+                                                    <!-- botón editar -->
+                                                    <button class="boton-editar-registro btn btn-outline-secondary"
+                                                        type="button"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modal-editar-usuario"
 
-                                    <td>
-                                    </td>
+                                                        data-id="
+                                                        <?= htmlspecialchars((string) $usuario['id_usuario'], ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-nombres="<?= htmlspecialchars($usuario['nombres'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-apellidos="<?= htmlspecialchars($usuario['apellidos'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-documento="<?= htmlspecialchars($usuario['documento'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-correo="<?= htmlspecialchars($usuario['correo'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-estado="<?= htmlspecialchars($usuario['estado'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-centro="<?= htmlspecialchars($usuario['centro'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-tipo-cuenta="<?= htmlspecialchars($usuario['tipo_cuenta'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                                                        data-id-rol="<?= htmlspecialchars((string) ($usuario['id_rol'] ?? ''), ENT_QUOTES, 'UTF-8') ?>">
 
+                                                        <i class="bi bi-pencil"></i>
 
-                                    <td class="text-center">
+                                                    </button>
 
-                                        <div class="d-flex justify-content-center gap-2">
-
-                                            <!-- botón ver -->
-                                            <button class="boton-ver-registro btn btn-outline-secondary" type="button"
-                                                data-bs-toggle="modal" data-bs-target="#modal-detalle-usuario">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-
-                                            <!-- botón editar -->
-                                            <button class="boton-editar-registro btn btn-outline-secondary"
-                                                type="button" data-bs-toggle="modal"
-                                                data-bs-target="#modal-editar-usuario">
-
-                                                <i class="bi bi-pencil"></i>
-
-                                            </button>
-
-                                        </div>
-
-                                    </td>
-
-
-                                </tr>
-
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
                             </tbody>
 
                         </table>
@@ -434,7 +500,9 @@
                                 <!-- cuerpo -->
                                 <div class="modal-body modal-editar-cuerpo">
 
-                                    <form id="formulario-editar-usuario">
+                                    <form id="formulario-editar-usuario" method="POST" action="../../public/procesos/actualizar_usuario.php">
+
+                                        <input type="hidden" id="editar-id-usuario" name="id_usuario">
 
                                         <div class="row g-3">
 
@@ -443,7 +511,15 @@
                                                     Nombre completo
                                                 </label>
                                                 <input id="editar-nombre" class="form-control" type="text"
-                                                    value="Cristian Camilo Duque Orozco">
+                                                    name="nombres">
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label class="form-label" for="editar-apellido">
+                                                    Apellido
+                                                </label>
+                                                <input id="editar-apellido" class="form-control" type="text"
+                                                    name="apellidos">
                                             </div>
 
                                             <div class="col-md-6">
@@ -451,24 +527,23 @@
                                                     Número de documento
                                                 </label>
                                                 <input id="editar-documento" class="form-control" type="text"
-                                                    value="1065544332">
+                                                    name="documento">
                                             </div>
 
                                             <div class="col-12">
                                                 <label class="form-label" for="editar-correo">
                                                     Correo electrónico
                                                 </label>
-                                                <input id="editar-correo" class="form-control" type="email"
-                                                    value="samuel@gmail.com">
+                                                <input id="editar-correo" class="form-control" type="email" name="correo">
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label class="form-label" for="editar-estado">
                                                     Estado
                                                 </label>
-                                                <select id="editar-estado" class="form-select">
-                                                    <option selected>Activo</option>
-                                                    <option>Inactivo</option>
+                                                <select id="editar-estado" class="form-select" name="estado">
+                                                    <option value="ACTIVO">ACTIVO</option>
+                                                    <option value="INACTIVO">INACTIVO</option>
                                                 </select>
                                             </div>
 
@@ -476,8 +551,11 @@
                                                 <label class="form-label" for="editar-centro">
                                                     Centro
                                                 </label>
-                                                <select id="editar-centro" class="form-select">
-                                                    <option selected>CTGI</option>
+                                                <select id="editar-centro" class="form-select" name="centro">
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="CTGI">CTGI</option>
+                                                    <option value="CTMA">CTMA</option>
+                                                    <option value="CDHC">CDHC</option>
                                                 </select>
                                             </div>
 
@@ -485,9 +563,9 @@
                                                 <label class="form-label" for="editar-tipo">
                                                     Tipo de registro
                                                 </label>
-                                                <select id="editar-tipo" class="form-select">
-                                                    <option selected>Permanente</option>
-                                                    <option>Temporal</option>
+                                                <select id="editar-tipo" class="form-select" name="tipo_cuenta">
+                                                    <option value="PERMANENTE">Permanente</option>
+                                                    <option value="TEMPORAL">Temporal</option>
                                                 </select>
                                             </div>
 
@@ -495,10 +573,10 @@
                                                 <label class="form-label" for="editar-rol">
                                                     Rol
                                                 </label>
-                                                <select id="editar-rol" class="form-select">
-                                                    <option selected>Usuario</option>
-                                                    <option>Vigilante</option>
-                                                    <option>Administrador</option>
+                                                <select id="editar-rol" class="form-select" name="id_rol">
+                                                    <option value="1">Usuario</option>
+                                                    <option value="2">Vigilante</option>
+                                                    <option value="3">Administrador</option>
                                                 </select>
                                             </div>
 
@@ -506,9 +584,13 @@
                                                 <label class="form-label" for="editar-contrasena">
                                                     Contraseña
                                                 </label>
-                                                <input id="editar-contrasena" class="form-control" type="password"
-                                                    placeholder="Nueva contraseña" minlength="6"
-                                                    autocomplete="new-password">
+                                                <input id="editar-contrasena"
+                                                    class="form-control"
+                                                    type="password"
+                                                    placeholder="Nueva contraseña"
+                                                    minlength="8"
+                                                    autocomplete="new-password"
+                                                    name="contrasena">
                                             </div>
 
                                             <!-- campo replicado del registro permanente para confirmar la contraseña -->
@@ -516,9 +598,13 @@
                                                 <label class="form-label" for="editar-confirmar-contrasena">
                                                     Confirmar contraseña
                                                 </label>
-                                                <input id="editar-confirmar-contrasena" class="form-control"
-                                                    type="password" placeholder="Confirmar contraseña" minlength="6"
-                                                    autocomplete="new-password">
+                                                <input id="editar-confirmar-contrasena"
+                                                    class="form-control"
+                                                    type="password"
+                                                    placeholder="Confirmar contraseña"
+                                                    minlength="8"
+                                                    autocomplete="new-password"
+                                                    name="confirmar_contrasena">
                                             </div>
 
                                         </div>
@@ -559,6 +645,7 @@
 
     <script src="../../public/assets/js/nav.js"></script>
     <script src="../../public/assets/js/barra.js"></script>
+    <script src="../../public/assets/js/usuarios.js"></script>
 
 </body>
 
